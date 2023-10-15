@@ -23,3 +23,18 @@ jobs:
 
     - name: Build
       run: npm run build
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Deploy
+      run: aws s3 sync dist/ s3://${BACKET_NAME} --exact-timestamps --region ${REGION} --delete
+      env: 
+        BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+        REGION: ${{ secrets.REGION }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
