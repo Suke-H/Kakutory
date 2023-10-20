@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css'
 import { Header } from './components/Header'
 
-function App(): JSX.Element {
+export const App = (): JSX.Element =>{
 
   return (
     <>
@@ -10,5 +10,3 @@ function App(): JSX.Element {
     </>
   )
 }
-
-export default App
