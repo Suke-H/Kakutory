@@ -36,7 +36,6 @@ const separateLineStyle: React.CSSProperties = {
   // 位置
   position: 'fixed' as const,
   top: `calc(${headerTop} + 140px)`, 
-  // left: '0',
   left: '50%',
   transform: 'translateX(-50%)',
 }
@@ -50,7 +49,6 @@ const menuContainerStyle: React.CSSProperties = {
   display: 'flex', // 横並びに
   position: 'fixed', // 座標指定
   top: `calc(${headerTop} + 150px)`, 
-  // left: '0',
   left: '50%',
   transform: 'translateX(-50%)',
 };
