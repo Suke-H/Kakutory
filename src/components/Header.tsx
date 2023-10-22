@@ -1,10 +1,13 @@
 import React from 'react';
 import kakutorySVG from '../assets/kakutory.svg';
 
+const headerTop = '50px';
+const widthEntire = '99vw';
+
 const headerStyle: React.CSSProperties = {
     // 背景
     backgroundColor: '#373B7A',
-    width: '100vw',
+    width: widthEntire,
     height: '100px',
 
     // 文字
@@ -14,7 +17,7 @@ const headerStyle: React.CSSProperties = {
 
     // 位置
     position: 'fixed' as const,
-    top: '100px',
+    top: headerTop,
     left: '50%',
     transform: 'translateX(-50%)',
 
@@ -27,27 +30,29 @@ const headerStyle: React.CSSProperties = {
 const separateLineStyle: React.CSSProperties = {
   // 背景
   backgroundColor: '#585858',
-  width: '100vw',
+  width: widthEntire,
   height: '10px',
 
   // 位置
   position: 'fixed' as const,
-  top: '240px',
-  left: '0',
-
-  // display: 'flex',
+  top: `calc(${headerTop} + 140px)`, 
+  // left: '0',
+  left: '50%',
+  transform: 'translateX(-50%)',
 }
 
 const menuContainerStyle: React.CSSProperties = {
   // 背景
-  width: '100vw',
+  width: widthEntire,
   height: '40px',
 
   // 配置
   display: 'flex', // 横並びに
   position: 'fixed', // 座標指定
-  top: 'calc(200px + 50px)', 
-  left: '0', 
+  top: `calc(${headerTop} + 150px)`, 
+  // left: '0',
+  left: '50%',
+  transform: 'translateX(-50%)',
 };
 
 const menuItemStyle: React.CSSProperties = {
@@ -62,6 +67,7 @@ const menuItemStyle: React.CSSProperties = {
   color: '#585858',
   fontWeight: 'bold',
   fontSize: '20px',
+  fontFamily: 'Noto Sans JP, Impact, Meiryo,ヒラギノ角ゴ, Lato, sans-serif',
 };
 
 export const Header = (): JSX.Element => {
