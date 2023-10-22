@@ -1,56 +1,42 @@
 import React from 'react';
 import kakutorySVG from '../assets/kakutory.svg';
 
-const headerTop = '50px';
-const widthEntire = '99vw';
+const widthRatio = '99%';
 
-const headerStyle: React.CSSProperties = {
+const headerContainerStyle: React.CSSProperties = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100vw',
+}
+
+const titleStyle: React.CSSProperties = {
     // 背景
     backgroundColor: '#373B7A',
-    width: widthEntire,
-    height: '100px',
+    width: widthRatio,
+    height: '140px',
 
-    // 文字
-    color: '#E9E9E9',
-    padding: '20px 0',
-    fontSize: '24px',
-
-    // 位置
-    position: 'fixed' as const,
-    top: headerTop,
-    left: '50%',
-    transform: 'translateX(-50%)',
-
-    // 文字を中央揃えに
-    display: 'flex', 
-    alignItems: 'center', 
-    justifyContent: 'center', 
+    // 垂直方向に中央揃え
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
 };
 
 const separateLineStyle: React.CSSProperties = {
   // 背景
   backgroundColor: '#585858',
-  width: widthEntire,
+  width: widthRatio,
   height: '10px',
-
-  // 位置
-  position: 'fixed' as const,
-  top: `calc(${headerTop} + 140px)`, 
-  left: '50%',
-  transform: 'translateX(-50%)',
 }
 
 const menuContainerStyle: React.CSSProperties = {
   // 背景
-  width: widthEntire,
+  width: widthRatio,
   height: '40px',
 
   // 配置
   display: 'flex', // 横並びに
-  position: 'fixed', // 座標指定
-  top: `calc(${headerTop} + 150px)`, 
-  left: '50%',
-  transform: 'translateX(-50%)',
 };
 
 const menuItemStyle: React.CSSProperties = {
@@ -70,8 +56,8 @@ const menuItemStyle: React.CSSProperties = {
 
 export const Header = (): JSX.Element => {
   return (
-    <>
-      <div style={headerStyle}>
+    <div style={headerContainerStyle}>
+      <div style={titleStyle}>
         <img src={kakutorySVG} alt="kakutory" width="360" height="60" />
       </div>
 
@@ -82,6 +68,6 @@ export const Header = (): JSX.Element => {
         <div style={menuItemStyle}>GAME</div>
         <div style={menuItemStyle}>DIARY</div>
       </div>
-    </>
+    </div>
   );
 }
