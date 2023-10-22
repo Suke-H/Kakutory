@@ -1,14 +1,15 @@
 import React from 'react';
 import kakutorySVG from '../assets/kakutory.svg';
 
-const widthRatio = '99%';
+const widthRatio = '98%';
 
 const headerContainerStyle: React.CSSProperties = {
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  width: '100vw',
+  width: '100%',
+  marginTop: '2vh',
 }
 
 const titleStyle: React.CSSProperties = {
@@ -27,14 +28,13 @@ const separateLineStyle: React.CSSProperties = {
   // 背景
   backgroundColor: '#585858',
   width: widthRatio,
-  height: '10px',
+  height: '15px',
 }
 
 const menuContainerStyle: React.CSSProperties = {
   // 背景
   width: widthRatio,
   height: '40px',
-
   // 配置
   display: 'flex', // 横並びに
 };
@@ -46,11 +46,10 @@ const menuItemStyle: React.CSSProperties = {
   justifyContent: 'center',
   alignItems: 'center',
   margin: '0 10px',
-
   // 文字
   color: '#585858',
   fontWeight: 'bold',
-  fontSize: '20px',
+  fontSize: '24px',
   fontFamily: 'Noto Sans JP, Impact, Meiryo,ヒラギノ角ゴ, Lato, sans-serif',
 };
 
@@ -64,9 +63,9 @@ export const Header = (): JSX.Element => {
       <div style={separateLineStyle}></div>
 
       <div style={menuContainerStyle}>
-        <div style={menuItemStyle}>ABOUT</div>
-        <div style={menuItemStyle}>GAME</div>
-        <div style={menuItemStyle}>DIARY</div>
+      <div style={menuItemStyle}>ABOUT</div>
+      <div style={menuItemStyle}>GAMES</div>
+      <div style={menuItemStyle}>DIARY</div>
       </div>
     </div>
   );
