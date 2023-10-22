@@ -19,7 +19,7 @@ const titleStyle: React.CSSProperties = {
     width: widthRatio,
     height: '140px',
 
-    // 垂直方向に中央揃え
+    // 水平・垂直方向に中央揃え
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
