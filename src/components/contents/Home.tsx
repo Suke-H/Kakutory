@@ -1,5 +1,6 @@
+/* eslint-disable react/react-in-jsx-scope */
 // import { Link } from "react-router-dom";
-import React from 'react';
+// import React from 'react';
 import strayBot from '../../assets/home/strayBot.png';
 import shikakuReversi from '../../assets/home/shikakuReversi.png';
 import chocomint from '../../assets/home/chocomint.png';

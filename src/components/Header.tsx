@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react/react-in-jsx-scope */
+// import React from 'react';
 import kakutorySVG from '../assets/kakutory.svg';
 
 const widthRatio = '98%';
