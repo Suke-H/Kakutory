@@ -1,18 +1,12 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
+import React from 'react';
 import './App.css'
+import { Header } from './components/Header'
 
-function App(): JSX.Element {
-  // const [count, setCount] = useState(0)
+export const App = (): JSX.Element =>{
 
   return (
     <>
-      <div>
-        <h1>Hello, World!!</h1>
-      </div>
+      <Header/>
     </>
   )
 }
-
-export default App
