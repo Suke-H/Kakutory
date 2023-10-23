@@ -41,3 +41,7 @@
 .read-the-docs {
   color: #888;
 }
+
+.img-button:hover{
+  transform: scale(1.05);
+}
