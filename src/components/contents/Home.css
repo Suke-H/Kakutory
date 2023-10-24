@@ -1,0 +1,27 @@
+.home {
+    color: #585858;
+    font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+    font-weight: bold;
+}
+
+.imageWrapper {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.imageItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    transition: transform 0.3s;
+}
+
+.imageItem:hover{
+    transform: scale(1.05);
+  }
+
+  

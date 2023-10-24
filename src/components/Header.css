@@ -1,0 +1,42 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2vh;
+  }
+  
+  .title {
+    background-color: #373B7A;
+    width: 98%;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .separateLine {
+    background-color: #585858;
+    width: 98%;
+    height: 15px;
+  }
+  
+  .menuContainer {
+    width: 98%;
+    height: 40px;
+    display: flex;
+  }
+  
+  .menuItem {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    color: #585858;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+  }
