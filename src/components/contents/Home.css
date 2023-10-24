@@ -1,7 +1,8 @@
 .home {
     color: #585858;
-    font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 .imageWrapper {
@@ -16,6 +17,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    filter: drop-shadow(0 0 1em #585858aa);
 
     transition: transform 0.3s;
 }
@@ -24,4 +26,15 @@
     transform: scale(1.05);
   }
 
-  
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .imageWrapper {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 0 auto;
+    }
+  }

@@ -1,3 +1,4 @@
+
 .headerContainer {
     display: flex;
     flex-direction: column;
@@ -10,16 +11,22 @@
   .title {
     background-color: #373B7A;
     width: 98%;
-    height: 140px;
+    /* height: 140px; */
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .title-image {
+    width: 36vh;
+    height: 6vh;
   }
   
   .separateLine {
     background-color: #585858;
     width: 98%;
-    height: 15px;
+    height: 1.5vh;
   }
   
   .menuContainer {
@@ -40,3 +47,38 @@
     font-size: 24px;
     font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
   }
+
+
+/* @media (max-width:1024px) {
+
+} */
+
+@media (max-width:600px) {
+
+    .headerContainer {
+
+      }
+      
+    .title {
+      margin-top: 6vh;
+      height: 15vh;
+    }
+
+    .title-image {
+      width: 36vh;
+      height: 6vh;
+    }
+    
+    .separateLine {
+   
+    }
+    
+    .menuContainer {
+      
+    }
+    
+    .menuItem {
+
+    }
+    
+}

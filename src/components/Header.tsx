@@ -7,7 +7,7 @@ export const Header = (): JSX.Element => {
   return (
     <div className="headerContainer">
       <div className="title">
-        <img src={kakutorySVG} alt="kakutory" width="360" height="60" />
+        <img src={kakutorySVG} alt="kakutory" className="title-image" />
       </div>
 
       <div className="separateLine"></div>
