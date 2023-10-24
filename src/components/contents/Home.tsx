@@ -29,7 +29,7 @@ export const Home = (): JSX.Element => {
 
     return (
         <div className='home'>
-            <h1 style={{fontSize: '40px'}}>GAMES</h1>
+            <h1 className="column">GAMES</h1>
             {/* <Link to="/games"> */}
                 {/* <img src="https://via.placeholder.com/150" alt="games" /> */}
             {/* </Link> */}
@@ -59,9 +59,9 @@ export const Home = (): JSX.Element => {
 
             {/* <h1>ABOUT</h1> */}
 
-            {/* <h1 style={{fontSize: '40px'}}>DIARY</h1> */}
+            {/* <h1>DIARY</h1> */}
 
-            {/* <h1 style={{fontSize: '40px'}}>CONTACT</h1> */}
+            {/* <h1>CONTACT</h1> */}
             {/* ご用件はこちらまで */}
         </div>
     );

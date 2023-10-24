@@ -26,6 +26,10 @@
     transform: scale(1.05);
   }
 
+.column {
+    font-size: 40px;
+}
+
   @media (max-width:1024px) {
   }
 
@@ -37,4 +41,11 @@
         gap: 50px;
         margin: 0 auto;
     }
+
+    .column {
+        font-size: 30px;
+    }
   }
+
+
+
