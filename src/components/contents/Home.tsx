@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import { Link } from "react-router-dom";
 // import React from 'react';
-// import { useState } from 'react';
 import strayBot from '../../assets/home/strayBot.png';
 import shikakuReversi from '../../assets/home/shikakuReversi.png';
 import chocomint from '../../assets/home/chocomint.png';
@@ -9,30 +8,24 @@ import memory from '../../assets/home/memory.png';
 
 import '../../App.css';
 
-// interface ImageWithHoverProps {
-//     url: string;
-//     src: string;
-//     alt: string;
-//     style: React.CSSProperties;
-//   }
+interface LinkedImageProps {
+    url: string;
+    src: string;
+    alt: string;
+    style: React.CSSProperties;
+  }
   
-// const ImageWithHover: React.FC<ImageWithHoverProps> = ({ src, alt, style }) => {
-//     return (
-//       <div className="image-container">
-//         <img src={src} alt={alt} />
-//       </div>
-//     );
-// };
-
-// const [isHovered, setIsHovered] = useState(false);
-
-// const handleMouseEnter = (): void => {
-// setIsHovered(true);
-// };
-
-// const handleMouseLeave = (): void => {
-// setIsHovered(false);
-// };
+const LinkedImage = (props: LinkedImageProps): JSX.Element => {
+    return (
+        <a href={props.url}>
+            <img src={props.src} 
+                alt={props.alt} 
+                style={props.style}
+                className='img-button'
+            />
+        </a>
+    )
+}
   
 
 const homeStyle: React.CSSProperties = {
@@ -41,8 +34,6 @@ const homeStyle: React.CSSProperties = {
     fontFamily: 'Noto Sans JP, Impact, Meiryo,ヒラギノ角ゴ, Lato, sans-serif',
     fontWeight: 'bold',
 }
-
-
 
 const imageWrapperStyle = {
     width: '60%',   // 画面全体の60%の幅
@@ -60,7 +51,6 @@ const imageItemStyle = {
     justifyContent: 'center',  // 横方向の中央寄せ
 
     transition: 'transform 0.3s',
-    // transform: isHovered ? 'scale(1.2)' : 'scale(1)',
 };
 
 export const Home = (): JSX.Element => {
@@ -73,25 +63,30 @@ export const Home = (): JSX.Element => {
             {/* </Link> */}
 
             <div style={imageWrapperStyle}>
-                <a href="https://unityroom.com/games/stray_bot">
-                    <img 
-                        src={strayBot} 
-                        alt="STRAY BOT" 
-                        style={imageItemStyle} 
-                        className='img-button'
-                        // onMouseEnter={handleMouseEnter}
-                        // onMouseLeave={handleMouseLeave}
-                    />
-                </a>
-                <a href="https://unityroom.com/games/shikaku_reversi">
-                    <img src={shikakuReversi} alt="シカクリバーシ"  style={imageItemStyle} />
-                </a>
-                <a href="https://unityroom.com/games/worship-chocomint">
-                    <img src={chocomint} alt="チョコミントを崇めよ！"  style={imageItemStyle} />
-                </a>
-                <a href="https://unityroom.com/games/matons_memory_journey">
-                    <img src={memory} alt="マトン君 記憶探しの旅"  style={imageItemStyle} />
-                </a>
+                <LinkedImage 
+                    url="https://unityroom.com/games/stray_bot"
+                    src={strayBot}
+                    alt="STRAY BOT"
+                    style={imageItemStyle}
+                />
+                <LinkedImage 
+                    url="https://unityroom.com/games/shikaku_reversi"
+                    src={shikakuReversi}
+                    alt="シカクリバーシ"
+                    style={imageItemStyle}
+                />
+                <LinkedImage 
+                    url="https://unityroom.com/games/worship-chocomint"
+                    src={chocomint}
+                    alt="チョコミントを崇めよ！"
+                    style={imageItemStyle}
+                />
+                <LinkedImage 
+                    url="https://unityroom.com/games/matons_memory_journey"
+                    src={memory}
+                    alt="マトン君 記憶探しの旅"
+                    style={imageItemStyle}
+                />
             </div>
 
             {/* <h1>ABOUT</h1> */}
