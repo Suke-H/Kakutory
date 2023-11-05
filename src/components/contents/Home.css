@@ -18,7 +18,7 @@
 } */
 
 .imageWrapper {
-    width: 60%;
+    width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -37,8 +37,6 @@
 .imageItem:hover{
     transform: scale(1.05);
   }
-
-
 
   @media (max-width:1024px) {
   }

@@ -1,59 +1,64 @@
 /* PC */
 .headerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top: 2vh;
-  }
-  
-  .title {
-    background-color: #373B7A;
-    width: 98%;
-    height: 15vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 
-  .title-image {
-    width: 36vh;
-    height: 6vh;
-  }
-  
-  .headerSeparateLine {
-    background-color: #585858;
-    width: 98%;
-    height: 1.5vh;
-  }
-  
-  .menuContainer {
-    width: 98%;
-    height: 40px;
-    display: flex;
-  }
-  
-  .menuItem {
-    width: 100px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 10px;
-    color: #585858;
-    font-weight: bold;
-    font-size: 24px;
-    font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
-  }
 
-  .menu-icon {
-    display: none;
-  }
-  
-  .side-menu {
-    display: none;
-  }
+}
+
+.title {
+  background-color: #373B7A;
+  width: 98%;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 6vh;
+}
+
+.title-image {
+  width: 48vh;
+  height: 8vh;
+}
+
+.headerSeparateLine {
+  background-color: #585858;
+  width: 98%;
+  height: 1.5vh;
+}
+
+.menuContainer {
+  width: 98%;
+  height: 40px;
+  display: flex;
+}
+
+.menuItem {
+  width: 100px;
+  height: 40px;
+  /* width: 10vw;
+  height: 5vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  color: #585858;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.side-menu {
+  display: none;
+}
 
 
 /* @media (max-width:1024px) {
@@ -62,9 +67,8 @@
 
 /* スマホ */
 @media (max-width:600px) {
-
   .title {
-    margin-top: 8vh;
+    margin-top: 10vh;
     height: 15vh;
   }
 
