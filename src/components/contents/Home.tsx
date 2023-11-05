@@ -29,10 +29,12 @@ export const Home = (): JSX.Element => {
 
     return (
         <div className='home'>
-            <h1 className="column">GAMES</h1>
+            <h1 className="column">GAME</h1>
             {/* <Link to="/games"> */}
                 {/* <img src="https://via.placeholder.com/150" alt="games" /> */}
             {/* </Link> */}
+
+            {/* <div className="homeSeparateLine"></div> */}
 
             <div className='imageWrapper'>
                 <LinkedImage 

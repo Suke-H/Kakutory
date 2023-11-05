@@ -24,10 +24,10 @@ export const Header = (): JSX.Element => {
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="close-button" onClick={toggleMenu}>&times;</div>
         <ul>
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#">サービス</a></li>
-          <li><a href="#">プロフィール</a></li>
-          <li><a href="#">お問い合わせ</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Game</a></li>
+          <li><a href="#">Diary</a></li>
+          <li><a href="#">Gallary</a></li>
         </ul>
       </div>
 
@@ -35,13 +35,14 @@ export const Header = (): JSX.Element => {
         <img src={kakutorySVG} alt="kakutory" className="title-image" />
       </div>
 
-      <div className="separateLine"></div>
+      <div className="headerSeparateLine"></div>
 
-      {/* <div className="menuContainer">
-        <div className="menuItem">ABOUT</div>
-        <div className="menuItem">GAMES</div>
-        <div className="menuItem">DIARY</div>
-      </div> */}
+      <div className="menuContainer">
+        <div className="menuItem">About</div>
+        <div className="menuItem">Games</div>
+        <div className="menuItem">Diary</div>
+        <div className="menuItem">Gallary</div>
+      </div>
     </div>
   );
 }

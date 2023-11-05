@@ -1,4 +1,4 @@
-
+/* PC */
 .headerContainer {
     display: flex;
     flex-direction: column;
@@ -11,7 +11,6 @@
   .title {
     background-color: #373B7A;
     width: 98%;
-    /* height: 140px; */
     height: 15vh;
     display: flex;
     justify-content: center;
@@ -23,7 +22,7 @@
     height: 6vh;
   }
   
-  .separateLine {
+  .headerSeparateLine {
     background-color: #585858;
     width: 98%;
     height: 1.5vh;
@@ -58,39 +57,21 @@
 
 
 /* @media (max-width:1024px) {
-
+タブレット
 } */
 
+/* スマホ */
 @media (max-width:600px) {
 
-    .headerContainer {
-      }
-      
-    .title {
-      margin-top: 8vh;
-      height: 15vh;
-    }
+  .title {
+    margin-top: 8vh;
+    height: 15vh;
+  }
 
-    .title-image {
-      width: 36vh;
-      height: 6vh;
-    }
-    
-
-    /* .menu-icon {
-      width: 30px;
-      height: 25px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      top: 3.2vh;
-      left: 3.2vh;
-      cursor: pointer;
-      z-index: 1000;
-  } */
+  .title-image {
+    width: 36vh;
+    height: 6vh;
+  }
 
   .menu-icon {
     width: 30px;
@@ -104,40 +85,40 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 1000;
-}
+  }
   
   .bar {
-      width: 100%;
-      height: 4px;
-      background-color: #585858;
+    width: 100%;
+    height: 4px;
+    background-color: #585858;
   }
   
   .side-menu {
-      display: block;
+    display: block;
 
-      position: absolute;
-      top: 0;
-      left: -300px;
-      width: 300px;
-      height: 100vh;
-      background-color: #585858;
-      transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #585858;
+    transition: 0.3s;
 
-      z-index: 10;
+    z-index: 10;
   }
   
   .side-menu ul {
-      list-style: none;
-      padding: 0;
+    list-style: none;
+    padding: 0;
   }
   
   .side-menu ul li {
-      padding: 20px;
+    padding: 20px;
   }
   
   .side-menu ul li a {
-      color: #E9E9E9;
-      text-decoration: none;
+    color: #E9E9E9;
+    text-decoration: none;
   }
 
   .side-menu.open {
@@ -151,15 +132,10 @@
     font-size: 40px; 
     color: #E9E9E9;
   }
+
+  .menuContainer {
+    display: none;
+  }
     
 }
 
-@media (min-width: 768px) {
-  .menu-icon {
-    display: none;
-  }
-  
-  .side-menu {
-    display: none;
-  }
-}

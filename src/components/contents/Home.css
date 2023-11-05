@@ -1,9 +1,21 @@
 .home {
     color: #585858;
-    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
     font-weight: bold;
     text-align: center;
 }
+
+.column {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+    /* margin-bottom: 0; */
+}
+
+/* .homeSeparateLine {
+    background-color: #585858;
+    width: 98%;
+    height: 0.5vh;
+    margin: 0 0 5vh 0;
+} */
 
 .imageWrapper {
     width: 60%;
@@ -26,9 +38,7 @@
     transform: scale(1.05);
   }
 
-.column {
-    font-size: 40px;
-}
+
 
   @media (max-width:1024px) {
   }
