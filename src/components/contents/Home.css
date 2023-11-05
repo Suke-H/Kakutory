@@ -1,0 +1,59 @@
+.home {
+    color: #585858;
+    font-weight: bold;
+    text-align: center;
+}
+
+.column {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+    /* margin-bottom: 0; */
+}
+
+/* .homeSeparateLine {
+    background-color: #585858;
+    width: 98%;
+    height: 0.5vh;
+    margin: 0 0 5vh 0;
+} */
+
+.imageWrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.imageItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 0 1em #585858aa);
+
+    transition: transform 0.3s;
+}
+
+.imageItem:hover{
+    transform: scale(1.05);
+  }
+
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .imageWrapper {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 0 auto;
+    }
+
+    .column {
+        font-size: 30px;
+    }
+  }
+
+
+
