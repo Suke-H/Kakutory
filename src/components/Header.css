@@ -88,7 +88,6 @@
     left: 3vh;
     transform: translateY(-50%);
     cursor: pointer;
-    z-index: 1000;
   }
   
   .bar {
