@@ -22,14 +22,14 @@ export const Header = (): JSX.Element => {
       </div>
 
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
-          <ul>
-              <li><a href="#">ホーム</a></li>
-              <li><a href="#">サービス</a></li>
-              <li><a href="#">プロフィール</a></li>
-              <li><a href="#">お問い合わせ</a></li>
-          </ul>
+        <div className="close-button" onClick={toggleMenu}>&times;</div>
+        <ul>
+          <li><a href="#">ホーム</a></li>
+          <li><a href="#">サービス</a></li>
+          <li><a href="#">プロフィール</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
       </div>
-
 
       <div className="title">
         <img src={kakutorySVG} alt="kakutory" className="title-image" />

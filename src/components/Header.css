@@ -48,6 +48,14 @@
     font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
   }
 
+  .menu-icon {
+    display: none;
+  }
+  
+  .side-menu {
+    display: none;
+  }
+
 
 /* @media (max-width:1024px) {
 
@@ -105,6 +113,8 @@
   }
   
   .side-menu {
+      display: block;
+
       position: absolute;
       top: 0;
       left: -300px;
@@ -133,5 +143,23 @@
   .side-menu.open {
     left: 0px;
   }
+
+  .side-menu .close-button {
+    position: absolute;
+    top: 0.1vh; 
+    right: 5vh; 
+    font-size: 40px; 
+    color: #E9E9E9;
+  }
     
+}
+
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+  
+  .side-menu {
+    display: none;
+  }
 }
