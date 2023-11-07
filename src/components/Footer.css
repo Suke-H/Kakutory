@@ -1,0 +1,16 @@
+.copywrite {
+    color: #E0E0E0;
+    position: absolute;
+    right: 200px;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 10vh 0 0 0;
+    height: 40px;
+    background-color: #585858;
+    display: flex;
+    align-items: center;
+}
