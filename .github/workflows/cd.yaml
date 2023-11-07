@@ -3,8 +3,8 @@ name: Build
 on:
   push:
     branches:
-      # - main
-      - checkActions
+      - main
+      # - checkActions
 
 permissions:
   id-token: write
@@ -23,7 +23,8 @@ jobs:
       with:
         node-version: '16.x'
 
-    - uses: aws-actions/configure-aws-credentials@v1
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: ${{ secrets.ROLE_ARN }}
         aws-region: ${{ secrets.REGION }}
