@@ -25,7 +25,7 @@ export const Header = (): JSX.Element => {
         <div className="close-button" onClick={toggleMenu}>&times;</div>
         <ul>
           <li><a href="#">About</a></li>
-          <li><a href="#">Game</a></li>
+          <li><a href="#">Games</a></li>
           <li><a href="#">Diary</a></li>
           <li><a href="#">Gallary</a></li>
         </ul>
