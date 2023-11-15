@@ -27,7 +27,7 @@ export const Header = (): JSX.Element => {
           <nav>
             <ul>
               <li><Link to="/">Home</Link></li>
-              {/* <li><Link to="/about">About</Link></li> */}
+              <li><Link to="/about">About</Link></li>
               <li><Link to="/game">Game</Link></li>
               {/* <li><Link to="/diary">Diary</Link></li> */}
               {/* <li><Link to="/gallery">Gallery</Link></li> */}
@@ -43,7 +43,7 @@ export const Header = (): JSX.Element => {
 
       <div className="menuContainer">
         <Link to="/" className="menuItem">Home</Link>
-        {/* <Link to="/about" className="menuItem">About</Link> */}
+        <Link to="/about" className="menuItem">About</Link>
         <Link to="/game" className="menuItem">Game</Link>
         {/* <Link to="/diary" className="menuItem">Diary</Link> */}
         {/* <Link to="/gallery" className="menuItem">Gallery</Link> */}

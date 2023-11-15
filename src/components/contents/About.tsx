@@ -1,12 +1,14 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import { Link } from "react-router-dom";
 // import React from 'react';
+import corn from '../../assets/corn.png';
+
 import strayBot from '../../assets/home/strayBot.png';
 import shikakuReversi from '../../assets/home/shikakuReversi.png';
 import chocomint from '../../assets/home/chocomint.png';
 import memory from '../../assets/home/memory.png';
 
-import './Game.css';
+import './About.css';
 
 interface LinkedImageProps {
     url: string;
@@ -25,12 +27,13 @@ const LinkedImage = (props: LinkedImageProps): JSX.Element => {
     )
 }
 
-export const Game = (): JSX.Element => {
-
+export const About = (): JSX.Element => {
     return (
-        <div className='game'>
-            <h1 className="column">GAMES</h1>
+        <div className='about'>
+            <h1 className="column">ABOUT</h1>
             <div className='imageWrapper'>
+                <img src={corn} width="100" alt="corn" />
+                under construction...
                 <LinkedImage 
                     url="https://unityroom.com/games/stray_bot"
                     src={strayBot}
@@ -51,6 +54,7 @@ export const Game = (): JSX.Element => {
                     src={memory}
                     alt="マトン君 記憶探しの旅"
                 />
+               
             </div>
         </div>
     );
