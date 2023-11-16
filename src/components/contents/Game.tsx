@@ -6,7 +6,7 @@ import shikakuReversi from '../../assets/home/shikakuReversi.png';
 import chocomint from '../../assets/home/chocomint.png';
 import memory from '../../assets/home/memory.png';
 
-import './Home.css';
+import './Game.css';
 
 interface LinkedImageProps {
     url: string;
@@ -25,12 +25,11 @@ const LinkedImage = (props: LinkedImageProps): JSX.Element => {
     )
 }
 
-export const Home = (): JSX.Element => {
+export const Game = (): JSX.Element => {
 
     return (
-        <div className='home'>
-            <h1 className="column">GAME</h1>
-
+        <div className='game'>
+            <h1 className="column">GAMES</h1>
             <div className='imageWrapper'>
                 <LinkedImage 
                     url="https://unityroom.com/games/stray_bot"
@@ -53,13 +52,6 @@ export const Home = (): JSX.Element => {
                     alt="マトン君 記憶探しの旅"
                 />
             </div>
-
-            {/* <h1>ABOUT</h1> */}
-
-            {/* <h1>DIARY</h1> */}
-
-            {/* <h1>CONTACT</h1> */}
-            {/* ご用件はこちらまで */}
         </div>
     );
 }

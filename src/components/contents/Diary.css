@@ -1,0 +1,39 @@
+.diary {
+    color: #585858;
+    font-weight: bold;
+    text-align: center;
+
+    min-height: 50vh;
+}
+
+.column {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+}
+
+.cornImg {
+    margin-top: 50px;
+}
+
+.underConstruction {
+    font-size: 30px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+    margin-top: 50px;
+}
+
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .diary {
+        min-height: 80vh;
+    }
+
+
+    .column {
+        font-size: 30px;
+    }
+  }
+
+
+

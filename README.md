@@ -24,5 +24,4 @@ https://kakutory.com
    - CloudFront
    - Route53
 - GitHub Actions
-   - OIDC
 <!-- - [zenn-editor](https://github.com/zenn-dev/zenn-editor) -->

@@ -1,0 +1,53 @@
+.game {
+    color: #585858;
+    font-weight: bold;
+    text-align: center;
+
+    min-height: 50vh;
+}
+
+.column {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+}
+
+.imageWrapper {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin: 0 auto;
+}
+
+.imageItem {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0 0 1em #585858aa);
+
+    transition: transform 0.3s;
+}
+
+.imageItem:hover{
+    transform: scale(1.05);
+  }
+
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .imageWrapper {
+        width: 90%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+        margin: 0 auto;
+    }
+
+    .column {
+        font-size: 30px;
+    }
+  }
+
+
+
