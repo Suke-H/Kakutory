@@ -25,6 +25,9 @@
   }
 
   @media (max-width:600px) {
+    .diary {
+        min-height: 80vh;
+    }
 
 
     .column {

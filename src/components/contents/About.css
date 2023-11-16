@@ -25,7 +25,9 @@
   }
 
   @media (max-width:600px) {
-
+    .about {
+        min-height: 80vh;
+    }
 
     .column {
         font-size: 30px;
