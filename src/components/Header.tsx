@@ -29,20 +29,19 @@ export const Header = (): JSX.Element => {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About</Link></li>
               <li><Link to="/game">Game</Link></li>
-              {/* <li><Link to="/diary">Diary</Link></li> */}
-              {/* <li><Link to="/gallery">Gallery</Link></li> */}
+              <li><Link to="/diary">Diary</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
             </ul>
         </nav>
       </div>
 
-      <div className="title">
+      <Link to="/" className="title">
         <img src={kakutorySVG} alt="kakutory" className="title-image" />
-      </div>
+      </Link>
 
       <div className="headerSeparateLine"></div>
 
       <div className="menuContainer">
-        <Link to="/" className="menuItem">Home</Link>
         <Link to="/about" className="menuItem">About</Link>
         <Link to="/game" className="menuItem">Game</Link>
         <Link to="/diary" className="menuItem">Diary</Link>
