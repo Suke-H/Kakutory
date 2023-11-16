@@ -11,7 +11,8 @@
 
 .title {
   background-color: #373B7A;
-  width: 98%;
+  /* width: 98%; */
+  width: 98vw;
   height: 25vh;
   display: flex;
   justify-content: center;
@@ -27,7 +28,7 @@
 
 .headerSeparateLine {
   background-color: #585858;
-  width: 98%;
+  width: 98vw;
   height: 1.5vh;
 }
 

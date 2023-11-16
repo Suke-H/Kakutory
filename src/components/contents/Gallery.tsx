@@ -3,13 +3,13 @@
 // import React from 'react';
 import corn from '../../assets/corn.png';
 
-import './About.css';
+import './Gallery.css';
 
 
-export const About = (): JSX.Element => {
+export const Gallery = (): JSX.Element => {
     return (
-        <div className='about'>
-            <h1 className="column">ABOUT</h1>
+        <div className='gallery'>
+            <h1 className="column">GALLERY</h1>
 
             {/* 画像の挿入 */}
             <img src={corn} width="80vw" alt="corn" className="cornImg" />

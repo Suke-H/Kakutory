@@ -45,8 +45,8 @@ export const Header = (): JSX.Element => {
         <Link to="/" className="menuItem">Home</Link>
         <Link to="/about" className="menuItem">About</Link>
         <Link to="/game" className="menuItem">Game</Link>
-        {/* <Link to="/diary" className="menuItem">Diary</Link> */}
-        {/* <Link to="/gallery" className="menuItem">Gallery</Link> */}
+        <Link to="/diary" className="menuItem">Diary</Link>
+        <Link to="/gallery" className="menuItem">Gallery</Link>
       </div>
     </div>
   );
