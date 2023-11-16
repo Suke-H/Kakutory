@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import kakutorySVG from '../assets/kakutory.svg';
 import './Header.css';
 
@@ -23,25 +24,28 @@ export const Header = (): JSX.Element => {
 
       <div className={`side-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className="close-button" onClick={toggleMenu}>&times;</div>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Diary</a></li>
-          <li><a href="#">Gallary</a></li>
-        </ul>
+          <nav>
+            <ul>
+              <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+              <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
+              <li><Link to="/game" onClick={toggleMenu}>Game</Link></li>
+              <li><Link to="/diary" onClick={toggleMenu}>Diary</Link></li>
+              <li><Link to="/gallery" onClick={toggleMenu}>Gallery</Link></li>
+            </ul>
+        </nav>
       </div>
 
-      <div className="title">
+      <Link to="/" className="title">
         <img src={kakutorySVG} alt="kakutory" className="title-image" />
-      </div>
+      </Link>
 
       <div className="headerSeparateLine"></div>
 
       <div className="menuContainer">
-        <div className="menuItem">About</div>
-        <div className="menuItem">Games</div>
-        <div className="menuItem">Diary</div>
-        <div className="menuItem">Gallary</div>
+        <Link to="/about" className="menuItem">About</Link>
+        <Link to="/game" className="menuItem">Game</Link>
+        <Link to="/diary" className="menuItem">Diary</Link>
+        <Link to="/gallery" className="menuItem">Gallery</Link>
       </div>
     </div>
   );

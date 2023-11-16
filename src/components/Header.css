@@ -6,12 +6,11 @@
   justify-content: center;
   width: 100%;
 
-
 }
 
 .title {
   background-color: #373B7A;
-  width: 98%;
+  width: 98vw;
   height: 25vh;
   display: flex;
   justify-content: center;
@@ -23,16 +22,21 @@
 .title-image {
   width: 48vh;
   height: 8vh;
+  transition: transform 0.3s ease;
+}
+
+.title:hover .title-image {
+  transform: scale(1.05); /* .titleにカーソルが乗った時に.title-imageを拡大 */
 }
 
 .headerSeparateLine {
   background-color: #585858;
-  width: 98%;
+  width: 98vw;
   height: 1.5vh;
 }
 
 .menuContainer {
-  width: 98%;
+  width: 98vw;
   height: 40px;
   display: flex;
 }
