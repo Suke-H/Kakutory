@@ -1,10 +1,12 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import { Link } from "react-router-dom";
 // import React from 'react';
-import strayBot from '../../assets/home/strayBot.png';
-import shikakuReversi from '../../assets/home/shikakuReversi.png';
-import chocomint from '../../assets/home/chocomint.png';
-import memory from '../../assets/home/memory.png';
+// import strayBot from '../../assets/home/strayBot.png';
+// import shikakuReversi from '../../assets/home/shikakuReversi.png';
+// import chocomint from '../../assets/home/chocomint.png';
+// import memory from '../../assets/home/memory.png';
+import { Game } from './Game';
+import { Diary } from './Diary';
 
 import './Home.css';
 
@@ -26,10 +28,9 @@ const LinkedImage = (props: LinkedImageProps): JSX.Element => {
 }
 
 export const Home = (): JSX.Element => {
-
     return (
         <div className='home'>
-            <h1 className="column">GAME</h1>
+            {/* <h1 className="column">GAME</h1>
 
             <div className='imageWrapper'>
                 <LinkedImage 
@@ -52,7 +53,10 @@ export const Home = (): JSX.Element => {
                     src={memory}
                     alt="マトン君 記憶探しの旅"
                 />
-            </div>
+            </div> */}
+
+            <Game/>
+            <Diary/>
 
             {/* <h1>ABOUT</h1> */}
 
