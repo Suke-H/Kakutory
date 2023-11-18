@@ -3,12 +3,15 @@
 
 import 'zenn-content-css';
 import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 export const DiaryContent = (): JSX.Element => {
-    const [htmlContent, setHtmlContent] = useState('');
+    const [htmlContent, setHtmlContent] = useState<string>('');
+    const { id } = useParams();
 
     useEffect(() => {
-      fetch('/src/components/contents/diarys/test2.html')
+      const filePath = `/src/components/contents/diarys/${id}.html`;
+      fetch(filePath)
       .then(async response => await response.text())
       .then(html => {
           setHtmlContent(html);

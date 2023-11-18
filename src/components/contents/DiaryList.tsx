@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
@@ -17,14 +19,15 @@ export interface DiarySummary {
 }
 
 interface DiaryListProps {
-    diarySummaries: DiarySummary[];
+    allDiarySummary: DiarySummary[];
 }
 
-export const DiaryList: React.FC<DiaryListProps> = ({ diarySummaries }) => {
+export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary }) => {
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       
-        {diarySummaries.map((diary) => (
+        {allDiarySummary.map((diary) => (
+          <Link to={`/diary/${diary.id}`} key={diary.id}>
           <Card key={diary.id} sx={{ 
             display: 'flex', 
             marginBottom: 2 , 
@@ -92,12 +95,11 @@ export const DiaryList: React.FC<DiaryListProps> = ({ diarySummaries }) => {
                       }} />
                   ))}
                 </Box>
-                {/* <Typography variant="body2" color="text.secondary" align='left'>
-                  {diary.summary}
-                </Typography> */}
               </CardContent>
             </Box>
           </Card>
+        </Link>
+
         ))}
       </Box>
     );
