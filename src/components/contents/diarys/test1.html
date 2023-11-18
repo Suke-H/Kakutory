@@ -1,0 +1,25 @@
+<h1 id="%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%A8%E3%81%AF"><a class="header-anchor-link" href="#%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%A8%E3%81%AF" aria-hidden="true"></a> 人工知能とは</h1>
+<aside class="msg message"><span class="msg-symbol">!</span><div class="msg-content"><p>G検定の勉強記録です。</p>
+</div></aside>
+<h2 id="%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AE%E5%AE%9A%E7%BE%A9"><a class="header-anchor-link" href="#%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AE%E5%AE%9A%E7%BE%A9" aria-hidden="true"></a> 人工知能の定義</h2>
+<p>人工知能や機械学習の定義を理解する</p>
+<ul>
+<li>人工知能とは何か</li>
+<li>人工知能のおおまかな分類</li>
+<li>AI効果</li>
+<li>人工知能とロボットの違い</li>
+</ul>
+<p>キーワード：推論、認識、判断、エージェント、古典的な人工知能、機械学習、ディープラーニング</p>
+<div class="code-block-container"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token imports">fs</span> <span class="token keyword module">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span>
+<span class="token keyword module">import</span> <span class="token imports">lib</span> <span class="token keyword module">from</span> <span class="token string">"zenn-markdown-html"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> markdownToHtml <span class="token operator">=</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">?</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">:</span> lib<span class="token punctuation">;</span>
+
+<span class="token comment">// Markdown ファイルの読み込み</span>
+<span class="token keyword">const</span> markdown <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">readFileSync</span><span class="token punctuation">(</span><span class="token string">'src/example.md'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Markdown を HTML に変換</span>
+<span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token function">markdownToHtml</span><span class="token punctuation">(</span>markdown<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// HTML をファイルに書き出し</span>
+fs<span class="token punctuation">.</span><span class="token method function property-access">writeFileSync</span><span class="token punctuation">(</span><span class="token string">'src/example.html'</span><span class="token punctuation">,</span> html<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div>

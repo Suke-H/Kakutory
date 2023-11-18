@@ -15,7 +15,8 @@
     "@mui/material": "^5.14.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.18.0",
+    "zenn-content-css": "^0.1.149"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -34,6 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.3",
     "typescript": "^5.2.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "zenn-markdown-html": "^0.1.149"
   }
 }

@@ -6,6 +6,7 @@
 import './Diary.css';
 
 import { type DiarySummary, DiaryList} from './DiaryList';
+import { DiaryContent } from './DiaryContent';
   
   // 全日記のサマリ内容
   const DiarySummaries: DiarySummary[] = [
@@ -38,7 +39,8 @@ export const Diary = (): JSX.Element => {
         <div className='diary'>
             <h1 className="column">DIARY</h1>
 
-            <DiaryList diarySummaries={DiarySummaries} />
+            {/* <DiaryList diarySummaries={DiarySummaries} /> */}
+            <DiaryContent />
         </div>
     );
 }
