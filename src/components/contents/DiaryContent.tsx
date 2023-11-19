@@ -22,7 +22,11 @@ export const DiaryContent = (): JSX.Element => {
     }, []);
 
     return (
-        <div className="znc">
+        <div className="znc" style={{
+             width: "70%",
+             margin: "0 auto",
+             maxWidth: "800px",
+             }}>
             <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
     );
