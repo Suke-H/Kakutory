@@ -5,7 +5,6 @@ import corn from '../../assets/corn.png';
 
 import './About.css';
 
-
 export const About = (): JSX.Element => {
     return (
         <div className='about'>
