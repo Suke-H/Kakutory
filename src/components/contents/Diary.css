@@ -1,9 +1,11 @@
 .diary {
     color: #585858;
     font-weight: bold;
-    text-align: center;
 
     min-height: 50vh;
+    margin: 0 auto;
+    /* width: 70%; */
+    /* max-width: 800px; */
 }
 
 .column {
@@ -28,7 +30,6 @@
     .diary {
         min-height: 80vh;
     }
-
 
     .column {
         font-size: 30px;

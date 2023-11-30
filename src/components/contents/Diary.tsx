@@ -1,21 +1,22 @@
 /* eslint-disable react/react-in-jsx-scope */
-// import { Link } from "react-router-dom";
 // import React from 'react';
-import corn from '../../assets/corn.png';
+
+// import { Link } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
 import './Diary.css';
 
-
+import { DiaryList } from './DiaryList';
+import { AllDiarySummary } from './AllDiarySummary';
+import { DiaryContent } from './DiaryContent';
+  
 export const Diary = (): JSX.Element => {
     return (
         <div className='diary'>
-            <h1 className="column">DIARY</h1>
-
-            {/* 画像の挿入 */}
-            <img src={corn} width="80vw" alt="corn" className="cornImg" />
-
-            <h1 className="underConstruction">under construction...</h1>
-            
+          <Routes>
+            <Route path="/" element={<DiaryList allDiarySummary={AllDiarySummary} />} />
+            <Route path="/:id" element={<DiaryContent />} />
+          </Routes>
         </div>
     );
 }
