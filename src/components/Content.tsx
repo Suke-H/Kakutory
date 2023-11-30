@@ -4,11 +4,9 @@ import { Home } from './contents/Home';
 import { Game } from './contents/Game';
 import { About } from './contents/About';
 import { Diary } from './contents/Diary';
-import { DiaryContent } from './contents/DiaryContent';
-import { DiaryList } from './contents/DiaryList';
 import { Gallery } from './contents/Gallery';
+import { NotFound } from './contents/NotFound';
 import { Routes, Route } from 'react-router-dom';
-import { AllDiarySummary } from './contents/AllDiarySummary';
 
 export const Content = (): JSX.Element => {
   return (
@@ -19,6 +17,7 @@ export const Content = (): JSX.Element => {
         <Route path="/game" element={<Game />} />
         <Route path="/diary/*" element={<Diary />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </>
   );

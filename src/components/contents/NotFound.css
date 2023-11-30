@@ -1,0 +1,18 @@
+.NotFound {
+    color: #585858;
+    font-weight: bold;
+    text-align: center;
+
+    min-height: 50vh;
+}
+
+
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .NotFound {
+        min-height: 80vh;
+    }
+
+  }
