@@ -1,6 +1,5 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import React from 'react';
-
 import 'zenn-content-css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -14,7 +13,8 @@ export const DiaryContent = (): JSX.Element => {
     const [error, setError] = useState<boolean>(false);
 
     useEffect(() => {
-      const filePath = `/src/components/contents/diarys/${id}.html`;
+        // const filePath = `/src/assets/diaryContents/${id}.html`;
+        const filePath = `/diaryContents/${id}.html`;
       fetch(filePath)
       .then(async response => {
         if (!response.ok) { // レスポンスのステータスが OK (200) でない場合
@@ -28,6 +28,7 @@ export const DiaryContent = (): JSX.Element => {
       })
       .catch(error => {
           console.error('Error fetching HTML:', error);
+          console.log('path:', filePath);
           setError(true);
       });
     }, [id]);
