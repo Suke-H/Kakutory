@@ -14,15 +14,17 @@
 https://kakutory.com
 
 # 🔧 使用技術
-
-- Vite
-   - React + TypeScript
-   <!-- - Tailwind CSS -->
-   - Material UI
 - AWS
    - S3
    - CloudFront
    - Route53
+- Vite
+   - React + TypeScript
+   <!-- - Tailwind CSS -->
+   - Material UI
 - GitHub Actions
    - OIDC
-- [zenn-editor](https://github.com/zenn-dev/zenn-editor)
+- [zenn-editor](https://github.com/zenn-dev/zenn-editor)：markdownドキュメントのhtml化
+   - zenn-markdown-html
+   - zenn-contents-css
+
