@@ -18,10 +18,11 @@ https://kakutory.com
 - Vite
    - React + TypeScript
    <!-- - Tailwind CSS -->
-   <!-- - Material UI -->
+   - Material UI
 - AWS
    - S3
    - CloudFront
    - Route53
 - GitHub Actions
-<!-- - [zenn-editor](https://github.com/zenn-dev/zenn-editor) -->
+   - OIDC
+- [zenn-editor](https://github.com/zenn-dev/zenn-editor)
