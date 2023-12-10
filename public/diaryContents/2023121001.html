@@ -18,10 +18,6 @@ markdownをzenn形式のhtmlに変換してくれるOSSです。</p>
 </div></aside>
 <div class="code-block-container"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token imports">fs</span> <span class="token keyword module">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span>
 <span class="token keyword module">import</span> <span class="token imports">lib</span> <span class="token keyword module">from</span> <span class="token string">"zenn-markdown-html"</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> markdownToHtml <span class="token operator">=</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">?</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">:</span> lib<span class="token punctuation">;</span>
-
-<span class="token comment">// Markdownファイルの読み込み</span>
-<span class="token keyword">const</span> markdown <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">readFileSync</span><span class="token punctuation">(</span><span class="token string">'src/example.md'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token comment">// MarkdownをHTMLに変換</span>
 <span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token function">markdownToHtml</span><span class="token punctuation">(</span>markdown<span class="token punctuation">)</span><span class="token punctuation">;</span>
