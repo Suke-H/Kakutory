@@ -3,6 +3,7 @@
 import 'zenn-content-css';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './DiaryContent.css'
 
 import { NotFound } from './NotFound';
 
@@ -38,11 +39,7 @@ export const DiaryContent = (): JSX.Element => {
     }
 
     return (
-        <div className="znc" style={{
-             width: "70%",
-             margin: "0 auto",
-             maxWidth: "800px",
-             }}>
+        <div className="znc">
             <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
     );

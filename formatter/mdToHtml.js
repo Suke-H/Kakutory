@@ -19,16 +19,16 @@ files.forEach(file => {
         // プリント
         console.log(outputFilePath);
 
-        // 対応するHTMLファイルが存在しない場合のみ変換を実行
-        // if (!fs.existsSync(outputFilePath)) {
-        //     // プリント
-        //     console.log("変換を実行");
+        対応するHTMLファイルが存在しない場合のみ変換を実行
+        if (!fs.existsSync(outputFilePath)) {
+            // プリント
+            console.log("変換を実行");
 
             const markdown = fs.readFileSync(path.join(markdownDir, file), 'utf8');
             const html = markdownToHtml(markdown);
             fs.writeFileSync(outputFilePath, html);
             console.log(`Converted ${file} to HTML.`);
-        // }   
+        }   
 
     
     }
