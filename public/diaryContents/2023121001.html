@@ -1,0 +1,44 @@
+<h1 id="%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81"><a class="header-anchor-link" href="#%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA%E3%82%B5%E3%82%A4%E3%83%88%E3%82%92%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81" aria-hidden="true"></a> ポートフォリオサイトを作りました！</h1>
+<p>所属しているコミュニティの方が作品をポートフォリオをつくっているのを見て、<br />
+自分も作りたくなり、せっかくならとサイトを立ち上げてみました！<br />
+使用技術に関しては別の日記にまとめようかなと思い、<br />
+この日記ではこのサイトでの目標・やりたいことを書いていきます。</p>
+<h2 id="1.-%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA"><a class="header-anchor-link" href="#1.-%E3%83%9D%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%AA%E3%82%AA" aria-hidden="true"></a> 1. ポートフォリオ</h2>
+<p>そのまんまですが、メインの目標です。<br />
+主に制作した作品をまとめたりして、自分の活動をざっくりアピールできる場にできたらと思います。<br />
+作品はゲームだけでなく、Web系の制作物も載せていきたいなと思っています。<br />
+もちろんこのサイト自体も制作物としたいので、もう少し手を入れていきます。<br />
+現在イラストの練習をしているのでそのうちギャラリーページなども作れたら楽しそうだけど、それはのちのち。</p>
+<h2 id="2.-%E9%96%8B%E7%99%BA%E8%80%85%E3%83%96%E3%83%AD%E3%82%B0"><a class="header-anchor-link" href="#2.-%E9%96%8B%E7%99%BA%E8%80%85%E3%83%96%E3%83%AD%E3%82%B0" aria-hidden="true"></a> 2. 開発者ブログ</h2>
+<p>はてなブログみたいな開発者ブログに憧れがあり...<br />
+開発日記を書いていきつつ、個人的なブログとしても使っていきたいです。<br />
+また、この日記の作成・フォーマットに<a href="https://github.com/zenn-dev/zenn-editor" target="_blank" rel="nofollow noopener noreferrer">zenn-editor</a>を使っています。<br />
+markdownをzenn形式のhtmlに変換してくれるOSSです。</p>
+<aside class="msg message"><span class="msg-symbol">!</span><div class="msg-content"><p>こんなこともできます。</p>
+</div></aside>
+<div class="code-block-container"><pre class="language-js"><code class="language-js"><span class="token keyword module">import</span> <span class="token imports">fs</span> <span class="token keyword module">from</span> <span class="token string">'fs'</span><span class="token punctuation">;</span>
+<span class="token keyword module">import</span> <span class="token imports">lib</span> <span class="token keyword module">from</span> <span class="token string">"zenn-markdown-html"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> markdownToHtml <span class="token operator">=</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">?</span> lib<span class="token punctuation">.</span><span class="token keyword module">default</span> <span class="token operator">:</span> lib<span class="token punctuation">;</span>
+
+<span class="token comment">// Markdownファイルの読み込み</span>
+<span class="token keyword">const</span> markdown <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token method function property-access">readFileSync</span><span class="token punctuation">(</span><span class="token string">'src/example.md'</span><span class="token punctuation">,</span> <span class="token string">'utf8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// MarkdownをHTMLに変換</span>
+<span class="token keyword">const</span> html <span class="token operator">=</span> <span class="token function">markdownToHtml</span><span class="token punctuation">(</span>markdown<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+</code></pre></div><p>すんごいありがたいOSSですね。使いこなしていきたい...</p>
+<h2 id="3.-%E8%87%AA%E4%BD%9C%E3%82%B2%E3%83%BC%E3%83%A0%E7%BD%AE%E3%81%8D%E5%A0%B4"><a class="header-anchor-link" href="#3.-%E8%87%AA%E4%BD%9C%E3%82%B2%E3%83%BC%E3%83%A0%E7%BD%AE%E3%81%8D%E5%A0%B4" aria-hidden="true"></a> 3. 自作ゲーム置き場</h2>
+<p>いまのところunityroomにアップロードした作品を載せていますが、<br />
+自作ゲーム置き場として使ってもみたいです。<br />
+UnityのWebGLビルドもですが、ブラウザ特化のゲームも作っていけたらとも思っています。<br />
+（<a href="https://www.asahi-net.or.jp/~cs8k-cyu/" target="_blank" rel="nofollow noopener noreferrer">ABA GAMESさん</a>のようなことができたらとても嬉しい...）</p>
+<p>この部分はこれから検討って感じですが、ぜひやっていきたいですね。</p>
+<h2 id="%E3%81%95%E3%81%84%E3%81%94%E3%81%AB"><a class="header-anchor-link" href="#%E3%81%95%E3%81%84%E3%81%94%E3%81%AB" aria-hidden="true"></a> さいごに</h2>
+<p>自分のホームページを作ること自体は、昔から憧れがありました。<br />
+それこそ高校の頃に、Web系の技術に明るい同級生が作っていたものを見て、情報系に憧れた部分があり...<br />
+この年になってやっとこさ始めてみたのですが、<br />
+こんなにドメイン取得簡単なんだなーとか、うまいことやれば運用費もそこまでかからないなとか、色々学びがありました。<br />
+何事もやってみるもんですね。</p>
+<p>そして何より楽しいです。わからないことも多いですが、Web技術をうまいこと使えてる実感がしますし、<br />
+こういうやりたいことを形にできる作業はとても好きです。<br />
+あとはこのサイトを有効活用していけたらと思います。がんばるぞー</p>
