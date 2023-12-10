@@ -3,25 +3,18 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
-      id: 2023112002,
-      title: 'G検定の勉強',
-      // thumbnail: '/src/assets/diarySam/general.png',
+      id: 2023121002,
+      title: 'このサイトの使用技術について',
       thumbnail: '/diarySam/general.png',
-      date: '2023-11-20',
-      tags: ['G検定', 'ディープラーニング'],
+      date: '2023-12-08',
+      tags: ['Web開発', 'AWS', 'React', 'TypeScript'],
     },
     {
-      id: 2023111701,
-      title: 'ホームページつくりました！',
+      id: 2023121001,
+      title: 'ポートフォリオサイトを作りました！',
       thumbnail: '/diarySam/nikki.png',
-      date: '2023-11-17',
+      date: '2023-12-08',
       tags: ['Web開発', 'AWS'],
     },
-    {
-      id: 2023112001,
-      title: '釣りに行った話',
-      thumbnail: '/diarySam/tsuri.png',
-      date: '2023-11-20',
-      tags: ['日記'],
-    },
+
   ];

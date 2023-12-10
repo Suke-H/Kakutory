@@ -1,0 +1,53 @@
+<h1 id="%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E4%BD%BF%E7%94%A8%E6%8A%80%E8%A1%93"><a class="header-anchor-link" href="#%E3%81%93%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%88%E3%81%AE%E4%BD%BF%E7%94%A8%E6%8A%80%E8%A1%93" aria-hidden="true"></a> このサイトの使用技術</h1>
+<p>このサイトで使用している技術についてご紹介します。</p>
+<p><a href="https://github.com/Suke-H/Kakutory/" target="_blank" rel="nofollow noopener noreferrer">GitHubリポジトリ</a>のREADMEに大まかな箇条書きはしていますが、<br />
+このページではより詳しく説明していきます。</p>
+<h2 id="1.-%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9"><a class="header-anchor-link" href="#1.-%E3%82%A4%E3%83%B3%E3%83%95%E3%83%A9" aria-hidden="true"></a> 1. インフラ</h2>
+<p>インフラにはAWSを使用しています。ざっくりこんな感じ。</p>
+<ul>
+<li>S3: 静的ホスティング</li>
+<li>Route53: ドメイン取得</li>
+<li>CloudFront: HTTPS化</li>
+</ul>
+<p>人生初のドメイン取得でしたが、こんな簡単にできるとは...<br />
+運用自体も、静的ホスティングなので結構安く済んでてありがたいです。</p>
+<p>また、一度「AWSクラウドプラクティショナー」の資格を取ってから臨んだので、<br />
+これ試験でやったやつ！というのが多くて楽しかったです。<br />
+アーキテクチャ図とかそのうち描けるようになりたい。</p>
+<h2 id="2.-%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89"><a class="header-anchor-link" href="#2.-%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89" aria-hidden="true"></a> 2. フロントエンド</h2>
+<p>まず、環境構築はViteで行っています。<a href="https://zenn.dev/sikkim/articles/93bf99d8588e68" target="_blank">こちらの記事</a>を参考にしました。<br />
+Viteで新規プロジェクトを作成することで、ガイドに沿っていけば自分が実現したい開発環境を構築できます。<br />
+自分はReact + TypeScriptにしました。<br />
+ホットリロードでの開発やビルドも、全てVite内で完結できています。</p>
+<p>こんな感じの<code>package.json</code>が作られ、</p>
+<div class="code-block-container"><pre class="language-json"><code class="language-json">  <span class="token property">"scripts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"dev"</span><span class="token operator">:</span> <span class="token string">"vite"</span><span class="token punctuation">,</span>
+    <span class="token property">"build"</span><span class="token operator">:</span> <span class="token string">"tsc &amp;&amp; vite build"</span><span class="token punctuation">,</span>
+    <span class="token property">"preview"</span><span class="token operator">:</span> <span class="token string">"vite preview"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div><p><code>npm run dev</code>で開発、<code>npm run build</code>でビルド、<code>npm run preview</code>でビルドのプレビューができます。</p>
+<p>また、ReactのUIコンポーネントライブラリである<a href="https://mui.com/" target="_blank" rel="nofollow noopener noreferrer">Material-UI(MUI)</a>も一部に使用しています。<br />
+簡単にリッチなUIが作れて、いい感じですね。現在は日記一覧のページに使用しています。</p>
+<h2 id="3.-cd"><a class="header-anchor-link" href="#3.-cd" aria-hidden="true"></a> 3. CD</h2>
+<p>デプロイに必要な以下の手順を、GitHub Actionsで自動化させています。</p>
+<ol>
+<li>Viteによるビルド</li>
+<li>S3へアップロード</li>
+<li>CloudFrontのキャッシュ削除</li>
+</ol>
+<p>CDは憧れだったので、これができて嬉しいです。<br />
+AWSとの連携部分には、OpenID Connect(OIDC)認証を利用しています。<br />
+AWSの操作が自動化できるのは大きいです！かなり役立ってます。</p>
+<p>ちなみにこちらの<a href="https://www.udemy.com/course/cicd-with-github-actions/" target="_blank" rel="nofollow noopener noreferrer">Udemy教材</a>を大いに参考にしました。</p>
+<h2 id="4.-%E3%81%9D%E3%81%AE%E4%BB%96"><a class="header-anchor-link" href="#4.-%E3%81%9D%E3%81%AE%E4%BB%96" aria-hidden="true"></a> 4. その他</h2>
+<p>その他として、この日記の作成・フォーマットに<a href="https://github.com/zenn-dev/zenn-editor" target="_blank" rel="nofollow noopener noreferrer">zenn-editor</a>を使っています。<br />
+markdownドキュメントを、zenn形式のhtmlに変換してくれるライブラリです。<br />
+一気に開発者ブログ感がでるので、とてもありがたい。</p>
+<p>現在はローカルでこのライブラリを実行し、そのまま貼り付けているスタイルです。<br />
+...なんかスマートじゃないので、もう少しいい方法があればなあと。</p>
+<h2 id="%E3%81%BE%E3%81%A8%E3%82%81"><a class="header-anchor-link" href="#%E3%81%BE%E3%81%A8%E3%82%81" aria-hidden="true"></a> まとめ</h2>
+<p>ざっとこのような技術を使って、このサイトを作っています。<br />
+始めたばかりではありますが、開発していてとても楽しいです！！<br />
+大変な部分はあったものの、「まあ何とかなるんだな」とわかったのが一番の発見です。<br />
+これから自分の場所にしていけたらと思います。<br />
+まだまだやること、改善できることは多いので、ゆっくりやっていきます。</p>
