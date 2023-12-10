@@ -35,6 +35,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.3",
+    "rollup-plugin-rewrite": "^0.0.4",
     "typescript": "^5.2.2",
     "vite": "^4.4.5",
     "zenn-markdown-html": "^0.1.149"
