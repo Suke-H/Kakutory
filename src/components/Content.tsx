@@ -13,9 +13,9 @@ export const Content = (): JSX.Element => {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/game" element={<Game />} />
-        <Route path="/diary/*" element={<Diary />} />
+        <Route path="/about" element={<About isHome={false}/>} />
+        <Route path="/game" element={<Game isHome={false}/>} />
+        <Route path="/diary/*" element={<Diary isHome={false}/>} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
