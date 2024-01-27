@@ -1,0 +1,13 @@
+.znc {
+    width: 40%;
+    margin: 0 auto;
+    max-width: 800px;
+
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    .znc {
+        width: 90%;
+    }
+}

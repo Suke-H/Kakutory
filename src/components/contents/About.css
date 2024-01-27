@@ -16,58 +16,6 @@
     font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
 }
 
-.container {
-    display: flex;
-    align-items: center;
-}
-  
-.logo img {
-    margin-top: 20px;
-    width: 150px; /* ロゴのサイズは適宜調整してください */
-    height: auto;
-}
-
-.icons img {
-    width: 30px;
-    height: auto;
-}
-  
-.titles {
-    margin-left: 30px; 
-    margin-top: 20px;
-
-    align-self: flex-start;
-}
-  
-.titles p {
-    font-size: 36px;
-    margin: 0 0 15px 20px;
-    text-align: left;
-}
-
-.titles ul {
-    margin-top: 0px;
-    margin-left: 0px;
-    text-align: left;
-}
-
-.titles li {
-    font-size: 18px;
-    margin-left: 0;
-    margin-bottom: 10px;
-    text-align: left;
-}
-  
-.icons {
-    display: flex;
-    gap: 10px; 
-    margin-left: 20px; 
-}
-  
-.icons span {
-    font-size: 24px; 
-}
-
   @media (max-width:1024px) {
   }
 
