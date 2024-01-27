@@ -2,7 +2,6 @@
 // import React from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import kakutorySVG from '../assets/kakutory.svg';
 import kakutoryPNG from '../assets/kakutory.png';
 import './Header.css';
 
