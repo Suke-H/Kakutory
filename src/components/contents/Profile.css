@@ -51,3 +51,61 @@
 .icons span {
     font-size: 24px; 
 }
+
+@media (max-width:1024px) {
+}
+
+@media (max-width:600px) {
+  .about {
+      min-height: 80vh;
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+  .logo img {
+    margin-top: 20px;
+    width: 100px;
+    height: auto;
+    }
+
+    .icons img {
+    width: 20px;
+    height: auto;
+    margin-top: 10px;
+    }
+    .icons {
+        margin-left: 0; 
+    }
+
+  .column {
+      font-size: 30px;
+  }
+
+  .titles {
+    margin-left: 0; 
+    margin-top: 10px;
+    align-self: flex-start;
+    }
+  
+.titles p {
+    font-size: 28px;
+    margin: 0 0 15px 20px;
+    text-align: left;
+}
+
+.titles ul {
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: left;
+}
+
+.titles li {
+    font-size: 16px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: left;
+}
+  
+}
