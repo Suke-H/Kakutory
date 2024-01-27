@@ -35,7 +35,7 @@ export const Profile = (): JSX.Element => {
             <div className="titles">
                 <p>かくひと</p>
                 <ul>
-                    <li>おもいつきゲームクリエイター</li>
+                    <li>おもいつきゲーム制作者</li>
                     <li>かけだしWebエンジニア</li>
                 </ul>
             </div>
