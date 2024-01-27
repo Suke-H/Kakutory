@@ -20,8 +20,9 @@
 }
 
 .title-image {
-  width: 48vh;
-  height: 8vh;
+  /* width: 48vh;
+  height: 8vh; */
+  width: 52vh;
   transition: transform 0.3s ease;
 }
 
@@ -77,8 +78,9 @@
   }
 
   .title-image {
-    width: 36vh;
-    height: 6vh;
+    /* width: 36vh;
+    height: 6vh; */
+    width: 40vh;
   }
 
   .menu-icon {

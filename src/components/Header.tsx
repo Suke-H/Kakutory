@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import kakutorySVG from '../assets/kakutory.svg';
+import kakutoryPNG from '../assets/kakutory.png';
 import './Header.css';
 
 export const Header = (): JSX.Element => {
@@ -36,7 +37,7 @@ export const Header = (): JSX.Element => {
       </div>
 
       <Link to="/" className="title">
-        <img src={kakutorySVG} alt="kakutory" className="title-image" />
+        <img src={kakutoryPNG} alt="kakutory" className="title-image" />
       </Link>
 
       <div className="headerSeparateLine"></div>
