@@ -36,7 +36,7 @@ export const AboutContent = (): JSX.Element => {
     }
 
     return (
-        <div className="znc">
+        <div className="znc" id="znc-about">
             <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
         </div>
     );

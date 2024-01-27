@@ -8,6 +8,7 @@ import memory from '../../assets/home/memory.png';
 
 import './Game.css';
 import { type IsHomeProp } from './IsHomeProp';
+import Button from '@mui/material/Button';
 
 interface LinkedImageProps {
     url: string;
@@ -55,7 +56,20 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             </div>
 
             {isHome ? 
-                <a href="/#/game/" className='read-more'>{">>"} READ MORE</a>
+                <a href="/#/game/" className='read-more'>
+                    <Button 
+                        variant="contained"
+                        sx={{ 
+                            marginTop: '80px',
+                            marginBottom: '50px',
+                            backgroundColor: '#585858',
+                            '&:hover': {
+                                backgroundColor: '#585858',
+                            },
+                        }}>
+                        MORE
+                    </Button>
+                </a>
                 : (
                     <></>
                 )

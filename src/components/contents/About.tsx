@@ -6,6 +6,7 @@ import { AboutContent } from './AboutContent';
 import { Profile } from './Profile';
 import './About.css';
 import { type IsHomeProp } from './IsHomeProp';
+import Button from '@mui/material/Button';
 
 export const About = ({ isHome }: IsHomeProp): JSX.Element => {
     return (
@@ -15,7 +16,21 @@ export const About = ({ isHome }: IsHomeProp): JSX.Element => {
             <Profile />
 
             {isHome ? 
-                <a href="/#/about/" className='read-more'>{">>"} READ MORE</a>
+                <a href="/#/about/" className='read-more'>
+                    <Button 
+                        variant="contained"
+                        sx={{ 
+                            marginTop: '50px',
+                            marginButtom: '50px',
+                            backgroundColor: '#585858',
+                            '&:hover': {
+                                backgroundColor: '#585858',
+                            },
+                    }}>
+                        MORE
+                    </Button>
+                </a>
+                
                 : (
                     <AboutContent />
                 )
