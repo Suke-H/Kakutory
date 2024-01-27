@@ -7,6 +7,8 @@ import chocomint from '../../assets/home/chocomint.png';
 import memory from '../../assets/home/memory.png';
 
 import './Game.css';
+import { type IsHomeProp } from './IsHomeProp';
+import Button from '@mui/material/Button';
 
 interface LinkedImageProps {
     url: string;
@@ -25,7 +27,7 @@ const LinkedImage = (props: LinkedImageProps): JSX.Element => {
     )
 }
 
-export const Game = (): JSX.Element => {
+export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
     return (
         <div className='game'>
@@ -52,6 +54,27 @@ export const Game = (): JSX.Element => {
                     alt="マトン君 記憶探しの旅"
                 />
             </div>
+
+            {isHome ? 
+                <a href="/#/game/" className='read-more'>
+                    <Button 
+                        variant="contained"
+                        sx={{ 
+                            marginTop: '80px',
+                            marginBottom: '50px',
+                            backgroundColor: '#585858',
+                            '&:hover': {
+                                backgroundColor: '#585858',
+                            },
+                        }}>
+                        MORE
+                    </Button>
+                </a>
+                : (
+                    <></>
+                )
+            }
+
         </div>
     );
 }

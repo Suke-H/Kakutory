@@ -3,7 +3,16 @@
     font-weight: bold;
     text-align: center;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     min-height: 50vh;
+
+}
+
+.read-more {
 }
 
 .column {
@@ -11,22 +20,12 @@
     font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
 }
 
-.cornImg {
-    margin-top: 50px;
-}
-
-.underConstruction {
-    font-size: 30px;
-    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
-    margin-top: 50px;
-}
-
   @media (max-width:1024px) {
   }
 
   @media (max-width:600px) {
     .about {
-        min-height: 80vh;
+        min-height: 60vh;
     }
 
     .column {
