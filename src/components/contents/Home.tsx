@@ -9,8 +9,8 @@ import './Home.css';
 export const Home = (): JSX.Element => {
     return (
         <div className='home'>
-            <About isHome={true}/>
             <Game isHome={true}/>
+            <About isHome={true}/>
             <Diary isHome={true}/>
 
             {/* <h1>CONTACT</h1> */}
