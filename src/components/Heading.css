@@ -33,9 +33,12 @@
     font-size: 36px;
 }
 
-
 /* スマホ */
 @media (max-width:600px) {
+    .heading {
+        margin-top: 20px;
+    }
+
     .emphasis_mark {
         width: 25px;
     }

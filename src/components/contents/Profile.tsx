@@ -15,6 +15,8 @@ import note from '../../assets/about/SNS/note-icon.png';
 
 export const Profile = (): JSX.Element => {
     return (
+      <>
+      <a href="/#/about">
         <Card sx={{ 
             display: 'flex', 
             
@@ -130,6 +132,8 @@ export const Profile = (): JSX.Element => {
             </Typography>
           </CardContent>
         </Card>
+      </a>
+      </>
     );
 
     

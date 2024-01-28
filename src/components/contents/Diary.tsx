@@ -29,7 +29,7 @@ export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
                   <Button 
                       variant="contained"
                       sx={{ 
-                          marginTop: '50px',
+                          marginTop: {xs: "20px", md: '50px'},
                           marginButtom: '50px',
                           backgroundColor: '#585858',
                           '&:hover': {

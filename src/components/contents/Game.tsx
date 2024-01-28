@@ -64,7 +64,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                     <Button 
                         variant="contained"
                         sx={{ 
-                            marginTop: '80px',
+                            marginTop: {xs: "40px", md: '80px'},
                             marginBottom: '50px',
                             backgroundColor: '#585858',
                             '&:hover': {
