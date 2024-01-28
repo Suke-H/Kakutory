@@ -10,13 +10,13 @@ interface HeadingProps {
 export const Heading = ( { text } : HeadingProps ): JSX.Element => {
     return (
         <div className='heading'>
-            <div className='emphasis'>
+            <div className='left-box'>
                 <img src={emphasis_mark} alt='強調マーク' className="emphasis_mark"/>
             </div>
-            
-            <div className='heading-text'>
+            <div className='center-box'>
                 {text}
             </div>
+            <div className='right-box'></div>
         </div>
     );
 }
