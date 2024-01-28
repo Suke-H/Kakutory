@@ -3,12 +3,14 @@
 import { About } from './About';
 import { Game } from './Game';
 import { Diary } from './Diary';
+// import { Welcome } from './Welcome';
 
 import './Home.css';
 
 export const Home = (): JSX.Element => {
     return (
         <div className='home'>
+            {/* <Welcome /> */}
             <About isHome={true}/>
             <Game isHome={true}/>
             <Diary isHome={true}/>

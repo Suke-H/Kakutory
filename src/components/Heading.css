@@ -1,0 +1,46 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.left-box, .right-box {
+    flex: 1; /* 左右のボックスに等しい幅を与える */
+    display: flex;
+    align-items: center;
+}
+
+.left-box {
+    justify-content: flex-end; /* emphasis_mark を右端に寄せる */
+}
+
+.emphasis_mark {
+    width: 30px;
+}
+
+.center-box {
+    flex: 0 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* テキストを下に揃える */
+    height: 80px;
+    border-bottom: 3px solid #585858;
+    padding-bottom: 0.5px;
+
+    font-size: 36px;
+}
+
+
+/* スマホ */
+@media (max-width:600px) {
+    .emphasis_mark {
+        width: 25px;
+    }
+
+    .center-box {
+        font-size: 30px;
+    }
+}

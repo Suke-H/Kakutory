@@ -4,18 +4,21 @@
 // import { Link } from "react-router-dom";
 import { Routes, Route } from 'react-router-dom';
 
-import './Diary.css';
-
+import { Heading } from '../Heading';
 import { DiaryList } from './DiaryList';
 import { AllDiarySummary } from './AllDiarySummary';
 import { DiaryContent } from './DiaryContent';
 import { type IsHomeProp } from './IsHomeProp';
 
+import './Diary.css';
 import Button from '@mui/material/Button';
   
 export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
     return (
         <div className='diary'>
+
+          <Heading text={"DIARYS"} />
+
           <Routes>
             <Route path="/" element={<DiaryList allDiarySummary={AllDiarySummary} />} />
             <Route path="/:id" element={<DiaryContent />} />
