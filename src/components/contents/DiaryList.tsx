@@ -26,8 +26,6 @@ export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary }) => {
     return (
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        <h1 className="column">DIARY</h1>
-      
         {allDiarySummary.map((diary) => (
           <Link to={`/diary/${diary.id}`} key={diary.id} style={{ width: "100%" }}>
           <Card key={diary.id} sx={{ 

@@ -1,14 +1,17 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import { Link } from "react-router-dom";
 // import React from 'react';
+
+import { Heading } from '../Heading';
+import { type IsHomeProp } from './IsHomeProp';
+
+import './Game.css';
+import Button from '@mui/material/Button';
+
 import strayBot from '../../assets/home/strayBot.png';
 import shikakuReversi from '../../assets/home/shikakuReversi.png';
 import chocomint from '../../assets/home/chocomint.png';
 import memory from '../../assets/home/memory.png';
-
-import './Game.css';
-import { type IsHomeProp } from './IsHomeProp';
-import Button from '@mui/material/Button';
 
 interface LinkedImageProps {
     url: string;
@@ -31,7 +34,8 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
     return (
         <div className='game'>
-            <h1 className="column">GAMES</h1>
+
+            <Heading text={"GAMES"} />
             <div className='imageWrapper'>
                 <LinkedImage 
                     url="https://unityroom.com/games/stray_bot"

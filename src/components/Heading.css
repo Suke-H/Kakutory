@@ -1,0 +1,24 @@
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+.emphasis {
+
+}
+
+.emphasis_mark {
+    width: 30px;
+}
+
+.heading-text {
+    /* 下揃え */
+    align-self: flex-end;
+
+    font-size: 36px;
+    text-align: left;
+}
+
