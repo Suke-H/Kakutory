@@ -13,8 +13,6 @@ import github from '../../assets/about/SNS/github-mark.png';
 import zenn from '../../assets/about/SNS/zenn-logo-only.svg';
 import note from '../../assets/about/SNS/note-icon.png';
 
-import './Profile.css';
-
 export const Profile = (): JSX.Element => {
     return (
         <Card sx={{ 
