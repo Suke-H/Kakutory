@@ -15,7 +15,9 @@ export const About = ({ isHome }: IsHomeProp): JSX.Element => {
         <div className='about'>
             <Heading text={"ABOUT"} />
 
-            <Profile />
+            <div className='about-profile'>
+                <Profile />
+            </div>
 
             {isHome ? 
                 <a href="/#/about/" className='read-more'>

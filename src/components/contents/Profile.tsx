@@ -17,53 +17,32 @@ import './Profile.css';
 
 export const Profile = (): JSX.Element => {
     return (
-      <>
-        <div className="container">
-            <div className="logo">
-                <img src={kakuhito} alt="かくひと" />
-
-                <div className="icons">
-                    <a href="https://twitter.com/kakuhito_66">
-                        <img src={x}  alt="X" />
-                    </a>
-                    <a href="https://github.com/Suke-H/">
-                        <img src={github} alt="GitHub" />
-                    </a>
-                    <a href='https://zenn.dev/kakuhito'>
-                        <img src={zenn} alt="Zenn" />
-                    </a>
-
-                    <a href='https://note.com/kaku_suke_33'>
-                        <img src={note} alt="note" />
-                    </a>
-                </div>
-            </div>
-            <div className="titles">
-                <p>かくひと</p>
-                <ul>
-                    <li>おもいつきゲーム制作者</li>
-                    <li>かけだしWebエンジニア</li>
-                </ul>
-            </div>
-
-        </div>
-
-        {/* return ( */}
         <Card sx={{ 
             display: 'flex', 
+            
             maxWidth: 800, 
             backgroundColor: "#E9E9E9",
             border: '1px solid #e0e0e0', 
             borderRadius: '16px', 
             overflow: 'hidden', 
-            fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','),  
+
         }}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', p: 2 }}>
+          <Box 
+            sx={{ 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'space-between', 
+              p: {xs: 0 , md:  2 },
+              marginTop: {xs: "20px" , md: 0 },
+              marginLeft: {xs: "20px" , md: 0 },
+              }}
+            >
             <Box
               component="img"
               sx={{
-                height: 150,
-                width: 150,
+                width:{ xs: "100px", md: "150px" } ,
+                
               }}
               alt="Character Image"
               src={kakuhito}
@@ -73,28 +52,28 @@ export const Profile = (): JSX.Element => {
                 <img
                   src={x}
                   alt="x"
-                  style={{ width: 30, marginRight: 8 }}
+                  style={{ width: 20, marginRight: 8 }}
                 />
               </a>
               <a href="https://github.com/Suke-H/" target="_blank" rel="noopener noreferrer">
                 <img
                   src={github}
                   alt="github"
-                  style={{ width: 30, marginRight: 8 }}
+                  style={{ width: 20, marginRight: 8 }}
                 />
               </a>
               <a href="https://zenn.dev/kakuhito" target="_blank" rel="noopener noreferrer">
                 <img
                   src={zenn}
                   alt="zenn"
-                  style={{ width: 30, marginRight: 8 }}
+                  style={{ width: 20, marginRight: 8 }}
                 />
               </a>
               <a href="https://note.com/kaku_suke_33" target="_blank" rel="noopener noreferrer">
                 <img
                   src={note}
                   alt="note"
-                  style={{ width: 30, marginRight: 8 }}
+                  style={{ width: 20, marginRight: 8 }}
                 />
               </a>
             </Box>
@@ -102,14 +81,15 @@ export const Profile = (): JSX.Element => {
           <CardContent 
             sx={{ 
               // flex: '1 0 auto' ,
-              marginRight: "20px",
+              marginRight: {xs: 0, md: "20px"},
+              padding: {xs: "16px 16px 24px 8px", md: "16px 16px 24px 16px"},
               }}>
             <Typography gutterBottom variant="h5" component="div"
                 sx={{
                     fontWeight: "bold",
                     color: "#585858",
-                    fontSize: "36px",
-                    margin: "10px 0 20px 20px",
+                    fontSize: {xs: "28px", md: "36px"},
+                    margin: {xs: "0 0 20px 10px", md: "10px 0 20px 20px"},
                     textAlign: "left",
                     fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','), 
                     }}>
@@ -119,19 +99,39 @@ export const Profile = (): JSX.Element => {
               sx={{
                 fontWeight: "bold",
                 color: "#585858",
-                fontSize: "18px",
-                margin: "0 0 10px 20px",
+                fontSize: {xs: "14px", md: "18px"},
+                margin: {xs:  "0 0 10px 5px", md: "0 0 10px 20px"},
                 textAlign: "left",
                 fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','), 
+
+                display: "list-item",
+                listStyleType: "disc",
+                listStylePosition: "inside",
+                marginBottom: "10px",
               }}
               >
-                <span className="list-style">おもいつきゲーム制作者</span>
-                <span className="list-style">かけだしWebエンジニア</span>
+                おもいつきゲーム制作者
+            </Typography>
+
+            <Typography variant="body2" color="text.secondary" 
+              sx={{
+                fontWeight: "bold",
+                color: "#585858",
+                fontSize: {xs: "14px", md: "18px"},
+                margin: {xs:  "0 0 10px 5px", md: "0 0 10px 20px"},
+                textAlign: "left",
+                fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','), 
+
+                display: "list-item",
+                listStyleType: "disc",
+                listStylePosition: "inside",
+                marginBottom: "10px",
+              }}
+              >
+                かけだしWebエンジニア
             </Typography>
           </CardContent>
         </Card>
-      {/* ); */}
-        </>
     );
 
     

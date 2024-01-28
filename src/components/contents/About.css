@@ -3,12 +3,12 @@
     font-weight: bold;
     text-align: center;
 
+    /* min-height: 50vh; */
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    /* min-height: 50vh; */
 }
 
 .column {
