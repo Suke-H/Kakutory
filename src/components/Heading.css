@@ -14,11 +14,11 @@
 }
 
 .left-box {
-    justify-content: flex-end; /* emphasis-mark を右端に寄せる */
+    justify-content: flex-end; /* emphasis_mark を右端に寄せる */
 }
 
 .emphasis_mark {
-    width: 30px; /* または適切なサイズに設定 */
+    width: 30px;
 }
 
 .center-box {
@@ -33,6 +33,14 @@
     font-size: 36px;
 }
 
-.right-box {
-    /* 必要に応じて追加のスタイリングをここに設定 */
+
+/* スマホ */
+@media (max-width:600px) {
+    .emphasis_mark {
+        width: 25px;
+    }
+
+    .center-box {
+        font-size: 30px;
+    }
 }

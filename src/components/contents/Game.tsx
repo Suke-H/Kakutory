@@ -8,10 +8,10 @@ import { type IsHomeProp } from './IsHomeProp';
 import './Game.css';
 import Button from '@mui/material/Button';
 
-import strayBot from '../../assets/home/strayBot.png';
-import shikakuReversi from '../../assets/home/shikakuReversi.png';
-import chocomint from '../../assets/home/chocomint.png';
-import memory from '../../assets/home/memory.png';
+import strayBot from '../../assets/game/strayBot.png';
+import shikakuReversi from '../../assets/game/shikakuReversi.png';
+import chocomint from '../../assets/game/chocomint.png';
+import memory from '../../assets/game/memory.png';
 
 interface LinkedImageProps {
     url: string;
