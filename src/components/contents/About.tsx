@@ -28,6 +28,7 @@ export const About = ({ isHome }: IsHomeProp): JSX.Element => {
                             '&:hover': {
                                 backgroundColor: '#585858',
                             },
+                            fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','),
                     }}>
                         MORE
                     </Button>

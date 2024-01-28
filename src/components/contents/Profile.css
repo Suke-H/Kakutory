@@ -54,6 +54,8 @@
     display: list-item;
     list-style-type: disc;
     list-style-position: inside;
+
+    margin-bottom: 10px;
 }
 
 @media (max-width:1024px) {
