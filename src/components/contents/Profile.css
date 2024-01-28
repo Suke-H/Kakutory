@@ -50,6 +50,12 @@
     font-size: 24px; 
 }
 
+.list-style {
+    display: list-item;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
 @media (max-width:1024px) {
 }
 

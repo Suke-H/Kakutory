@@ -23,7 +23,7 @@ export const About = ({ isHome }: IsHomeProp): JSX.Element => {
                         variant="contained"
                         sx={{ 
                             marginTop: '50px',
-                            marginButtom: '50px',
+                            marginBottom: '30px',
                             backgroundColor: '#585858',
                             '&:hover': {
                                 backgroundColor: '#585858',

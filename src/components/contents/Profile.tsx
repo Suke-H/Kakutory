@@ -109,10 +109,8 @@ export const Profile = (): JSX.Element => {
               かくひと
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={{color: "#585858"}}>
-                <ul>
-                    <li>おもいつきゲーム制作者</li>
-                    <li>かけだしWebエンジニア</li>
-                </ul>
+                <span className="list-style">おもいつきゲーム制作者</span>
+                <span className="list-style">かけだしWebエンジニア</span>
             </Typography>
           </CardContent>
         </Card>
