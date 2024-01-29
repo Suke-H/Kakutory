@@ -2,13 +2,6 @@
     color: #585858;
     font-weight: bold;
     text-align: center;
-
-    /* min-height: 50vh; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .column {
@@ -20,10 +13,6 @@
   }
 
   @media (max-width:600px) {
-    .about {
-        /* min-height: 60vh; */
-    }
-
     .column {
         font-size: 30px;
     }
