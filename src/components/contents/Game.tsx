@@ -35,7 +35,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
     return (
         <div className='game'>
 
-            <Heading text={"GAMES"} />
+            <Heading text={"GAME"} />
             <div className='imageWrapper'>
                 <LinkedImage 
                     url="https://unityroom.com/games/stray_bot"

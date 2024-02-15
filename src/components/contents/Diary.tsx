@@ -17,7 +17,7 @@ export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
     return (
         <div className='diary'>
 
-          <Heading text={"DIARYS"} />
+          <Heading text={"DIARY"} />
 
           <Routes>
             <Route path="/" element={<DiaryList allDiarySummary={AllDiarySummary} />} />
