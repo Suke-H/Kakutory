@@ -25,7 +25,9 @@ files.forEach(file => {
             console.log("変換を実行");
 
             const markdown = fs.readFileSync(path.join(markdownDir, file), 'utf8');
-            const html = markdownToHtml(markdown);
+            const html = markdownToHtml(markdown, {
+                embedOrigin: 'https://embed.zenn.studio',
+            });
             fs.writeFileSync(outputFilePath, html);
             console.log(`Converted ${file} to HTML.`);
         }   
