@@ -17,8 +17,8 @@
 <span class="embed-block zenn-embedded zenn-embedded-card"><iframe id="zenn-embedded__99a189ea7be13" src="https://embed.zenn.studio/card#zenn-embedded__99a189ea7be13" data-content="https%3A%2F%2Fzenn.dev%2Fsikkim%2Farticles%2F93bf99d8588e68" frameborder="0" scrolling="no" loading="lazy"></iframe></span><a href="https://zenn.dev/sikkim/articles/93bf99d8588e68" style="display:none" target="_blank">https://zenn.dev/sikkim/articles/93bf99d8588e68</a></p>
 <h1 id="%E7%B6%9A%E3%81%8D%EF%BC%88%E6%8C%AB%E6%8A%98%EF%BC%89"><a class="header-anchor-link" href="#%E7%B6%9A%E3%81%8D%EF%BC%88%E6%8C%AB%E6%8A%98%EF%BC%89" aria-hidden="true"></a> 続き（挫折）</h1>
 <p>フロント部分だけは無事に完成しました。作った感触的に「派生も作れるぞ！」と思い至り、バックエンドも含めた派生ゲームの開発に取り掛かったのですが、結果としては失敗に終わりました......<br />
-理由は、作ったものをどうデプロイしたらよいか何もわからんかったから......<br />
-当時「AWSを使いたい！」ということだけ念頭にあり、何となく人に聞いて知ったLightsailというのを使う予定だったのですが、なにぶんEC2みたいなIaaSなので、バックエンド環境を1から構築する必要があり......サーバー構築に何の知識もない自分ではムリでした。<br />
+理由は、作ったものをどうデプロイしたらよいか何もわからんかったから......<br /><br />
+当時「AWSを使いたい！」ということだけ念頭にあり、何となく人に聞いて知ったLightsailというのを使う予定だったのですが、なにぶんEC2みたいなIaaSなので、バックエンド環境を1から構築する必要があり......サーバー構築に何の知識もない自分ではムリでした。<br /><br />
 まずサービスを構築する上では、どうデプロイするかをあらかじめ考えるべきだという大反省になりました。</p>
 <h1 id="aws%E3%81%AE%E5%8B%89%E5%BC%B7"><a class="header-anchor-link" href="#aws%E3%81%AE%E5%8B%89%E5%BC%B7" aria-hidden="true"></a> AWSの勉強</h1>
 <p>そこから数ヶ月経ったのですが、とりあえずAWS何もわからん状態から脱却したくて「AWSクラウドプラクティショナー」を受けてみました。<br />
@@ -34,7 +34,7 @@ AWS資格の中で一番簡単で、「サービス総まとめ」みたいな�
 （*Lambda: 関数を作るようにバックエンド処理を書くことができるサーバーレスサービス）</p>
 <p>......結果、予想以上に簡単にできました！！<br />
 一応構成図を載せておきますが、詳細はまたZennなどで記事を書きたいと思います。<br />
-（素人構成図なので大目に見てくださいorよかったらXで指摘ください）</p>
+（素人構成図なので大目に見てくださいorよかったらX等で指摘ください）</p>
 <p><img src="/images/2024031101/wordle-drawio.png" alt="wordle-drawio" /></p>
 <p>バックエンドにLambda含めてDynamoDBなども使ってるのですが、これもほぼお金かかってません。</p>
 <p>AWSのフルマネージド系のサービスはすごいなと思いました。これらを組み合わせて作った方が間違いなく早いし、現在のサービス使用状況だと料金もかかりません（企業のサービスレベルでリクエストが多い場合は別で、料金が高くなる可能性があります）。</p>
