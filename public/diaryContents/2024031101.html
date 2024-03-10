@@ -1,0 +1,45 @@
+<p><img src="/images/2024031101/wordle-demo.png" alt="Wordle-Demo" width="50%" /></p>
+<h1 id="wordle%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81"><a class="header-anchor-link" href="#wordle%E4%BD%9C%E3%82%8A%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81" aria-hidden="true"></a> Wordle作りました！</h1>
+<p>Wordle*を勉強として作ってみました！<br />
+<a href="https://kakutory.com/game_pages/MyWordleProject/" rel="noreferrer noopener nofollow" target="_blank">https://kakutory.com/game_pages/MyWordleProject/</a><a href="https://kakutory.com/game_pages/MyWordleProject/" style="display:none" target="_blank" rel="nofollow noopener noreferrer">https://kakutory.com/game_pages/MyWordleProject/</a></p>
+<p>（*このプロジェクトはNew York Times社のWordleをもとに模倣しています）<br />
+<a href="https://www.nytimes.com/games/wordle/index.html" rel="noreferrer noopener nofollow" target="_blank">https://www.nytimes.com/games/wordle/index.html</a><a href="https://www.nytimes.com/games/wordle/index.html" style="display:none" target="_blank" rel="nofollow noopener noreferrer">https://www.nytimes.com/games/wordle/index.html</a></p>
+<h1 id="%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91"><a class="header-anchor-link" href="#%E3%81%8D%E3%81%A3%E3%81%8B%E3%81%91" aria-hidden="true"></a> きっかけ</h1>
+<p>Wordleを真似したゲームが作りたいと思ったのがきっかけです。<br />
+僕はWordleがとても好きで、特に「毎日自動でお題を更新する機能」に惹かれます。作者であってもこのゲームを毎日遊べるってすごくいい。<br />
+この機能を活かしたWordleの派生ゲームが作りたいと思い、構想を練り始めたところで、まずは勉強としてオリジナルを真似してみようと、取り掛かりました。</p>
+<h1 id="%E4%BD%9C%E3%82%8A%E3%81%AF%E3%81%98%E3%82%81%EF%BC%88%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%EF%BC%89"><a class="header-anchor-link" href="#%E4%BD%9C%E3%82%8A%E3%81%AF%E3%81%98%E3%82%81%EF%BC%88%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%EF%BC%89" aria-hidden="true"></a> 作りはじめ（フロントエンド）</h1>
+<p>まずはフロントエンドから作り始めました。<br />
+使用した言語はReact、TypeScriptです。UdemyでReactを勉強した後、作成を始めました（ちなみにこちらの講座です）<br />
+<a href="https://www.udemy.com/course/modern_javascipt_react_beginner/" rel="noreferrer noopener nofollow" target="_blank">https://www.udemy.com/course/modern_javascipt_react_beginner/</a><a href="https://www.udemy.com/course/modern_javascipt_react_beginner/" style="display:none" target="_blank" rel="nofollow noopener noreferrer">https://www.udemy.com/course/modern_javascipt_react_beginner/</a></p>
+<p>結果として、ReactでWordleはとても作りやすく、上手く作成できました！<br />
+余談ですが、ReactのStateという概念、ちょっとゲーム制作で使うStateに似てますね。ゲームのState管理としても使えるのかなと思いました。</p>
+<p>また、環境構築にはViteを使いました。このQiita記事の通りに進めましたが、「ホットリロードでの開発、ビルド」がViteで完結するのでほんとに使いやすいです。<br />
+<a href="https://zenn.dev/sikkim/articles/93bf99d8588e68" rel="noreferrer noopener nofollow" target="_blank">https://zenn.dev/sikkim/articles/93bf99d8588e68</a><a href="https://zenn.dev/sikkim/articles/93bf99d8588e68" style="display:none" target="_blank">https://zenn.dev/sikkim/articles/93bf99d8588e68</a></p>
+<h1 id="%E7%B6%9A%E3%81%8D%EF%BC%88%E6%8C%AB%E6%8A%98%EF%BC%89"><a class="header-anchor-link" href="#%E7%B6%9A%E3%81%8D%EF%BC%88%E6%8C%AB%E6%8A%98%EF%BC%89" aria-hidden="true"></a> 続き（挫折）</h1>
+<p>フロント部分だけは無事に完成しました。作った感触的に「派生も作れるぞ！」と思い至り、バックエンドも含めた派生ゲームの開発に取り掛かったのですが、結果としては失敗に終わりました......<br />
+理由は、作ったものをどうデプロイしたらよいか何もわからんかったから......<br />
+当時「AWSを使いたい！」ということだけ念頭にあり、何となく人に聞いて知ったLightsailというのを使う予定だったのですが、なにぶんEC2みたいなIaaSなので、バックエンド環境を1から構築する必要があり......サーバー構築に何の知識もない自分ではムリでした。<br />
+まずサービスを構築する上では、どうデプロイするかをあらかじめ考えるべきだという大反省になりました。</p>
+<h1 id="aws%E3%81%AE%E5%8B%89%E5%BC%B7"><a class="header-anchor-link" href="#aws%E3%81%AE%E5%8B%89%E5%BC%B7" aria-hidden="true"></a> AWSの勉強</h1>
+<p>そこから数ヶ月経ったのですが、とりあえずAWS何もわからん状態から脱却したくて「AWSクラウドプラクティショナー」を受けてみました。<br />
+AWS資格の中で一番簡単で、「サービス総まとめ」みたいな資格です（その時の記事）。<br />
+<a href="https://zenn.dev/kakuhito/articles/896e7aacbf18a0" rel="noreferrer noopener nofollow" target="_blank">https://zenn.dev/kakuhito/articles/896e7aacbf18a0</a><a href="https://zenn.dev/kakuhito/articles/896e7aacbf18a0" style="display:none" target="_blank">https://zenn.dev/kakuhito/articles/896e7aacbf18a0</a></p>
+<p>結果的に、この勉強は結構ためになりました。<br />
+色んなサービスをざっと把握できたことと、AWS S3（ストレージサービス）で「静的ホスティング」ができるということを知りました。これは、バックエンド部分が無ければかなり料金を抑えてホスティングできる仕組み。github.ioやvercelなどと同じです。</p>
+<p>これを使って、ポートフォリオサイト（現在開いてもらっているサイトです）を公開しました。<br />
+どうホスティングしたかの詳細はZenn等にまとめようと思っていますが、以下のサイトをがっつり参考にしました。<br />
+<a href="https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa" rel="noreferrer noopener nofollow" target="_blank">https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa</a><a href="https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa" style="display:none" target="_blank" rel="nofollow noopener noreferrer">https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa</a></p>
+<h1 id="%E6%B0%97%E3%81%A5%E3%81%8D%E3%80%82%E5%AE%9F%E9%9A%9B%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B"><a class="header-anchor-link" href="#%E6%B0%97%E3%81%A5%E3%81%8D%E3%80%82%E5%AE%9F%E9%9A%9B%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B" aria-hidden="true"></a> 気づき。実際試してみる</h1>
+<p>これができて思ったこととして、「この静的サイト」＋「Lambda*メインで構成したAPI」を組み合わせたら、すごい楽だしお金もほぼ掛からずにできるんじゃない？となりました。<br />
+（*Lambda: 関数を作るようにバックエンド処理を書くことができるサーバーレスサービス）</p>
+<p>......結果、予想以上に簡単にできました！！<br />
+一応構成図を載せておきますが、詳細はまたZennなどで記事を書きたいと思います。<br />
+（素人構成図なので大目に見てくださいorよかったらXで指摘ください）</p>
+<p><img src="/images/2024031101/wordle-drawio.png" alt="wordle-drawio" /></p>
+<p>バックエンドにLambda含めてDynamoDBなども使ってるのですが、これもほぼお金かかってません。</p>
+<p>AWSのフルマネージド系のサービスはすごいなと思いました。これらを組み合わせて作った方が間違いなく早いし、現在のサービス使用状況だと料金もかかりません（企業のサービスレベルでリクエストが多い場合は別で、料金が高くなる可能性があります）。</p>
+<h1 id="%E4%BB%8A%E5%BE%8C"><a class="header-anchor-link" href="#%E4%BB%8A%E5%BE%8C" aria-hidden="true"></a> 今後</h1>
+<p>「この方法なら派生も作れるぞ！」となったので、作ります！！<br />
+4月には作りたいな〜と思ってます。構想はすでに決まっており、個人的に面白い物に仕上がるのではないかと思っています。<br />
+ご期待を......</p>
