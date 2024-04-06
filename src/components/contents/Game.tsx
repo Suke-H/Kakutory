@@ -12,6 +12,7 @@ import strayBot from '../../assets/game/strayBot.png';
 import shikakuReversi from '../../assets/game/shikakuReversi.png';
 import chocomint from '../../assets/game/chocomint.png';
 import memory from '../../assets/game/memory.png';
+import DearPastDiary from '../../assets/game/DearPastDiary.png';
 
 interface LinkedImageProps {
     url: string;
@@ -56,6 +57,11 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                     url="https://unityroom.com/games/matons_memory_journey"
                     src={memory}
                     alt="マトン君 記憶探しの旅"
+                />
+                <LinkedImage 
+                    url="https://unityroom.com/games/dear_past_diary"
+                    src={DearPastDiary}
+                    alt="『Dear past diary, 』"
                 />
             </div>
 
