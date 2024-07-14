@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2024071401,
+        title: '東京ゲームダンジョン外伝に行ってきたレポ',
+        thumbnail: '/diarySam/20240714_TGD.jpg',
+        date: '2024-07-14',
+        tags: ['レポ', 'ゲーム'],
+    },
+    {
         id: 2024031101,
         title: 'Wordle作りました！',
         thumbnail: '/diarySam/MyWordleProject.png',
@@ -14,7 +21,7 @@ export const AllDiarySummary: DiarySummary[] = [
         title: '東京ゲームダンジョン4にお手伝い＆遊びに行った',
         thumbnail: '/diarySam/20240123_TGD.jpg',
         date: '2024-01-23',
-        tags: ['レポ'],
+        tags: ['レポ', 'ゲーム'],
     },
     {
         id: 2023121002,
