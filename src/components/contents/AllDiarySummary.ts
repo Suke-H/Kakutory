@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2024072401,
+        title: 'ヨシタケシンスケ展に行ってきたかもしれない',
+        thumbnail: '/diarySam/20240724_yoshitake.jpg',
+        date: '2024-07-24',
+        tags: ['レポ'],
+    },
+    {
         id: 2024071401,
         title: '東京ゲームダンジョン外伝に行ってきたレポ',
         thumbnail: '/diarySam/20240714_TGD.jpg',
@@ -37,5 +44,6 @@ export const AllDiarySummary: DiarySummary[] = [
         date: '2023-12-08',
         tags: [`お知らせ`, 'Web開発'],
     },
+
 
 ];
