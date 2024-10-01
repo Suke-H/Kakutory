@@ -1,0 +1,13 @@
+.heading2 {
+    font-size: 30px; 
+    margin-top: 80px;
+    margin-bottom: 20px;
+    /* text-align: left; 
+    padding-left: 10%; */
+}
+
+@media (max-width: 600px) {
+    .heading2 {
+        font-size: 25px;
+    }
+}
