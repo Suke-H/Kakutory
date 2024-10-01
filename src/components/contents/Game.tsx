@@ -21,23 +21,6 @@ import kiro from '../../assets/game/kiro.png';
 import konatsu from '../../assets/game/konatsu.png';
 import TankStrike from '../../assets/game/TankStrike.png';
 
-interface LinkedImageProps {
-    url: string;
-    src: string;
-    alt: string;
-  }
-  
-const LinkedImage = (props: LinkedImageProps): JSX.Element => {
-    return (
-        <a href={props.url}>
-            <img src={props.src} 
-                alt={props.alt} 
-                className='imageItem'
-            />
-        </a>
-    )
-}
-
 interface GameCardProps {
     url: string;
     imageUrl: string;
@@ -78,29 +61,29 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             url: "https://unityroom.com/games/stray_bot", 
             imageUrl: strayBot, 
             title: "STRAY BOT", 
-            date: "2024-09-30", 
-            description: "最初にゲーム制作に取り組んだ作品" 
+            date: "2022-10-27", 
+            description: "最初にゲーム制作に取り組んだ作品です。ロボットの『マトン君』を導くパズルゲーム。友達に描いてもらい、今でもお気に入りなロボです。" 
         },
         { 
             url: "https://unityroom.com/games/shikaku_reversi", 
             imageUrl: shikakuReversi,
             title: "シカクリバーシ", 
-            date: "2024-08-15", 
-            description: "A challenging puzzle game." 
+            date: "2023-08-31", 
+            description: "ZeF君(@ZeF_games)との共同制作。「丸みもマス目もないリバーシ」です、ぜひ遊んでみてください。東京ゲームダンジョン3に出展しました。" 
         },
         { 
-            url: "https://unityroom.com/games/dear_past_diary", 
+            url: "https://unityroom.com/games/konatsu_enikki", 
             imageUrl: konatsu, 
             title: "こなつのえにっき", 
-            date: "2024-10-01", 
-            description: "Daily life and adventures of Konatsu." 
+            date: "2024-08-04", 
+            description: "けめるさん(@qemelly_ongaku)とunity1weekの練習としてつくった作品。はじめてイラスト側に回って共同制作した作品です。" 
         },
         { 
             url: "https://unityroom.com/games/tank_strike", 
             imageUrl: TankStrike, 
             title: "TANK STRIKE!!", 
             date: "2024-10-01", 
-            description: "Daily life and adventures of Konatsu." 
+            description: "RDAG(@paldynojosh)さんのTinyTankを使った3D作品です。タンクがかわいいので、ほのぼのした感じを目指しました。一発ネタです。" 
         },
         
     ];    
@@ -109,43 +92,73 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             url: "https://unityroom.com/games/kaerimichi", 
             imageUrl: kiro, 
             title: "帰路", 
-            date: "2024-09-30", 
-            description: "Explore as a robot..." 
+            date: "2024-08-18", 
+            description: "けめるさん(@qemelly_ongaku)との共同制作。パネルで2色をひっくり返して、少女を正しいゴールへ導くパズルゲーム。今後も育てたい作品です。" 
         },
         {   
             url: "https://unityroom.com/games/dear_past_diary", 
             imageUrl: DearPastDiary, 
             title: "『Dear past diary, 』", 
-            date: "2024-09-30", 
-            description: "Explore as a robot..." 
+            date: "2024-04-01", 
+            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。" 
         },
         { 
             url: "https://unityroom.com/games/matons_memory_journey", 
             imageUrl: memory, title: "マトン君 記憶探しの旅", 
-            date: "2024-10-01", 
-            description: "Join Maton in a quest for his lost memories." },
+            date: "2023-06-26", 
+            description: "サイコロを振ってマトン君を進める、タイムアタック式すごろく。進めば進むほど、記憶の解像度が上がっていきます。" 
+        },
         { 
             url: "https://unityroom.com/games/worship-chocomint", 
             imageUrl: chocomint,
             title: "チョコミントを崇めよ！", 
             date: "2024-08-15", 
-            description: "A challenging puzzle game." 
+            description: "「チョコミントを全世界に布教しよう！」なカルト風クッキークリッカーです。1週間でここまでイラストを描いてくれた友達に感謝。" 
         },
-    
-        
         { 
             url: "https://unityroom.com/games/full_tank_by_kakusuke", 
             imageUrl: Fulltank, 
             title: "FULL TANK", 
-            date: "2024-10-01", 
-            description: "Fuel up and roll out on an explosive adventure." 
+            date: "2022-09-11", 
+            description: "unity1week初参加の作品です。音楽に合わせてバケツを操作し、水をキャッチしながらネズミをブロック。マルチタスクな音ゲーを目指したかった。" 
         },
         { 
             url: "https://unityroom.com/games/company-re-innovation", 
             imageUrl: Company, 
             title: "カンパニーRe:イノベーション", 
-            date: "2024-10-01", 
-            description: "Revolutionize the company from the inside out." 
+            date: "2023-01-01", 
+            description: "Slay the SpireみたいなマップをGitツリーにできないか模索したゲームです。黒歴史です。" 
+        },
+    ];
+
+    const homegames = [
+        {   
+            url: "https://unityroom.com/games/stray_bot", 
+            imageUrl: strayBot, 
+            title: "STRAY BOT", 
+            date: "2022-10-27", 
+            description: "最初にゲーム制作に取り組んだ作品です。マトン君というロボットを導くパズルゲーム。友達に描いてもらい、今でもお気に入りなロボです" 
+        },
+        { 
+            url: "https://unityroom.com/games/shikaku_reversi", 
+            imageUrl: shikakuReversi,
+            title: "シカクリバーシ", 
+            date: "2023-08-31", 
+            description: "ZeF君(@ZeF_games)との共同制作。「丸みもマス目もないリバーシ」です、ぜひ遊んでみてください。東京ゲームダンジョン3に出展しました。" 
+        },
+        {   
+            url: "https://unityroom.com/games/kaerimichi", 
+            imageUrl: kiro, 
+            title: "帰路", 
+            date: "2024-08-18", 
+            description: "けめるさん(@qemelly_ongaku)との共同制作。パネルで2色をひっくり返して、少女を正しいゴールへ導くパズルゲーム。今後も育てたい作品です。" 
+        },
+        {   
+            url: "https://unityroom.com/games/dear_past_diary", 
+            imageUrl: DearPastDiary, 
+            title: "『Dear past diary, 』", 
+            date: "2024-04-01", 
+            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。" 
         },
     ];
 
@@ -156,27 +169,11 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
         <Heading text={"GAME"} />
 
         <div className='imageWrapper'>
-          <LinkedImage 
-            url="https://unityroom.com/games/stray_bot"
-            src={strayBot}
-            alt="STRAY BOT"
-          />
-          <LinkedImage 
-            url="https://unityroom.com/games/shikaku_reversi"
-            src={shikakuReversi}
-            alt="シカクリバーシ"
-          />
-          <LinkedImage 
-            url="https://unityroom.com/games/worship-chocomint"
-            src={chocomint}
-            alt="チョコミントを崇めよ！"
-          />
-          <LinkedImage 
-            url="https://unityroom.com/games/dear_past_diary"
-            src={DearPastDiary}
-            alt="『Dear past diary, 』"
-          />
-        </div>
+            {homegames.map(game => (
+                    <GameCard key={game.url} {...game} />
+            ))}
+        
+      </div>
         <a href="/#/game/" className='read-more'>
           <Button 
             variant="contained"
@@ -187,8 +184,10 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
               '&:hover': {
                 backgroundColor: '#585858',
               },
+              fontSize: { xs: '12px', md: '20px' },
+              padding: '5px 40px' 
             }}>
-            MORE
+            &gt;&gt; READ MORE
           </Button>
         </a>
       </div>
@@ -228,7 +227,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                 <Link href={"https://unityroom.com/unity1weeks"} sx={{ color: '#1976d2', textDecoration: 'none' }}>
                     {"「Unity1週間ゲームジャム」"}
                 </Link>
-                {"への参加作品です。2022年9月『ふる』から参加をはじめ、計6回参加しました。"}
+                {"への参加作品です。2022年9月『ためる』から参加をはじめ、計6回参加しました。"}
         </Typography>
 
       <div className='imageWrapper'>

@@ -27,16 +27,18 @@ export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
           {isHome ? 
               <a href="/#/diary/" className='read-more'>
                   <Button 
-                      variant="contained"
-                      sx={{ 
-                          marginTop: {xs: "20px", md: '50px'},
-                          marginButtom: '50px',
-                          backgroundColor: '#585858',
-                          '&:hover': {
-                              backgroundColor: '#585858',
-                          },
-                  }}>
-                      MORE
+                    variant="contained"
+                    sx={{ 
+                      marginTop: { xs: '40px', md: '80px' },
+                      marginBottom: '50px',
+                      backgroundColor: '#585858',
+                      '&:hover': {
+                        backgroundColor: '#585858',
+                      },
+                      fontSize: { xs: '12px', md: '20px' },
+                      padding: '5px 40px' 
+                    }}>
+                    &gt;&gt; READ MORE
                   </Button>
 
               </a>
