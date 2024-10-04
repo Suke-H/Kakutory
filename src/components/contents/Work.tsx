@@ -2,11 +2,11 @@
 // import React from 'react';
 
 import './Work.css';
-import strayBot from '../../assets/game/strayBot.png';
-import shikakuReversi from '../../assets/game/shikakuReversi.png';
+import kakutory from '../../assets/work/kakutory.png'
+import wordle from '../../assets/work/wordle.png'
 
 import { useState } from 'react';
-import { Box, Card, CardActionArea, CardContent, Modal, Chip, CardMedia, Typography, IconButton } from '@mui/material';
+import { Box, Grid, Card, CardActionArea, CardContent, Modal, Chip, CardMedia, Typography, IconButton, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close'; // バツボタン用アイコン
 import { Heading } from '../Heading'; 
 
@@ -15,7 +15,6 @@ const modalStyle = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)', // モーダルを中央揃え
-  width: 500,
   bgcolor: 'background.paper',
   boxShadow: 24,
   p: 4,
@@ -87,8 +86,10 @@ const WorkCard = ({ url, imageUrl, title, tags, date, overview, technology, infr
 
       {/* モーダル */}
       <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
-        <Box sx={modalStyle}>
-          {/* バツボタン */}
+      <Box sx={{
+          ...modalStyle,
+          width: { xs: '80%', md: '50%' } 
+        }}>
           <IconButton
             aria-label="close"
             onClick={handleClose}
@@ -102,41 +103,83 @@ const WorkCard = ({ url, imageUrl, title, tags, date, overview, technology, infr
             <CloseIcon />
           </IconButton>
 
-          {/* モーダル内の画像 */}
           <CardMedia
             component="img"
             image={imageUrl}
             alt={title}
-            sx={{ marginBottom: 2 }} // 画像に角丸なし
+            sx={{ marginBottom: 2 }}
           />
 
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            {title} - 詳細情報
+          <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ fontWeight: 'bold', fontSize: { xs: '1.5rem', md: '2rem' } }}>
+            {title}
           </Typography>
+
+          <Divider sx={{ 
+                  borderBottomWidth: 2,
+                  width: "95%",
+                  }}/>
+
           <Box sx={{ mt: 2 }}>
-            <table>
-              <tbody>
-                <tr>
-                  <td><strong>概要:</strong></td>
-                  <td>{overview}</td>
-                </tr>
-                <tr>
-                  <td><strong>使用技術:</strong></td>
-                  <td>{technology}</td>
-                </tr>
-                <tr>
-                  <td><strong>インフラ:</strong></td>
-                  <td>{infrastructure}</td>
-                </tr>
-              </tbody>
-            </table>
+            <Box sx={{ mt: 2 }}>
+                <Grid container spacing={2}>
+                    <Grid item xs={12} md={3}>
+                    <Typography
+                        variant="body1"
+                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }} // フォントサイズをレスポンシブに
+                    >
+                        概要
+                    </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={9}>
+                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                        {overview}
+                    </Typography>
+                    </Grid>
+
+                    <Grid item xs={12} md={3}>
+                    <Typography
+                        variant="body1"
+                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }} // フォントサイズをレスポンシブに
+                    >
+                        使用技術
+                    </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={9}>
+                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                        {technology}
+                    </Typography>
+                    </Grid>
+
+                    <Grid item xs={12} md={3}>
+                    <Typography
+                        variant="body1"
+                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }} // フォントサイズをレスポンシブに
+                    >
+                        インフラ
+                    </Typography>
+                    </Grid>
+                    <Grid item xs={12} md={9}>
+                        
+                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                        {infrastructure}
+                    </Typography>
+                    </Grid>
+                </Grid>
+            </Box>
 
             {/* 説明部分 */}
-            <Box sx={{ mt: 3 }}>
-              <Typography variant="h6" component="h3">
+            <Box sx={{ mt: 5 }}>
+              <Typography id="modal-modal-title" variant="h6" component="h3" sx={{ fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
                 説明
               </Typography>
-              <Typography variant="body1" component="p" sx={{ marginTop: 1 }}>
+
+              <Divider sx={{ 
+                  borderBottomWidth: 2,
+                  width: "95%",
+                  mb: 2,
+                  }}/>
+
+              <Typography variant="body1" component="p" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: 1 }}>
                 {description}
               </Typography>
             </Box>
@@ -150,26 +193,26 @@ const WorkCard = ({ url, imageUrl, title, tags, date, overview, technology, infr
 export const Work = (): JSX.Element => {
   const works = [
     {
-      url: "https://example.com/work-a",
-      imageUrl: strayBot, 
-      title: 'プロジェクトA',
-      tags: ['React', 'フロントエンド', 'TypeScript'],
+      url: "https://kakutory.com",
+      imageUrl: kakutory, 
+      title: 'kakutory',
+      tags: ['React', 'Typescript', 'AWS'],
       date: '2023-05-01',
-      overview: 'Reactを使ったフロントエンド開発',
-      technology: 'React, TypeScript',
-      infrastructure: 'AWS, Docker',
-      description: 'Webアプリケーションのフロントエンド部分を開発し、モバイル対応も実施しました。',
+      overview: 'ポートフォリオサイト『kakutory』の作成',
+      technology: 'Vite, React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Github Actions',
+      description: 'ポートフォリオかつ自分の作品を公開する場としてつくりました。Webならではの作品をこれから公開したいなと思ってます。',
     },
     {
-      url: "https://example.com/work-b",
-      imageUrl: shikakuReversi,
-      title: 'プロジェクトB',
-      tags: ['Node.js', 'バックエンド', 'API開発'],
+      url: "https://kakutory.com/game_pages/MyWordleProject",
+      imageUrl: wordle,
+      title: 'MyWordleProject',
+      tags: ['ゲーム', 'React', 'TypeScript', 'AWS'],
       date: '2024-01-15',
-      overview: 'Node.jsを使ったAPI開発',
-      technology: 'Node.js, Express',
-      infrastructure: 'GCP, Kubernetes',
-      description: '大規模APIを開発し、負荷分散とスケーラビリティの対応を行いました。',
+      overview: '単語当てゲーム『Wordle』の模倣作成',
+      technology: 'Vite, React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
+      description: 'AWSを使ったバックエンド開発を学ぶためにWordleを模倣作成しました。',
     },
   ];
 
