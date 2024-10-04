@@ -42,13 +42,13 @@ export const Header = (): JSX.Element => {
               </Link>
             </li>
             <li>
-              <Link to="/diary" onClick={toggleMenu}>
-                Diary
+              <Link to="/work" onClick={toggleMenu}>
+                Work
               </Link>
             </li>
             <li>
-              <Link to="/work" onClick={toggleMenu}>
-                Work
+              <Link to="/diary" onClick={toggleMenu}>
+                Diary
               </Link>
             </li>
           </ul>
@@ -68,11 +68,11 @@ export const Header = (): JSX.Element => {
         <Link to="/game" className="menuItem">
           Game
         </Link>
-        <Link to="/diary" className="menuItem">
-          Diary
-        </Link>
         <Link to="/work" className="menuItem">
           Work
+        </Link>
+        <Link to="/diary" className="menuItem">
+          Diary
         </Link>
       </div>
     </div>
