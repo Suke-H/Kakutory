@@ -1,7 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-// import { Link } from "react-router-dom";
-// import React from 'react';
-
 import { Heading } from '../Heading';
 import { Heading2 } from '../Heading2';
 import { type IsHomeProp } from './IsHomeProp';
@@ -184,7 +181,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
               '&:hover': {
                 backgroundColor: '#585858',
               },
-              fontSize: { xs: '12px', md: '20px' },
+              fontSize: { xs: '16px', md: '20px' },
               padding: '5px 40px' 
             }}>
             &gt;&gt; READ MORE
@@ -198,14 +195,13 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
   return (
     <div className='game'>
         <Heading text={"GAME"} />
-
         <Heading2 text={"リリース作品"} />
         <Typography gutterBottom component="div" 
             sx={{
                 marginBottom: "40px",
                 marginLeft: "10%",
                 marginRight: "10%",
-                fontSize: { xs: '12px', md: '16px' }
+                fontSize: { xs: '14px', md: '16px' }
                 }} >
                 {"2022年の『STRAY BOT』からゲーム制作をはじめました（こっちをもっと増やしたいな...）"}
         </Typography>
@@ -222,7 +218,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                 marginBottom: "40px",
                 marginLeft: "10%",
                 marginRight: "10%",
-                fontSize: { xs: '12px', md: '16px' }
+                fontSize: { xs: '14px', md: '16px' }
                 }} >
                 <Link href={"https://unityroom.com/unity1weeks"} sx={{ color: '#1976d2', textDecoration: 'none' }}>
                     {"「Unity1週間ゲームジャム」"}
