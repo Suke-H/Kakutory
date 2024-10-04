@@ -1,7 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import React from 'react';
 
-// import { Link } from "react-router-dom";
 import { Routes, Route } from 'react-router-dom';
 
 import { Heading } from '../Heading';
@@ -35,7 +34,7 @@ export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
                       '&:hover': {
                         backgroundColor: '#585858',
                       },
-                      fontSize: { xs: '12px', md: '20px' },
+                      fontSize: { xs: '16px', md: '20px' },
                       padding: '5px 40px' 
                     }}>
                     &gt;&gt; READ MORE
