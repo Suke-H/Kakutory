@@ -8,6 +8,10 @@ import kakutory3 from '../../assets/work/kakutory/3.png';
 import wordle1 from '../../assets/work/wordle/1.png';
 import wordle2 from '../../assets/work/wordle/2.png';
 import wordle3 from '../../assets/work/wordle/3.png';
+import yuruSprint1 from '../../assets/work/yuruSprint/1.png';
+import yuruSprint2 from '../../assets/work/yuruSprint/2.png';
+import yuruSprint3 from '../../assets/work/yuruSprint/3.png';
+import yuruSprint4 from '../../assets/work/yuruSprint/4.png';
 
 import { useState } from 'react';
 import { Box, Grid, Card, CardActionArea, CardContent, Modal, Chip, CardMedia, Typography, IconButton, Divider } from '@mui/material';
@@ -36,7 +40,7 @@ const modalStyle = {
 
 interface WorkCardProps {
   url: string;
-  imageUrls: string[]; // 複数の画像URLを受け取る
+  imageUrls: string[];
   title: string;
   tags: string[];
   date: string;
@@ -102,9 +106,9 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
         <CardActionArea onClick={handleOpen}>
           <CardMedia
             component="img"
-            image={imageUrls[0]} // 最初の画像を表示
+            image={imageUrls[0]}
             alt={title}
-            sx={{ borderBottom: '4px solid #585858' }}
+            // sx={{ borderBottom: '4px solid #585858' }}
           />
 
           <CardContent sx={{ textAlign: 'left' }}>
@@ -265,6 +269,17 @@ export const Work = (): JSX.Element => {
         technology: 'Vite, React, TypeScript',
         infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
         description: 'AWSを使ったバックエンド開発を学ぶためにWordleを模倣作成しました。',
+      },
+      {
+        url: "https://github.com/Suke-H/yuru-sprint/",
+        imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
+        title: 'ゆるスプリント',
+        tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
+        date: '2024-01-15',
+        overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
+        technology: 'Node.js, Docker',
+        infrastructure: 'Cloud Run + Cloud Scheduler',
+        description: 'Slackでゆる～く1週間の目標を立てられるアプリ',
       },
     ];
   
