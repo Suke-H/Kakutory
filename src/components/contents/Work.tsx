@@ -78,7 +78,7 @@ const Arrow = ({ direction, onClick }: ArrowProps) => {
   );
 };
 
-const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, infrastructure, description }: WorkCardProps): JSX.Element => {
+const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, infrastructure, description, otherTechnologies, github, articles }: WorkCardProps): JSX.Element => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = (): void => {
@@ -89,7 +89,6 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
     setOpen(false);
   };
 
-  // スライダーの設定
   const sliderSettings = {
     dots: true, 
     infinite: true,
@@ -108,9 +107,7 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
             component="img"
             image={imageUrls[0]}
             alt={title}
-            // sx={{ borderBottom: '4px solid #585858' }}
           />
-
           <CardContent sx={{ textAlign: 'left' }}>
             <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
               {title}
@@ -153,7 +150,6 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
             <CloseIcon />
           </IconButton>
 
-          {/* 画像スライダー */}
           <Slider {...sliderSettings}>
             {imageUrls.map((imageUrl, index) => (
               <div key={index}>
@@ -167,78 +163,121 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
             ))}
           </Slider>
 
+          {/* タイトルセクション */}
           <Typography id="modal-modal-title" variant="h6" component="h2" sx={{ fontWeight: 'bold', fontSize: { xs: '1.5rem', md: '2rem' }, mt: 5 }}>
             {title}
           </Typography>
 
-          <Divider sx={{ 
-            borderBottomWidth: 2,
-            width: "95%",
-          }}/>
+          <Divider sx={{ borderBottomWidth: 2, width: "95%" }} />
 
+          {/* 概要、使用技術、インフラ、その他技術 */}
           <Box sx={{ mt: 2 }}>
-            <Box sx={{ mt: 2 }}>
-                <Grid container spacing={2}>
-                    <Grid item xs={12} md={3}>
-                    <Typography
-                        variant="body1"
-                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}
-                    >
-                        概要
-                    </Typography>
-                    </Grid>
-                    <Grid item xs={12} md={9}>
-                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
-                        {overview}
-                    </Typography>
-                    </Grid>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  概要
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  {overview}
+                </Typography>
+              </Grid>
 
-                    <Grid item xs={12} md={3}>
-                    <Typography
-                        variant="body1"
-                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}
-                    >
-                        使用技術
-                    </Typography>
-                    </Grid>
-                    <Grid item xs={12} md={9}>
-                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
-                        {technology}
-                    </Typography>
-                    </Grid>
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  URL
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  <a href={url} target="_blank" rel="noopener noreferrer">{url}</a>
+                </Typography>
+              </Grid>
 
-                    <Grid item xs={12} md={3}>
-                    <Typography
-                        variant="body1"
-                        sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}
-                    >
-                        インフラ
-                    </Typography>
-                    </Grid>
-                    <Grid item xs={12} md={9}>
-                        
-                    <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
-                        {infrastructure}
-                    </Typography>
-                    </Grid>
-                </Grid>
-            </Box>
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  使用言語
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  {technology}
+                </Typography>
+              </Grid>
 
-            <Box sx={{ mt: 5 }}>
-              <Typography id="modal-modal-title" variant="h6" component="h3" sx={{ fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
-                説明
-              </Typography>
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  インフラ
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  {infrastructure}
+                </Typography>
+              </Grid>
 
-              <Divider sx={{ 
-                  borderBottomWidth: 2,
-                  width: "95%",
-                  mb: 2,
-              }}/>
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  その他
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  {otherTechnologies}
+                </Typography>
+              </Grid>
+            </Grid>
+          </Box>
 
-              <Typography variant="body1" component="p" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: 1 }}>
-                {description}
-              </Typography>
-            </Box>
+          {/* 説明セクション */}
+          <Box sx={{ mt: 5 }}>
+            <Typography id="modal-modal-title" variant="h6" component="h3" sx={{ fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
+              説明
+            </Typography>
+            <Divider sx={{ borderBottomWidth: 2, width: "95%", mb: 2 }} />
+            <Typography variant="body1" component="p" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: 1 }}>
+              {description}
+            </Typography>
+          </Box>
+
+          {/* 関連情報セクション */}
+          <Box sx={{ mt: 5 }}>
+            <Typography id="modal-modal-title" variant="h6" component="h3" sx={{ fontWeight: 'bold', fontSize: { xs: '1.25rem', md: '1.75rem' } }}>
+              関連情報
+            </Typography>
+            <Divider sx={{ borderBottomWidth: 2, width: "95%", mb: 2 }} />
+            <Grid container spacing={2}>
+              {/* Github */}
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  Github
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  <a href={github} target="_blank" rel="noopener noreferrer">{github}</a>
+                </Typography>
+              </Grid>
+
+              {/* 記事リスト */}
+              <Grid item xs={12} md={3}>
+                <Typography variant="body1" sx={{ fontWeight: 'bold', fontSize: { xs: '0.875rem', md: '1.25rem' } }}>
+                  記事
+                </Typography>
+              </Grid>
+              <Grid item xs={12} md={9}>
+                <Typography variant="body1" sx={{ fontSize: { xs: '0.875rem', md: '1.125rem' }, mt: { xs: -1.5, md: 0} }}>
+                  <ul style={{ paddingLeft: '20px', marginTop: '0' }}> {/* スタイル調整 */}
+                    {articles.map((article, index) => (
+                      <li key={index} style={{ marginBottom: '8px' }}>
+                        <a href={article.link} target="_blank" rel="noopener noreferrer">{article.title}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </Typography>
+              </Grid>
+            </Grid>
           </Box>
         </Box>
       </Modal>
@@ -246,42 +285,64 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
   );
 };
 
+
+
 export const Work = (): JSX.Element => {
-    const works = [
-      {
-        url: "https://kakutory.com",
-        imageUrls: [ kakutory1, kakutory2, kakutory3 ],
-        title: 'kakutory',
-        tags: ['React', 'Typescript', 'AWS'],
-        date: '2023-05-01',
-        overview: 'ポートフォリオサイト『kakutory』の作成',
-        technology: 'Vite, React, TypeScript',
-        infrastructure: 'AWS S3 + CloudFront + Route53, Github Actions',
-        description: 'ポートフォリオかつ自分の作品を公開する場としてつくりました。Webならではの作品をこれから公開したいなと思ってます。',
-      },
-      {
-        url: "https://kakutory.com/game_pages/MyWordleProject",
-        imageUrls: [ wordle1, wordle2, wordle3 ],
-        title: 'MyWordleProject',
-        tags: ['ゲーム', 'React', 'TypeScript', 'AWS'],
-        date: '2024-01-15',
-        overview: '単語当てゲーム『Wordle』の模倣作成',
-        technology: 'Vite, React, TypeScript',
-        infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
-        description: 'AWSを使ったバックエンド開発を学ぶためにWordleを模倣作成しました。',
-      },
-      {
-        url: "https://github.com/Suke-H/yuru-sprint/",
-        imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
-        title: 'ゆるスプリント',
-        tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
-        date: '2024-01-15',
-        overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
-        technology: 'Node.js, Docker',
-        infrastructure: 'Cloud Run + Cloud Scheduler',
-        description: 'Slackでゆる～く1週間の目標を立てられるアプリ',
-      },
-    ];
+  const works = [
+    {
+      url: "https://kakutory.com",
+      imageUrls: [ kakutory1, kakutory2, kakutory3 ],
+      title: 'kakutory',
+      tags: ['React', 'Typescript', 'AWS'],
+      date: '2023-05-01',
+      overview: 'ポートフォリオサイト『kakutory』の作成',
+      technology: 'React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Github Actions',
+      otherTechnologies: 'Vite, GitHub Actions',
+      github: "https://github.com/Suke-H/kakutory",
+      articles: [
+        { title: "このサイトの使用技術", link: "https://kakutory.com/#/diary/2023121002" },
+      ],
+      description: 'ポートフォリオかつ自分の作品を公開する場としてつくりました。ゲームに加えて、Webでの制作物も上げていきたいと思います。',
+    },
+    {
+      url: "https://kakutory.com/game_pages/MyWordleProject",
+      imageUrls: [ wordle1, wordle2, wordle3 ],
+      title: 'MyWordleProject',
+      tags: ['ゲーム', 'React', 'TypeScript', 'AWS'],
+      date: '2024-01-15',
+      overview: '単語当てゲーム『Wordle』の模倣作成',
+      technology: 'React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
+      otherTechnologies: 'Vite, GitHub Actions',
+      github: "https://github.com/Suke-H/wordle-project",
+      articles: [
+        { title: "Wordle作りました！", link: "https://kakutory.com/#/diary/2024031101" },
+        { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
+      ],
+      description: 'AWSを使ったバックエンド開発を学ぶためにWordleを模倣作成しました。',
+    },
+    {
+      url: "https://github.com/Suke-H/yuru-sprint/",
+      imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
+      title: 'ゆるスプリント',
+      tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
+      date: '2024-01-15',
+      overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
+      technology: 'Node.js',
+      infrastructure: 'Cloud Run + Cloud Scheduler',
+      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
+      github: "https://github.com/Suke-H/yuru-sprint",
+      articles: [
+        { title: "Slack Appの公式Quickstartをローカルサーバーで試す", link: "https://zenn.dev/kakuhito/articles/667b00366f6626" },
+        { title: "【OIDC認証】GitHub ActionsでCloud Run自動デプロイ", link: "https://zenn.dev/kakuhito/articles/565c5dda9082a3" },
+      ],
+      description: `バックエンドの練習としてSlack Appを作成しました。
+      「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
+      結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
+    }
+  ];
+  
   
     return (
       <div className='work'>
