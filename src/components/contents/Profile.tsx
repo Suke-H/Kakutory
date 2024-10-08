@@ -64,7 +64,7 @@ export const Profile = (): JSX.Element => {
               src={kakuhito}
             />
             <Box sx={{ display: 'flex', justifyContent: 'center', pt: 2 }}>
-              <a href="https://twitter.com/kakuhito_66" target="_blank" rel="noopener noreferrer">
+              <a href="https://twitter.com/kaku_suke_33" target="_blank" rel="noopener noreferrer">
                 <img
                   src={x}
                   alt="x"
