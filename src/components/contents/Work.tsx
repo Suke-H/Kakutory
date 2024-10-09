@@ -21,7 +21,6 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Heading } from '../Heading'; 
 import Slider from "react-slick";
 
-
 const modalStyle = {
   position: 'absolute',
   top: '50%',
@@ -48,6 +47,9 @@ interface WorkCardProps {
   technology: string;
   infrastructure: string;
   description: string;
+  otherTechnologies: string;
+  github: string;
+  articles: Array<{ title: string; link: string }>;
 }
 
 // カスタム矢印コンポーネント
@@ -56,7 +58,7 @@ interface ArrowProps {
   onClick: () => void;         // クリック時の処理
 }
 
-const Arrow = ({ direction, onClick }: ArrowProps) => {
+const Arrow = ({ direction, onClick }: ArrowProps): JSX.Element => {
   return (
     <IconButton
       onClick={onClick}
