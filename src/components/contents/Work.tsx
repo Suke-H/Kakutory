@@ -12,9 +12,10 @@ import yuruSprint1 from '../../assets/work/yuruSprint/1.png';
 import yuruSprint2 from '../../assets/work/yuruSprint/2.png';
 import yuruSprint3 from '../../assets/work/yuruSprint/3.png';
 import yuruSprint4 from '../../assets/work/yuruSprint/4.png';
+import { type IsHomeProp } from './IsHomeProp';
 
 import { useState } from 'react';
-import { Box, Grid, Card, CardActionArea, CardContent, Modal, Chip, CardMedia, Typography, IconButton, Divider } from '@mui/material';
+import { Box, Button, Grid, Card, CardActionArea, CardContent, Modal, Chip, CardMedia, Typography, IconButton, Divider } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
@@ -289,7 +290,7 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
 
 
 
-export const Work = (): JSX.Element => {
+export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
   const works = [
     {
       url: "https://kakutory.com",
@@ -344,17 +345,108 @@ export const Work = (): JSX.Element => {
       結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
     }
   ];
+
+  const homeworks = [
+    {
+      url: "https://kakutory.com",
+      imageUrls: [ kakutory1, kakutory2, kakutory3 ],
+      title: 'kakutory',
+      tags: ['React', 'Typescript', 'AWS'],
+      date: '2023-12-08',
+      overview: 'ポートフォリオサイト『kakutory』の作成',
+      technology: 'React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Github Actions',
+      otherTechnologies: 'Vite, GitHub Actions',
+      github: "https://github.com/Suke-H/kakutory",
+      articles: [
+        { title: "このサイトの使用技術", link: "https://kakutory.com/#/diary/2023121002" },
+      ],
+      description: 'Webの勉強を主目的に、自分のポートフォリオサイトとして作成しました。フロントエンドはReactとTypescript、ホスティングはAWS S3とCloudfrontを使っています。今後、ゲームとWeb、2つの側面での制作物を公開したり、日記を書いていったり、自由に使っていきたいなと思ってます。',
+    },
+    {
+      url: "https://kakutory.com/game_pages/MyWordleProject",
+      imageUrls: [ wordle1, wordle2, wordle3 ],
+      title: 'MyWordleProject',
+      tags: ['ゲーム', 'React', 'TypeScript', 'AWS'],
+      date: '2024-01-15',
+      overview: '単語当てゲーム『Wordle』の模倣作成',
+      technology: 'React, TypeScript',
+      infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
+      otherTechnologies: 'Vite, GitHub Actions',
+      github: "https://github.com/Suke-H/wordle-project",
+      articles: [
+        { title: "Wordle作りました！", link: "https://kakutory.com/#/diary/2024031101" },
+        { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
+      ],
+      description: 'AWSを使ったバックエンド開発を学ぶために、Wordleを模倣作成しました。フロントエンドやホスティングはKakutoryと同じで、バックエンドにAWS LambdaとDynamoDBを使用しています。作者でさえも毎日遊べるシステムとして、これ以上シンプルで優れたゲームって中々無いのではないでしょうか...',
+    },
+    {
+      url: "https://github.com/Suke-H/yuru-sprint/",
+      imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
+      title: 'ゆるスプリント',
+      tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
+      date: '2024-09-22',
+      overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
+      technology: 'Node.js',
+      infrastructure: 'Cloud Run + Cloud Scheduler',
+      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
+      github: "https://github.com/Suke-H/yuru-sprint",
+      articles: [
+        { title: "Slack Appの公式Quickstartをローカルサーバーで試す", link: "https://zenn.dev/kakuhito/articles/667b00366f6626" },
+        { title: "【OIDC認証】GitHub ActionsでCloud Run自動デプロイ", link: "https://zenn.dev/kakuhito/articles/565c5dda9082a3" },
+      ],
+      description: `バックエンドの練習としてSlack Appを作成しました。
+      「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
+      結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
+    }
+  ];
   
-  
-    return (
-      <div className='work'>
-        <Heading text={"WORK"} />
-  
-        <div className='imageWrapper'>
-          {works.map((work, index) => (
-            <WorkCard key={index} {...work} />
-          ))}
+    if (isHome) {
+    
+      return (
+        <div className='work'>
+          <Heading text={"WORK"} />
+    
+          <div className='imageWrapper'>
+            {works.map((work, index) => (
+              <WorkCard key={index} {...work} />
+            ))}
+          </div>
+
+          <a href="/#/game/" className='read-more'>
+            <Button 
+              variant="contained"
+              sx={{ 
+                marginTop: { xs: '40px', md: '80px' },
+                marginBottom: '50px',
+                backgroundColor: '#585858',
+                '&:hover': {
+                  backgroundColor: '#585858',
+                },
+                fontSize: { xs: '16px', md: '20px' },
+                padding: '5px 40px' 
+              }}>
+              &gt;&gt; READ MORE
+            </Button>
+          </a>
         </div>
-      </div>
-    );
+
+        
+        
+      );
+    }
+
+    else {
+      return (
+        <div className='work'>
+          <Heading text={"WORK"} />
+    
+          <div className='imageWrapper'>
+            {homeworks.map((work, index) => (
+              <WorkCard key={index} {...work} />
+            ))}
+          </div>
+        </div>
+      );
+    }
   };

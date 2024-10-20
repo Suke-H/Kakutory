@@ -2,7 +2,9 @@
 // import React from 'react';
 import { About } from './About';
 import { Game } from './Game';
+import { Work } from './Work';
 import { Diary } from './Diary';
+
 // import { Welcome } from './Welcome';
 
 import './Home.css';
@@ -13,6 +15,7 @@ export const Home = (): JSX.Element => {
             {/* <Welcome /> */}
             <About isHome={true}/>
             <Game isHome={true}/>
+            <Work isHome={true}/>
             <Diary isHome={true}/>
 
             {/* <h1>CONTACT</h1> */}
