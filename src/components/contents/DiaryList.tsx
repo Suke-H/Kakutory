@@ -20,13 +20,17 @@ export interface DiarySummary {
 
 interface DiaryListProps {
     allDiarySummary: DiarySummary[];
+    isHome: boolean;
 }
 
-export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary }) => {
+export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary, isHome }) => {
+    const displayedDiaries = isHome ? allDiarySummary.slice(0, 4) : allDiarySummary;
+
     return (
+
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
-        {allDiarySummary.map((diary) => (
+        {displayedDiaries.map((diary) => (
           <Link to={`/diary/${diary.id}`} key={diary.id} style={{ width: "100%" }}>
           <Card key={diary.id} sx={{ 
             display: 'flex', 
