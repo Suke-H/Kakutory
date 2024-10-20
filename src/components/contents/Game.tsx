@@ -24,9 +24,10 @@ interface GameCardProps {
     title: string;
     date: string;
     description: string;
+    isHome: boolean;
 }
 
-const GameCard = ({ url, imageUrl, title, date, description }: GameCardProps): JSX.Element => {
+const GameCard = ({ url, imageUrl, title, date, description, isHome }: GameCardProps): JSX.Element => {
     return (
         <Card sx={{ width: '100%' }}>
             <CardActionArea href={url}>
@@ -35,17 +36,24 @@ const GameCard = ({ url, imageUrl, title, date, description }: GameCardProps): J
                     image={imageUrl}
                     alt={title}
                 />
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
-                        {title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {date}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
-                </CardContent>
+                
+                    
+                    {!isHome && (
+                        <>
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" sx={{ fontWeight: 'bold' }}>
+                                {title}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {date}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {description}
+                            </Typography>
+                        </CardContent>
+                        </>
+                    )}
+                
             </CardActionArea>
         </Card>
     );
@@ -167,7 +175,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
         <div className='imageWrapper'>
             {homegames.map(game => (
-                    <GameCard key={game.url} {...game} />
+                    <GameCard key={game.url} {...game} isHome={isHome} />
             ))}
         
       </div>
@@ -208,7 +216,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
       <div className='imageWrapper'>
       {games.map(game => (
-                    <GameCard key={game.url} {...game} />
+                    <GameCard key={game.url} {...game} isHome={isHome} />
             ))}
       </div>
 
@@ -228,7 +236,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
       <div className='imageWrapper'>
             {u1wgames.map(game => (
-                    <GameCard key={game.url} {...game} />
+                    <GameCard key={game.url} {...game} isHome={isHome} />
             ))}
         
       </div>
