@@ -12,6 +12,9 @@ import yuruSprint1 from '../../assets/work/yuruSprint/1.png';
 import yuruSprint2 from '../../assets/work/yuruSprint/2.png';
 import yuruSprint3 from '../../assets/work/yuruSprint/3.png';
 import yuruSprint4 from '../../assets/work/yuruSprint/4.png';
+import kiro1 from '../../assets/work/kiro/1.png';
+import kiro2 from '../../assets/work/kiro/2.png';
+import kiro3 from '../../assets/work/kiro/3.png';
 import { type IsHomeProp } from './IsHomeProp';
 
 import { useState } from 'react';
@@ -398,6 +401,23 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       description: `バックエンドの練習としてSlack Appを作成しました。
       「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
       結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
+    },
+    {
+      url: "https://kiro-stage-editor-708973678663.asia-northeast1.run.app/",
+      imageUrls: [ kiro1, kiro2, kiro3 ],
+      title: '『帰路』ステージエディタ',
+      tags: ['ゲーム', 'React', 'TypeScript', 'GoogleCloud'],
+      date: '2024-12-21',
+      overview: 'パズルゲーム『帰路』のステージエディタツール',
+      technology: 'React, TypeScript',
+      infrastructure: 'Cloud Run',
+      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
+      github: "https://github.com/Suke-H/kiro_stage_editor/",
+      articles: [
+      ],
+      description: `目下作成中のパズルゲーム『帰路』にて、Unityに依存せず、
+      受け渡しはJsonで行えるような補助ツールを作成したく、取り組んでいます。
+      スマホでも触れるので、寝ころびながらステージを考えられて便利...うまく使っていきたいです。`,
     }
   ];
   
