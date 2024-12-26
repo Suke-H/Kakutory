@@ -1,0 +1,22 @@
+.privacy {
+    color: #585858;
+    font-weight: bold;
+    text-align: center;
+}
+
+.column {
+    font-size: 40px;
+    font-family: 'Noto Sans JP', Meiryo, 'ヒラギノ角ゴ', sans-serif;
+}
+
+  @media (max-width:1024px) {
+  }
+
+  @media (max-width:600px) {
+    .column {
+        font-size: 30px;
+    }
+  }
+
+
+
