@@ -13,6 +13,7 @@ export const Privacy = (): JSX.Element => {
     return (
         <div className='privacy'>
             <Routes>
+                <Route path="/" element={<PrivacyContent />} />
                 <Route path="/:id" element={<PrivacyContent />} />
             </Routes>
         </div>

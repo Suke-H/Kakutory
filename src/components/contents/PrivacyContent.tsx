@@ -14,7 +14,7 @@ export const PrivacyContent = (): JSX.Element => {
     const [error, setError] = useState<boolean>(false);
 
     useEffect(() => {
-        const filePath = `/privacyContents/${id}.html`;
+        const filePath = id !== undefined ? `/privacyContents/${id}.html` : '/privacyContents/kakutory.html';
       fetch(filePath)
       .then(async response => {
         if (!response.ok) { // レスポンスのステータスが OK (200) でない場合
