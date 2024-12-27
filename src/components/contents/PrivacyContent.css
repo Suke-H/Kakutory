@@ -1,0 +1,17 @@
+#znc-about {
+    width: 40%;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+p {
+    margin: 5px 0;
+  }
+
+@media (max-width: 600px) {
+    #znc-about {
+        width: 90%;
+    }
+}
+
