@@ -15,9 +15,9 @@
 This privacy policy applies to the STRAY BOT app (hereby referred to as "Application") for mobile devices  as a Free service. This service is intended for use "AS IS".
 
 ## Handling of Personal Information
-This app does not use any advertising services or tracking tools, so it does not collect, use, store, or share any personal information of users (e.g., name, email address, location, etc.).
+This Application does not use any advertising services or tracking tools, so it does not collect, use, store, or share any personal information of users (e.g., name, email address, location, etc.).
 
 ## Revisions to the Privacy Policy
-This privacy policy is subject to change as necessary. Any changes will be notified through updates to the app.
+This privacy policy is subject to change as necessary. Any changes will be notified through updates to the Application.
 
 Last updated: 2024/12/27
