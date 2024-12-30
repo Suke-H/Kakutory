@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2024123001,
+        title: '2024年読んだ小説を振り返り+紹介',
+        thumbnail: '/diarySam/20241230_sam.png',
+        date: '2024-12-30',
+        tags: ['レポ'],
+    },
+    {
         id: 2024072401,
         title: 'ヨシタケシンスケ展に行ってきたかもしれない',
         thumbnail: '/diarySam/20240724_yoshitake.jpg',
@@ -18,7 +25,7 @@ export const AllDiarySummary: DiarySummary[] = [
     },
     {
         id: 2024031101,
-        title: 'Wordle作りました！',
+        title: 'おためしでWordleを作ってみた話',
         thumbnail: '/diarySam/MyWordleProject.png',
         date: '2024-03-11',
         tags: ['制作', 'Web開発'],
