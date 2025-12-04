@@ -41,7 +41,7 @@
     "prettier": "3.0.3",
     "rollup-plugin-rewrite": "^0.0.4",
     "typescript": "^5.2.2",
-    "vite": "^4.4.5",
+    "vite": "^7.2.6",
     "zenn-markdown-html": "^0.1.149"
   }
 }
