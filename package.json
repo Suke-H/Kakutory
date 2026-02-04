@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "dev:diary": "astro dev",
+    "build": "astro build && tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
@@ -40,6 +41,7 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.3",
     "rollup-plugin-rewrite": "^0.0.4",
+    "astro": "^5.0.0",
     "typescript": "^5.2.2",
     "vite": "^7.2.6",
     "zenn-markdown-html": "^0.1.149"

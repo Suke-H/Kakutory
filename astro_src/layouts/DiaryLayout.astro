@@ -1,0 +1,29 @@
+---
+const { frontmatter } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{frontmatter.title}</title>
+  <style is:global>
+    @import "zenn-content-css";
+    .znc {
+      width: 70%;
+      margin: 0 auto;
+      max-width: 800px;
+    }
+    @media (max-width: 600px) {
+      .znc {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="znc">
+    <slot />
+  </div>
+</body>
+</html>

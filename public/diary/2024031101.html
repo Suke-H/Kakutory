@@ -1,0 +1,44 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>おためしでWordleを作ってみた話</title><link rel="stylesheet" href="/diary/_astro/2023121001.Dvn0nB8q.css"></head> <body> <div class="znc"> <p><img src="/images/2024031101/wordle-demo.png" alt="Wordle-Demo"></p>
+<h1 id="wordle作りました">Wordle作りました！</h1>
+<p>Wordle*を勉強として作ってみました！
+<a href="https://kakutory.com/game_pages/MyWordleProject/">https://kakutory.com/game_pages/MyWordleProject/</a></p>
+<p>（*このプロジェクトはNew York Times社のWordleをもとに模倣しています）
+<a href="https://www.nytimes.com/games/wordle/index.html">https://www.nytimes.com/games/wordle/index.html</a></p>
+<p>技術的な話はZenn記事にまとめてみましたが、この日記では作り始めたきっかけだったり挫折だったりを書こうと思います。
+<a href="https://zenn.dev/kakuhito/articles/73f9f834812eee">https://zenn.dev/kakuhito/articles/73f9f834812eee</a></p>
+<h1 id="きっかけ">きっかけ</h1>
+<p>Wordleを真似したゲームが作りたいと思ったのがきっかけです。
+僕はWordleがとても好きで、特に「毎日自動でお題を更新する機能」に惹かれます。作者であってもこのゲームを毎日遊べるってすごくいい。
+この機能を活かしたWordleの派生ゲームが作りたいと思い、構想を練り始めたところで、まずは勉強としてオリジナルを真似してみようと、取り掛かりました。</p>
+<h1 id="作りはじめフロントエンド">作りはじめ（フロントエンド）</h1>
+<p>まずはフロントエンドから作り始めました。
+使用した言語はReact、TypeScriptです。環境構築にはViteを使いました。
+このQiita記事の通りに進めましたが、「ホットリロードでの開発、ビルド」がViteで完結するのでほんとに使いやすいです。
+<a href="https://zenn.dev/sikkim/articles/93bf99d8588e68">https://zenn.dev/sikkim/articles/93bf99d8588e68</a></p>
+<h1 id="続き挫折">続き（挫折）</h1>
+<p>フロント部分だけは無事に完成しました。作った感触的に「派生も作れるぞ！」と思い至り、バックエンドも含めた派生ゲームの開発に取り掛かったのですが、結果としては失敗に終わりました…
+理由は、作ったものをどうデプロイしたらよいか何もわからんかったから…
+恥ずかしい限りですが、サービスを作るうえではまずアーキテクチャから考えないといけないなというのを身に染みて感じました。</p>
+<h1 id="awsの勉強">AWSの勉強</h1>
+<p>そこから数ヶ月経ったのですが、とりあえず何もわからない状態から脱却したくて「AWSクラウドプラクティショナー」を受けてみました。  AWS資格の中で一番簡単で、「サービス総まとめ」みたいな資格でした（その時の記事）。
+<a href="https://zenn.dev/kakuhito/articles/896e7aacbf18a0">https://zenn.dev/kakuhito/articles/896e7aacbf18a0</a></p>
+<p>結果的に、この勉強は結Politics ためになりました。
+色んなサービスをざっと把握できたことと、AWS S3（ストレージサービス）で「静的ホスティング」ができるということを知りました。これは、バックエンド部分が無ければかなり料金を抑えてホスティングできる仕組み。github.ioやvercelなどと同じです。</p>
+<p>これを使って、ポートフォリオサイト（現在開いてもらっているサイトです）を公開しました。
+どうホスティングしたかの詳細はZenn等にまとめようと思っていますが、以下のサイトをがっつり参考にしました。
+<a href="https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa">https://qiita.com/ushi_osushi/items/a32d7b710567c2313faa</a></p>
+<h1 id="気づき実際試してみる">気づき。実際試してみる</h1>
+<p>これができて思ったこととして、「静的ホスティング」＋「Lambda*メインで構成したAPI」を組み合わせたら、実装面でも金銭面でもかなり楽だなと想定しました。
+（*Lambda: 関数を作るようにバックエンド処理を書くことができるサーバーレスサービス）</p>
+<p>結果として、予想以上に簡単にできました。よかった。
+構成図はこのようになっています（詳細は先ほどのZenn記事に記載します）。</p>
+<p><img src="/images/2024031101/wordle-drawio.png" alt="wordle-drawio"></p>
+<p>個人開発としてであれば、これらの組み合わせはかなり選択肢になると実感できました。</p>
+<h1 id="今後">今後</h1>
+<p>「この方法なら派生も作れるぞ！」となったので、作ります！！
+4月には作りたいな〜と思ってます。構想はすでに決まっており、個人的に面白い物に仕上がるのではないかと思っています。
+ご期待を…</p>
+<p>また、こういう感じの簡単なシェア機能（テキストコピーのみ）をつくっているので、
+遊んでもらった後にシェアしてもらえるととても嬉しいです。
+<a href="https://x.com/kaku_suke_33/status/1760152271948841349">https://x.com/kaku_suke_33/status/1760152271948841349</a></p>
+<p>7/15追記：全く作れていない…笑</p> </div> </body></html>
