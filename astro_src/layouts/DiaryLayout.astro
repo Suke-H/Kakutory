@@ -9,21 +9,267 @@ const { frontmatter } = Astro.props;
   <title>{frontmatter.title}</title>
   <style is:global>
     @import "zenn-content-css";
+
+    /* Global */
+    :root {
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-weight: 400;
+      color: #213547;
+      background-color: #E9E9E9;
+    }
+    body {
+      margin: 0;
+      background-color: #E9E9E9;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Header */
+    .headerContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+    }
+    .title {
+      background-color: #373B7A;
+      width: 98vw;
+      height: 25vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 6vh;
+      text-decoration: none;
+    }
+    .title-image {
+      width: 52vh;
+      transition: transform 0.3s ease;
+    }
+    .title:hover .title-image {
+      transform: scale(1.05);
+    }
+    .headerSeparateLine {
+      background-color: #585858;
+      width: 98vw;
+      height: 1.5vh;
+    }
+    .menuContainer {
+      width: 98vw;
+      height: 40px;
+      display: flex;
+    }
+    .menuItem {
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 5px;
+      color: #585858;
+      font-weight: bold;
+      font-size: 24px;
+      font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+      text-decoration: none;
+    }
+    .menu-icon {
+      display: none;
+    }
+    .side-menu {
+      display: none;
+    }
+
+    /* Heading */
+    .heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    .left-box, .right-box {
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+    .left-box {
+      justify-content: flex-end;
+    }
+    .emphasis_mark {
+      width: 30px;
+    }
+    .center-box {
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      height: 80px;
+      border-bottom: 3px solid #585858;
+      padding-bottom: 0.5px;
+      font-size: 36px;
+    }
+
+    /* Content */
     .znc {
       width: 70%;
       margin: 0 auto;
       max-width: 800px;
     }
+
+    /* Footer */
+    .footer {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin: 10vh 0 0 0;
+      height: 40px;
+      background-color: #585858;
+      display: flex;
+      align-items: center;
+    }
+    .copywrite {
+      color: #E0E0E0;
+      position: absolute;
+      right: 200px;
+      margin: 0;
+    }
+
+    /* Mobile */
     @media (max-width: 600px) {
       .znc {
         width: 90%;
+      }
+      .title {
+        margin-top: 10vh;
+        height: 15vh;
+      }
+      .title-image {
+        width: 40vh;
+      }
+      .menu-icon {
+        width: 30px;
+        height: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: absolute;
+        top: 5vh;
+        left: 3vh;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      .bar {
+        width: 100%;
+        height: 4px;
+        background-color: #585858;
+      }
+      .side-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: #585858;
+        transition: 0.3s;
+        z-index: 10;
+      }
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+      .side-menu ul li {
+        padding: 20px;
+      }
+      .side-menu ul li a {
+        color: #E9E9E9;
+        text-decoration: none;
+      }
+      .side-menu.open {
+        left: 0px;
+      }
+      .side-menu .close-button {
+        position: absolute;
+        top: 0.1vh;
+        right: 5vh;
+        font-size: 40px;
+        color: #E9E9E9;
+        cursor: pointer;
+      }
+      .menuContainer {
+        display: none;
+      }
+      .emphasis_mark {
+        width: 25px;
+      }
+      .center-box {
+        font-size: 30px;
       }
     }
   </style>
 </head>
 <body>
+  <!-- Header -->
+  <div class="headerContainer">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div class="side-menu" id="sideMenu">
+      <div class="close-button" onclick="toggleMenu()">&times;</div>
+      <nav>
+        <ul>
+          <li><a href="/#/" onclick="toggleMenu()">Home</a></li>
+          <li><a href="/#/about" onclick="toggleMenu()">About</a></li>
+          <li><a href="/#/game" onclick="toggleMenu()">Game</a></li>
+          <li><a href="/#/work" onclick="toggleMenu()">Work</a></li>
+          <li><a href="/#/diary" onclick="toggleMenu()">Diary</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <a href="/#/" class="title">
+      <img src="/kakutory.png" alt="kakutory" class="title-image" />
+    </a>
+
+    <div class="headerSeparateLine"></div>
+
+    <div class="menuContainer">
+      <a href="/#/about" class="menuItem">About</a>
+      <a href="/#/game" class="menuItem">Game</a>
+      <a href="/#/work" class="menuItem">Work</a>
+      <a href="/#/diary" class="menuItem">Diary</a>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <div class="heading">
+    <div class="left-box">
+      <img src="/emphasis_mark.png" alt="強調マーク" class="emphasis_mark" />
+    </div>
+    <div class="center-box">DIARY</div>
+    <div class="right-box"></div>
+  </div>
+
+  <!-- Content -->
   <div class="znc">
     <slot />
   </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="copywrite">© 2023 かくひと</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('sideMenu').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
