@@ -43,7 +43,6 @@
     "rollup-plugin-rewrite": "^0.0.4",
     "astro": "^5.0.0",
     "typescript": "^5.2.2",
-    "vite": "^7.2.6",
-    "zenn-markdown-html": "^0.1.149"
+    "vite": "^7.2.6"
   }
 }
