@@ -6,7 +6,6 @@ import { Routes, Route } from 'react-router-dom';
 import { Heading } from '../Heading';
 import { DiaryList } from './DiaryList';
 import { AllDiarySummary } from './AllDiarySummary';
-import { DiaryContent } from './DiaryContent';
 import { type IsHomeProp } from './IsHomeProp';
 
 import './Diary.css';
@@ -20,7 +19,6 @@ export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
 
           <Routes>
             <Route path="/" element={<DiaryList allDiarySummary={AllDiarySummary} isHome={isHome} />} />
-            <Route path="/:id" element={<DiaryContent />} />
           </Routes>
 
           {isHome ? 

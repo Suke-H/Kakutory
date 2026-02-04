@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from "react-router-dom";
 
 import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
@@ -31,7 +30,7 @@ export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary, isHome })
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
         {displayedDiaries.map((diary) => (
-          <Link to={`/diary/${diary.id}`} key={diary.id} style={{ width: "100%" }}>
+          <a href={`/diary/${diary.id}.html`} key={diary.id} style={{ width: "100%" }}>
           <Card key={diary.id} sx={{ 
             display: 'flex', 
             marginBottom: 2 , 
@@ -103,7 +102,7 @@ export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary, isHome })
               </CardContent>
             </Box>
           </Card>
-        </Link>
+        </a>
 
         ))}
       </Box>
