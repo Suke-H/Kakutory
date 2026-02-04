@@ -8,4 +8,7 @@ export default defineConfig({
   build: {
     format: 'file',
   },
+  markdown: {
+    smartypants: false,
+  },
 });

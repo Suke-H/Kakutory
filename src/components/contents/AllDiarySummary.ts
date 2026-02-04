@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2026020401,
+        title: '『アルジャーノンに花束を』を読んで',
+        thumbnail: '/diarySam/20241230_sam.png',
+        date: '2026-02-04',
+        tags: ['読書感想'],
+    },
+    {
         id: 2024123001,
         title: '2024年読んだ小説を振り返り+紹介',
         thumbnail: '/diarySam/20241230_sam.png',
