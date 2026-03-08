@@ -1,12 +1,14 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import { Heading } from '../../src/components/Heading';
+import { Profile } from '../../src/components/contents/Profile';
 const { frontmatter } = Astro.props;
 ---
-<BaseLayout title={frontmatter.title}>
+<BaseLayout title="About | kakutory">
   <div style="color: #585858; font-weight: bold; text-align: center;">
-    <Heading text="DIARY" client:only="react" />
+    <Heading text="ABOUT" client:only="react" />
   </div>
+  <Profile client:only="react" />
   <div class="znc">
     <slot />
   </div>
