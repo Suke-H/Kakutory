@@ -6,7 +6,7 @@ import './Footer.css';
 export const Footer = () : JSX.Element => {
     return (
         <footer className="footer">
-            <p className="copywrite">© 2023 かくひと</p>
+            <p className="copywrite">© 2026 かくひと</p>
         </footer>
     );
 };
