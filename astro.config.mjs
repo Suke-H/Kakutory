@@ -6,9 +6,6 @@ export default defineConfig({
   publicDir: './public',
   base: '/',
   outDir: './dist',
-  build: {
-    format: 'file',
-  },
   markdown: {
     smartypants: false,
   },
