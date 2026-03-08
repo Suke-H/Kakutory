@@ -41,7 +41,6 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "prettier": "3.0.3",
     "rollup-plugin-rewrite": "^0.0.4",
-    "typescript": "^5.2.2",
-    "vite": "^7.2.6"
+    "typescript": "^5.2.2"
   }
 }
