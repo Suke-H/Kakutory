@@ -7,11 +7,11 @@ import CardContent from '@mui/material/CardContent';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
-import kakuhito from '../../assets/about/kakuhito.png';
-import x from '../../assets/about/SNS/x-logo-black.png';
-import github from '../../assets/about/SNS/github-mark.png';
-import zenn from '../../assets/about/SNS/zenn-logo-only.svg';
-import note from '../../assets/about/SNS/note-icon.png';
+import kakuhito from '../../assets/about/kakuhito.png?url';
+import x from '../../assets/about/SNS/x-logo-black.png?url';
+import github from '../../assets/about/SNS/github-mark.png?url';
+import zenn from '../../assets/about/SNS/zenn-logo-only.svg?url';
+import note from '../../assets/about/SNS/note-icon.png?url';
 
 export const Profile = (): JSX.Element => {
 
@@ -31,7 +31,7 @@ export const Profile = (): JSX.Element => {
 
     return (
       <>
-      <a href="/#/about">
+      <a href="/about">
         <Card sx={{ 
             display: 'flex', 
             

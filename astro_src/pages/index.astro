@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Home } from '../../src/components/contents/Home';
+---
+<BaseLayout title="kakutory">
+  <Home client:only="react" />
+</BaseLayout>

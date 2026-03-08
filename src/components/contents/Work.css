@@ -24,6 +24,14 @@
   margin-top: 50px;
 }
 
+.imageWrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin: 0 auto;
+}
+
 @media (max-width: 1024px) {
 }
 
@@ -34,5 +42,12 @@
 
   .column {
     font-size: 30px;
+  }
+
+  .imageWrapper {
+    width: 90%;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 0 auto;
   }
 }

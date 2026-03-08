@@ -1,8 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 // import React from 'react';
 
-import { Routes, Route } from 'react-router-dom';
-
 import { Heading } from '../Heading';
 import { DiaryList } from './DiaryList';
 import { AllDiarySummary } from './AllDiarySummary';
@@ -10,19 +8,17 @@ import { type IsHomeProp } from './IsHomeProp';
 
 import './Diary.css';
 import Button from '@mui/material/Button';
-  
+
 export const Diary = ( {isHome}: IsHomeProp ): JSX.Element => {
     return (
         <div className='diary'>
 
           <Heading text={"DIARY"} />
 
-          <Routes>
-            <Route path="/" element={<DiaryList allDiarySummary={AllDiarySummary} isHome={isHome} />} />
-          </Routes>
+          <DiaryList allDiarySummary={AllDiarySummary} isHome={isHome} />
 
-          {isHome ? 
-              <a href="/#/diary/" className='read-more'>
+          {isHome ?
+              <a href="/diary" className='read-more'>
                   <Button 
                     variant="contained"
                     sx={{ 
