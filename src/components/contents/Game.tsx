@@ -7,16 +7,16 @@ import { Typography, Link, Card, CardActionArea, CardMedia, CardContent } from '
 import './Game.css';
 import Button from '@mui/material/Button';
 
-import strayBot from '../../assets/game/strayBot.png';
-import shikakuReversi from '../../assets/game/shikakuReversi.png';
-import chocomint from '../../assets/game/chocomint.png';
-import memory from '../../assets/game/memory.png';
-import DearPastDiary from '../../assets/game/DearPastDiary.png';
-import Fulltank from '../../assets/game/Fulltank.png';
-import Company from '../../assets/game/Company.png';
-import kiro from '../../assets/game/kiro.png';
-import konatsu from '../../assets/game/konatsu.png';
-import TankStrike from '../../assets/game/TankStrike.png';
+import strayBot from '../../assets/game/strayBot.png?url';
+import shikakuReversi from '../../assets/game/shikakuReversi.png?url';
+import chocomint from '../../assets/game/chocomint.png?url';
+import memory from '../../assets/game/memory.png?url';
+import DearPastDiary from '../../assets/game/DearPastDiary.png?url';
+import Fulltank from '../../assets/game/Fulltank.png?url';
+import Company from '../../assets/game/Company.png?url';
+import kiro from '../../assets/game/kiro.png?url';
+import konatsu from '../../assets/game/konatsu.png?url';
+import TankStrike from '../../assets/game/TankStrike.png?url';
 
 interface GameCardProps {
     url: string;

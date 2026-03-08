@@ -2,19 +2,19 @@
 // import React from 'react';
 
 import './Work.css';
-import kakutory1 from '../../assets/work/kakutory/icon1.png';
-import kakutory2 from '../../assets/work/kakutory/2.png';
-import kakutory3 from '../../assets/work/kakutory/3.png';
-import wordle1 from '../../assets/work/wordle/1.png';
-import wordle2 from '../../assets/work/wordle/2.png';
-import wordle3 from '../../assets/work/wordle/3.png';
-import yuruSprint1 from '../../assets/work/yuruSprint/1.png';
-import yuruSprint2 from '../../assets/work/yuruSprint/2.png';
-import yuruSprint3 from '../../assets/work/yuruSprint/3.png';
-import yuruSprint4 from '../../assets/work/yuruSprint/4.png';
-import kiro1 from '../../assets/work/kiro/1.png';
-import kiro2 from '../../assets/work/kiro/2.png';
-import kiro3 from '../../assets/work/kiro/3.png';
+import kakutory1 from '../../assets/work/kakutory/icon1.png?url';
+import kakutory2 from '../../assets/work/kakutory/2.png?url';
+import kakutory3 from '../../assets/work/kakutory/3.png?url';
+import wordle1 from '../../assets/work/wordle/1.png?url';
+import wordle2 from '../../assets/work/wordle/2.png?url';
+import wordle3 from '../../assets/work/wordle/3.png?url';
+import yuruSprint1 from '../../assets/work/yuruSprint/1.png?url';
+import yuruSprint2 from '../../assets/work/yuruSprint/2.png?url';
+import yuruSprint3 from '../../assets/work/yuruSprint/3.png?url';
+import yuruSprint4 from '../../assets/work/yuruSprint/4.png?url';
+import kiro1 from '../../assets/work/kiro/1.png?url';
+import kiro2 from '../../assets/work/kiro/2.png?url';
+import kiro3 from '../../assets/work/kiro/3.png?url';
 import { type IsHomeProp } from './IsHomeProp';
 
 import { useState } from 'react';

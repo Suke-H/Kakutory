@@ -1,0 +1,188 @@
+---
+import kakutoryPNG from '../../src/assets/kakutory.png';
+---
+
+<div class="headerContainer">
+  <div class="menu-icon" id="menu-icon">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="side-menu" id="side-menu">
+    <div class="close-button" id="close-button">&times;</div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/game">Game</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="/diary">Diary</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <a href="/" class="title">
+    <img src={kakutoryPNG.src} alt="kakutory" class="title-image" />
+  </a>
+
+  <div class="headerSeparateLine"></div>
+
+  <div class="menuContainer">
+    <a href="/about" class="menuItem">About</a>
+    <a href="/game" class="menuItem">Game</a>
+    <a href="/work" class="menuItem">Work</a>
+    <a href="/diary" class="menuItem">Diary</a>
+  </div>
+</div>
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const sideMenu = document.getElementById('side-menu');
+  const closeButton = document.getElementById('close-button');
+
+  menuIcon?.addEventListener('click', () => {
+    sideMenu?.classList.toggle('open');
+  });
+  closeButton?.addEventListener('click', () => {
+    sideMenu?.classList.remove('open');
+  });
+</script>
+
+<style>
+  /* PC */
+  .headerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .title {
+    background-color: #373B7A;
+    width: 98vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+  }
+
+  .title-image {
+    width: 52vh;
+    transition: transform 0.3s ease;
+  }
+
+  .title:hover .title-image {
+    transform: scale(1.05);
+  }
+
+  .headerSeparateLine {
+    background-color: #585858;
+    width: 98vw;
+    height: 1.5vh;
+  }
+
+  .menuContainer {
+    width: 98vw;
+    height: 40px;
+    display: flex;
+  }
+
+  .menuItem {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    color: #585858;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Noto Sans JP', Impact, Meiryo, 'ヒラギノ角ゴ', Lato, sans-serif;
+    text-decoration: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .side-menu {
+    display: none;
+  }
+
+  /* スマホ */
+  @media (max-width: 600px) {
+    .title {
+      margin-top: 10vh;
+      height: 15vh;
+    }
+
+    .title-image {
+      width: 40vh;
+    }
+
+    .menu-icon {
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 5vh;
+      left: 3vh;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .bar {
+      width: 100%;
+      height: 4px;
+      background-color: #585858;
+    }
+
+    .side-menu {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -300px;
+      width: 300px;
+      height: 100vh;
+      background-color: #585858;
+      transition: 0.3s;
+      z-index: 10;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .side-menu ul li {
+      padding: 20px;
+    }
+
+    .side-menu ul li a {
+      color: #E9E9E9;
+      text-decoration: none;
+    }
+
+    .side-menu.open {
+      left: 0px;
+    }
+
+    .side-menu .close-button {
+      position: absolute;
+      top: 0.1vh;
+      right: 5vh;
+      font-size: 40px;
+      color: #E9E9E9;
+      cursor: pointer;
+    }
+
+    .menuContainer {
+      display: none;
+    }
+  }
+</style>

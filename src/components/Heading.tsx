@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import './Heading.css';
-import emphasis_mark from '../assets/heading/emphasis_mark.png';
+import emphasis_mark from '../assets/heading/emphasis_mark.png?url';
 
 interface HeadingProps {
     text: string;

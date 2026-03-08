@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Diary } from '../../../src/components/contents/Diary';
+---
+<BaseLayout title="Diary | kakutory">
+  <Diary isHome={false} client:only="react" />
+</BaseLayout>
