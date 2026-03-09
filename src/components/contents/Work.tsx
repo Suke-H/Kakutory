@@ -346,26 +346,27 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       description: `バックエンドの練習としてSlack Appを作成しました。
       「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
       結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
-    }
+    },
+    {
+      url: "https://kiro-stage-editor-708973678663.asia-northeast1.run.app/",
+      imageUrls: [ kiro1, kiro2, kiro3 ],
+      title: '『帰路』ステージエディタ',
+      tags: ['ゲーム', 'React', 'TypeScript', 'GoogleCloud'],
+      date: '2024-12-21',
+      overview: 'パズルゲーム『帰路』のステージエディタツール',
+      technology: 'React, TypeScript',
+      infrastructure: 'Cloud Run',
+      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
+      github: "https://github.com/Suke-H/kiro_stage_editor/",
+      articles: [
+      ],
+      description: `目下作成中のパズルゲーム『帰路』にて、Unityに依存せず、
+      受け渡しはJsonで行えるような補助ツールを作成したく、取り組んでいます。
+      スマホでも触れるので、寝ころびながらステージを考えられて便利...うまく使っていきたいです。`,
+    },
   ];
 
   const homeworks = [
-    {
-      url: "https://kakutory.com",
-      imageUrls: [ kakutory1, kakutory2, kakutory3 ],
-      title: 'kakutory',
-      tags: ['React', 'Typescript', 'AWS'],
-      date: '2023-12-08',
-      overview: 'ポートフォリオサイト『kakutory』の作成',
-      technology: 'React, TypeScript',
-      infrastructure: 'AWS S3 + CloudFront + Route53, Github Actions',
-      otherTechnologies: 'Vite, GitHub Actions',
-      github: "https://github.com/Suke-H/kakutory",
-      articles: [
-        { title: "このサイトの使用技術", link: "https://kakutory.com/diary/2023121002" },
-      ],
-      description: 'Webの勉強を主目的に、自分のポートフォリオサイトとして作成しました。フロントエンドはReactとTypescript、ホスティングはAWS S3とCloudfrontを使っています。今後、ゲームとWeb、2つの側面での制作物を公開したり、日記を書いていったり、自由に使っていきたいなと思ってます。',
-    },
     {
       url: "https://kakutory.com/game_pages/MyWordleProject",
       imageUrls: [ wordle1, wordle2, wordle3 ],
@@ -382,25 +383,6 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
         { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
       ],
       description: 'AWSを使ったバックエンド開発を学ぶために、Wordleを模倣作成しました。フロントエンドやホスティングはKakutoryと同じで、バックエンドにAWS LambdaとDynamoDBを使用しています。作者でさえも毎日遊べるシステムとして、これ以上シンプルで優れたゲームって中々無いのではないでしょうか...',
-    },
-    {
-      url: "https://github.com/Suke-H/yuru-sprint/",
-      imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
-      title: 'ゆるスプリント',
-      tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
-      date: '2024-09-22',
-      overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
-      technology: 'Node.js',
-      infrastructure: 'Cloud Run + Cloud Scheduler',
-      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
-      github: "https://github.com/Suke-H/yuru-sprint",
-      articles: [
-        { title: "Slack Appの公式Quickstartをローカルサーバーで試す", link: "https://zenn.dev/kakuhito/articles/667b00366f6626" },
-        { title: "【OIDC認証】GitHub ActionsでCloud Run自動デプロイ", link: "https://zenn.dev/kakuhito/articles/565c5dda9082a3" },
-      ],
-      description: `バックエンドの練習としてSlack Appを作成しました。
-      「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
-      結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
     },
     {
       url: "https://kiro-stage-editor-708973678663.asia-northeast1.run.app/",
@@ -428,7 +410,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
           <Heading text={"WORK"} />
     
           <div className='imageWrapper'>
-            {works.map((work, index) => (
+            {homeworks.map((work, index) => (
               <WorkCard key={index} {...work} />
             ))}
           </div>
@@ -460,9 +442,9 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       return (
         <div className='work'>
           <Heading text={"WORK"} />
-    
+
           <div className='imageWrapper'>
-            {homeworks.map((work, index) => (
+            {works.map((work, index) => (
               <WorkCard key={index} {...work} />
             ))}
           </div>
