@@ -307,7 +307,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       otherTechnologies: 'Vite, GitHub Actions',
       github: "https://github.com/Suke-H/kakutory",
       articles: [
-        { title: "このサイトの使用技術", link: "https://kakutory.com/#/diary/2023121002" },
+        { title: "このサイトの使用技術", link: "https://kakutory.com/diary/2023121002" },
       ],
       description: 'Webの勉強を主目的に、自分のポートフォリオサイトとして作成しました。フロントエンドはReactとTypescript、ホスティングはAWS S3とCloudfrontを使っています。今後、ゲームとWeb、2つの側面での制作物を公開したり、日記を書いていったり、自由に使っていきたいなと思ってます。',
     },
@@ -323,7 +323,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       otherTechnologies: 'Vite, GitHub Actions',
       github: "https://github.com/Suke-H/wordle-project",
       articles: [
-        { title: "Wordle作りました！", link: "https://kakutory.com/#/diary/2024031101" },
+        { title: "Wordle作りました！", link: "https://kakutory.com/diary/2024031101" },
         { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
       ],
       description: 'AWSを使ったバックエンド開発を学ぶために、Wordleを模倣作成しました。フロントエンドやホスティングはKakutoryと同じで、バックエンドにAWS LambdaとDynamoDBを使用しています。作者でさえも毎日遊べるシステムとして、これ以上シンプルで優れたゲームって中々無いのではないでしょうか...',
@@ -362,7 +362,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       otherTechnologies: 'Vite, GitHub Actions',
       github: "https://github.com/Suke-H/kakutory",
       articles: [
-        { title: "このサイトの使用技術", link: "https://kakutory.com/#/diary/2023121002" },
+        { title: "このサイトの使用技術", link: "https://kakutory.com/diary/2023121002" },
       ],
       description: 'Webの勉強を主目的に、自分のポートフォリオサイトとして作成しました。フロントエンドはReactとTypescript、ホスティングはAWS S3とCloudfrontを使っています。今後、ゲームとWeb、2つの側面での制作物を公開したり、日記を書いていったり、自由に使っていきたいなと思ってます。',
     },
@@ -378,7 +378,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       otherTechnologies: 'Vite, GitHub Actions',
       github: "https://github.com/Suke-H/wordle-project",
       articles: [
-        { title: "Wordle作りました！", link: "https://kakutory.com/#/diary/2024031101" },
+        { title: "Wordle作りました！", link: "https://kakutory.com/diary/2024031101" },
         { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
       ],
       description: 'AWSを使ったバックエンド開発を学ぶために、Wordleを模倣作成しました。フロントエンドやホスティングはKakutoryと同じで、バックエンドにAWS LambdaとDynamoDBを使用しています。作者でさえも毎日遊べるシステムとして、これ以上シンプルで優れたゲームって中々無いのではないでしょうか...',
@@ -433,7 +433,7 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
             ))}
           </div>
 
-          <a href="/#/game/" className='read-more'>
+          <a href="/work" className='read-more'>
             <Button 
               variant="contained"
               sx={{ 

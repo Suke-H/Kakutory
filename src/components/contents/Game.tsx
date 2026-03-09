@@ -196,7 +196,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             ))}
         
       </div>
-        <a href="/#/game/" className='read-more'>
+        <a href="/game" className='read-more'>
           <Button 
             variant="contained"
             sx={{ 
