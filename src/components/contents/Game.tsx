@@ -14,9 +14,12 @@ import memory from '../../assets/game/memory.png?url';
 import DearPastDiary from '../../assets/game/DearPastDiary.png?url';
 import Fulltank from '../../assets/game/Fulltank.png?url';
 import Company from '../../assets/game/Company.png?url';
-import kiro from '../../assets/game/kiro.png?url';
+import kiro_u1w from '../../assets/game/kiro_u1w.png?url';
+import kiro_steam from '../../assets/game/kiro_steam.png?url';
+import shinyu from '../../assets/game/shinyu.png?url';
 import konatsu from '../../assets/game/konatsu.png?url';
 import TankStrike from '../../assets/game/TankStrike.png?url';
+
 
 interface GameCardProps {
     url: string;
@@ -63,6 +66,13 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
     const games = [
         {   
+            url: "https://store.steampowered.com/app/3409620/_/?l=japanese", 
+            imageUrl: kiro_steam, 
+            title: "帰路", 
+            date: "2025-12-29", 
+            description: "早く家に帰りたい少女いこいを、「白黒反転」を使ってゴールへ導くパズルゲームです。初めてのSteam、初めての4人チーム制作です。ゼヒアソンデネ" 
+        },
+        {   
             url: "https://unityroom.com/games/stray_bot", 
             imageUrl: strayBot, 
             title: "STRAY BOT", 
@@ -94,11 +104,18 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
     ];    
     const u1wgames = [
         {   
+            url: "https://unityroom.com/games/moshimoshi_shinyu",
+            imageUrl: shinyu,
+            title: "もしもし、しんゆう", 
+            date: "2025-08-11", 
+            description: "夏もそろそろ終わるし、花火大会に行きたい。久しぶりに親友に電話をかけて、何とか興味をひかせよう。うすいしお(@ususio0unity)さんが描いたベルくんが、とてもかわいいのです。" 
+        },
+        {   
             url: "https://unityroom.com/games/kaerimichi", 
-            imageUrl: kiro, 
-            title: "帰路", 
+            imageUrl: kiro_u1w, 
+            title: "帰路（unity1week版）", 
             date: "2024-08-18", 
-            description: "けめるさん(@qemelly_ongaku)との共同制作。パネルで2色をひっくり返して、少女を正しいゴールへ導くパズルゲーム。今後も育てたい作品です。" 
+            description: "Steam版『帰路』の元ネタです。ジャムのお題が「かえす」→「白黒を返す」＋「家に帰す」という発想。キャラが自動で道を見つけてくれる、ちょっと変わったパズルゲームになりました。" 
         },
         {   
             url: "https://unityroom.com/games/dear_past_diary", 
@@ -118,7 +135,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             imageUrl: chocomint,
             title: "チョコミントを崇めよ！", 
             date: "2024-08-15", 
-            description: "「チョコミントを全世界に布教しよう！」なカルト風クッキークリッカーです。1週間でここまでイラストを描いてくれた友達に感謝。" 
+            description: "「チョコミントを全世界に布教しよう！」なカルト風クッキークリッカーです。1週間でここまでイラストを描いてくれた友達(@acro_works)に感謝。" 
         },
         { 
             url: "https://unityroom.com/games/full_tank_by_kakusuke", 
@@ -138,6 +155,13 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
 
     const homegames = [
         {   
+            url: "https://store.steampowered.com/app/3409620/_/?l=japanese", 
+            imageUrl: kiro_steam, 
+            title: "帰路", 
+            date: "2025-12-29", 
+            description: "Steamで公開しました！4人で作成したゲームとなります。オモシロイヨゼヒアソンデネ。" 
+        },
+        {   
             url: "https://unityroom.com/games/stray_bot", 
             imageUrl: strayBot, 
             title: "STRAY BOT", 
@@ -151,19 +175,12 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             date: "2023-08-31", 
             description: "ZeF君(@ZeF_games)との共同制作。「丸みもマス目もないリバーシ」です、ぜひ遊んでみてください。東京ゲームダンジョン3に出展しました。" 
         },
-        {   
-            url: "https://unityroom.com/games/kaerimichi", 
-            imageUrl: kiro, 
-            title: "帰路", 
-            date: "2024-08-18", 
-            description: "けめるさん(@qemelly_ongaku)との共同制作。パネルで2色をひっくり返して、少女を正しいゴールへ導くパズルゲーム。今後も育てたい作品です。" 
-        },
-        {   
-            url: "https://unityroom.com/games/dear_past_diary", 
-            imageUrl: DearPastDiary, 
-            title: "『Dear past diary, 』", 
-            date: "2024-04-01", 
-            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。" 
+        {
+            url: "https://unityroom.com/games/moshimoshi_shinyu",
+            imageUrl: shinyu,
+            title: "もしもし、しんゆう",
+            date: "2025-08-11",
+            description: "うすいしお(@ususio0unity)さんとの共同制作。花火大会に行きたいし、久しぶりに親友に電話をかけて興味をひこう。ベルくんがとてもかわいい"
         },
     ];
 
@@ -211,7 +228,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                 marginRight: "10%",
                 fontSize: { xs: '14px', md: '16px' }
                 }} >
-                {"2022年の『STRAY BOT』からゲーム制作をはじめました（こっちをもっと増やしたいな...）"}
+                {"2022年の『STRAY BOT』からゲーム制作をはじめました。いろいろ作っていくぞ"}
         </Typography>
 
       <div className='imageWrapper'>
@@ -231,7 +248,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                 <Link href={"https://unityroom.com/unity1weeks"} sx={{ color: '#1976d2', textDecoration: 'none' }}>
                     {"「Unity1週間ゲームジャム」"}
                 </Link>
-                {"への参加作品です。2022年9月『ためる』から参加をはじめ、計6回参加しました。"}
+                {"への参加作品です。2022年9月『ためる』から参加をはじめ、計7回参加しました。"}
         </Typography>
 
       <div className='imageWrapper'>
