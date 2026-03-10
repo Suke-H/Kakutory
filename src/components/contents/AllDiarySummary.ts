@@ -5,7 +5,7 @@ export const AllDiarySummary: DiarySummary[] = [
     {
         id: 2026031001,
         title: 'きろにっき：ストーリーの話',
-        thumbnail: '/diarySam/michikusa.png',
+        thumbnail: '/diarySam/20260310_Desk.png',
         date: '2026-03-10',
         tags: ['制作', 'ゲーム'],
     },

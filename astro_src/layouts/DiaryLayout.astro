@@ -12,12 +12,6 @@ const { frontmatter } = Astro.props;
   <div class="znc">
     <slot />
   </div>
-
-  <!-- Zenn埋め込みスクリプト -->
-  <script src="https://embed.zenn.studio/js/listen-embed-event.js" type="module"></script>
-  <script type="module">
-    import('zenn-embed-elements');
-  </script>
 </BaseLayout>
 
 <style is:global>
