@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2026031001,
+        title: 'きろにっき：ストーリーの話',
+        thumbnail: '/diarySam/20260310_Desk.png',
+        date: '2026-03-10',
+        tags: ['制作', 'ゲーム'],
+    },
+    {
         id: 2026020401,
         title: '『アルジャーノンに花束を』を読んで',
         thumbnail: '/diarySam/20241230_sam.png',

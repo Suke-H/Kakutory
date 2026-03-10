@@ -3,10 +3,12 @@ import BaseLayout from './BaseLayout.astro';
 import { Heading } from '../../src/components/Heading';
 const { frontmatter } = Astro.props;
 ---
+
 <BaseLayout title={frontmatter.title}>
   <div style="color: #585858; font-weight: bold; text-align: center;">
     <Heading text="DIARY" client:only="react" />
   </div>
+
   <div class="znc">
     <slot />
   </div>
@@ -14,11 +16,13 @@ const { frontmatter } = Astro.props;
 
 <style is:global>
   @import "zenn-content-css";
+
   .znc {
     width: 70%;
     margin: 0 auto;
     max-width: 800px;
   }
+
   @media (max-width: 600px) {
     .znc { width: 90%; }
   }
