@@ -30,7 +30,7 @@ export const DiaryList: React.FC<DiaryListProps> = ({ allDiarySummary, isHome })
       <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
 
         {displayedDiaries.map((diary) => (
-          <a href={`/diary/${diary.id}.html`} key={diary.id} style={{ width: "100%" }}>
+          <a href={`/diary/${diary.id}`} key={diary.id} style={{ width: "100%" }}>
           <Card key={diary.id} sx={{ 
             display: 'flex', 
             marginBottom: 2 , 
