@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2026031501,
+        title: '『パラノマサイト FILE23 本所七不思議』を遊んで',
+        thumbnail: '/diarySam/chocomint-kun.png',
+        date: '2026-03-15',
+        tags: ['ゲーム感想'],
+    },
+    {
         id: 2026031001,
         title: 'きろにっき：ストーリーの話',
         thumbnail: '/diarySam/20260310_Desk.png',
