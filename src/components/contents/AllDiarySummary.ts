@@ -9,6 +9,12 @@ export const AllDiarySummary: DiarySummary[] = [
         date: '2026-04-02',
         tags: ['ゲーム感想'],
     },
+        id: 2026033101,
+        title: 'きろにっき：パズル編',
+        thumbnail: '/diarySam/nikki.png',
+        date: '2026-03-31',
+        tags: ['制作'],
+    },
     {
         id: 2026031501,
         title: '『パラノマサイト FILE23 本所七不思議』を遊んで',
@@ -18,7 +24,7 @@ export const AllDiarySummary: DiarySummary[] = [
     },
     {
         id: 2026031001,
-        title: 'きろにっき：ストーリーの話',
+        title: 'きろにっき：ストーリー編',
         thumbnail: '/diarySam/20260310_Desk.png',
         date: '2026-03-10',
         tags: ['制作', 'ゲーム'],
