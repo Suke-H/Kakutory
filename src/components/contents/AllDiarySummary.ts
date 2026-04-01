@@ -3,6 +3,12 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2026040201,
+        title: '『ドッペルテスト』を遊んで',
+        thumbnail: '/diarySam/chocomint-kun.png',
+        date: '2026-04-02',
+        tags: ['ゲーム感想'],
+    },
         id: 2026033101,
         title: 'きろにっき：パズル編',
         thumbnail: '/diarySam/nikki.png',
