@@ -19,6 +19,7 @@ import kiro_steam from '../../assets/game/kiro_steam.png?url';
 import shinyu from '../../assets/game/shinyu.png?url';
 import konatsu from '../../assets/game/konatsu.png?url';
 import TankStrike from '../../assets/game/TankStrike.png?url';
+import chatbot_bar from '../../assets/game/chatbot_bar2.png?url';
 
 
 interface GameCardProps {
@@ -104,6 +105,14 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
     ];    
     const u1wgames = [
         {   
+            url: "https://unityroom.com/games/blackbox",
+            imageUrl: chatbot_bar,
+            title: "チャットボットバーへようこそ！", 
+            date: "2026-03-24", 
+            description: "「AIって絶対、影で人間の愚痴言っているよな」という確信の元に作りました。好き勝手に命令されて大変なAIたちの舞台裏を、ありありと描いたかもしれないゲームです" 
+        },
+        {   
+
             url: "https://unityroom.com/games/moshimoshi_shinyu",
             imageUrl: shinyu,
             title: "もしもし、しんゆう", 
