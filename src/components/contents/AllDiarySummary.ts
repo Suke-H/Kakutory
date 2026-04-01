@@ -9,6 +9,7 @@ export const AllDiarySummary: DiarySummary[] = [
         date: '2026-04-02',
         tags: ['ゲーム感想'],
     },
+    {
         id: 2026033101,
         title: 'きろにっき：パズル編',
         thumbnail: '/diarySam/nikki.png',
