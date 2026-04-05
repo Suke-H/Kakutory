@@ -177,12 +177,12 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             date: "2022-10-27", 
             description: "最初にゲーム制作に取り組んだ作品です。マトン君というロボットを導くパズルゲーム。友達に描いてもらい、今でもお気に入りなロボです" 
         },
-        { 
-            url: "https://unityroom.com/games/shikaku_reversi", 
-            imageUrl: shikakuReversi,
-            title: "シカクリバーシ", 
-            date: "2023-08-31", 
-            description: "ZeF君(@ZeF_games)との共同制作。「丸みもマス目もないリバーシ」です、ぜひ遊んでみてください。東京ゲームダンジョン3に出展しました。" 
+        {   
+            url: "https://unityroom.com/games/dear_past_diary", 
+            imageUrl: DearPastDiary, 
+            title: "『Dear past diary, 』", 
+            date: "2024-04-01", 
+            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。" 
         },
         {
             url: "https://unityroom.com/games/moshimoshi_shinyu",
