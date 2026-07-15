@@ -15,6 +15,11 @@ import yuruSprint4 from '../../assets/work/yuruSprint/4.png?url';
 import kiro1 from '../../assets/work/kiro/1.png?url';
 import kiro2 from '../../assets/work/kiro/2.png?url';
 import kiro3 from '../../assets/work/kiro/3.png?url';
+import tekutekuLog1 from '../../assets/work/tekuteku-log/1.png?url';
+import tekutekuLog2 from '../../assets/work/tekuteku-log/2.png?url';
+import tekutekuLog3 from '../../assets/work/tekuteku-log/3.png?url';
+import tekutekuLog4 from '../../assets/work/tekuteku-log/4.png?url';
+import tekutekuLogFeature from '../../assets/work/tekuteku-log/feature.png?url';
 import { type IsHomeProp } from './IsHomeProp';
 
 import { useState } from 'react';
@@ -54,6 +59,7 @@ interface WorkCardProps {
   otherTechnologies: string;
   github: string;
   articles: Array<{ title: string; link: string }>;
+  portraitImages?: boolean;
 }
 
 // カスタム矢印コンポーネント
@@ -84,7 +90,7 @@ const Arrow = ({ direction, onClick }: ArrowProps): JSX.Element => {
   );
 };
 
-const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, infrastructure, description, otherTechnologies, github, articles }: WorkCardProps): JSX.Element => {
+const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, infrastructure, description, otherTechnologies, github, articles, portraitImages = false }: WorkCardProps): JSX.Element => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = (): void => {
@@ -163,7 +169,17 @@ const WorkCard = ({ url, imageUrls, title, tags, date, overview, technology, inf
                   component="img"
                   image={imageUrl}
                   alt={`${title} - Image ${index + 1}`}
-                  sx={{ mt: 5, mb: 2 }}
+                  sx={{
+                    mt: 5,
+                    mb: 2,
+                    ...(portraitImages && index > 0 && {
+                      height: '50vh',
+                      width: 'auto',
+                      maxWidth: '100%',
+                      objectFit: 'contain',
+                      mx: 'auto',
+                    }),
+                  }}
                 />
               </div>
             ))}
@@ -363,6 +379,27 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       description: `目下作成中のパズルゲーム『帰路』にて、Unityに依存せず、
       受け渡しはJsonで行えるような補助ツールを作成したく、取り組んでいます。
       スマホでも触れるので、寝ころびながらステージを考えられて便利...うまく使っていきたいです。`,
+    },
+    {
+      url: 'https://play.google.com/store/apps/details?id=com.Kakuhito.tekutekulog',
+      imageUrls: [
+        tekutekuLogFeature,
+        tekutekuLog1,
+        tekutekuLog2,
+        tekutekuLog3,
+        tekutekuLog4,
+      ],
+      title: 'てくてくログ',
+      portraitImages: true,
+      tags: ['Android', 'React Native', 'TypeScript'],
+      date: '2026-06-30',
+      overview: 'Androidアプリ『てくてくログ』のリリース',
+      technology: 'React Native, TypeScript',
+      infrastructure: 'Expo',
+      otherTechnologies: '',
+      github: '',
+      articles: [],
+      description: 'ゆるいモチベで続ける習慣継続アプリです。カレンダー形式で「筋トレ・掃除」などのマイ習慣を、ぽつぽつ日付にマークしていく感じ。こういうアプリが前からとても欲しく、このAI時代なのでいっそ作ってみるかの気持ちで作りました。Expo Goの開発体験がとてもよかった...',
     },
   ];
 

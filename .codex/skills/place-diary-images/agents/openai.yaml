@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "日記画像配置"
+  short_description: "日記の画像プレースホルダーを画像へ置換"
+  default_prompt: "$place-diary-images を使って日記へ画像を配置してください。"

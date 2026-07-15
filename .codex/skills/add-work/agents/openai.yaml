@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "Work追加"
+  short_description: "作品タイトルから記入欄と画像フォルダを作成"
+  default_prompt: "$add-work を使って新しい作品の記入欄を作成してください。"

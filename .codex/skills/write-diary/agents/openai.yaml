@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "日記作成"
+  short_description: "日記一覧・本文・画像フォルダをまとめて作成"
+  default_prompt: "$write-diary を使って新しい日記を作成してください。"
