@@ -3,6 +3,13 @@ import { type DiarySummary } from './DiaryList';
 // 全日記のサマリ内容
 export const AllDiarySummary: DiarySummary[] = [
     {
+        id: 2026091601,
+        title: '#FFF ヒント',
+        thumbnail: '/images/2026091601/fff-sam.png',
+        date: '2026-09-16',
+        tags: ['制作'],
+    },
+    {
         id: 2026062401,
         title: 'コードエージェントを作ってみた',
         thumbnail: '/diarySam/tekuteku.png',
