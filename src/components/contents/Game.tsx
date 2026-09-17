@@ -20,6 +20,8 @@ import shinyu from '../../assets/game/shinyu.png?url';
 import konatsu from '../../assets/game/konatsu.png?url';
 import TankStrike from '../../assets/game/TankStrike.png?url';
 import chatbot_bar from '../../assets/game/chatbot_bar2.png?url';
+import fff from '../../assets/game/fff.png?url';
+import doRpgRight from '../../assets/game/do-rpg-right.png?url';
 
 
 interface GameCardProps {
@@ -87,6 +89,13 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             date: "2023-08-31", 
             description: "ZeF君(@ZeF_games)との共同制作。「丸みもマス目もないリバーシ」です、ぜひ遊んでみてください。東京ゲームダンジョン3に出展しました。" 
         },
+        {
+            url: "https://fff-puzzle.pages.dev/",
+            imageUrl: fff,
+            title: "#FFF",
+            date: "2026-09-18",
+            description: "実験的に作ってみた色演算パズル、その名も『#FFF』。ステージは全部で16問、ぜひ遊んでみてください！Web開発で1から作ったゲームはこれが初めてかも"
+        },
         { 
             url: "https://unityroom.com/games/konatsu_enikki", 
             imageUrl: konatsu, 
@@ -104,12 +113,12 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
         
     ];    
     const u1wgames = [
-        {   
-            url: "https://unityroom.com/games/blackbox",
-            imageUrl: chatbot_bar,
-            title: "チャットボットバーへようこそ！", 
-            date: "2026-03-24", 
-            description: "「AIって絶対、影で人間の愚痴言っているよな」という確信の元に作りました。好き勝手に命令されて大変なAIたちの舞台裏を、ありありと描いたかもしれないゲームです" 
+        {
+            url: "https://unityroom.com/games/dear_past_diary",
+            imageUrl: DearPastDiary,
+            title: "『Dear past diary, 』",
+            date: "2024-04-01",
+            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。"
         },
         {   
 
@@ -126,25 +135,32 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             date: "2024-08-18", 
             description: "Steam版『帰路』の元ネタです。ジャムのお題が「かえす」→「白黒を返す」＋「家に帰す」という発想。キャラが自動で道を見つけてくれる、ちょっと変わったパズルゲームになりました。" 
         },
-        {   
-            url: "https://unityroom.com/games/dear_past_diary", 
-            imageUrl: DearPastDiary, 
-            title: "『Dear past diary, 』", 
-            date: "2024-04-01", 
-            description: "実家の勉強机をごそごそしながら、自分の日記を読み返してみるノベルゲームです。ぜひ遊んでみてください。" 
+        {
+            url: "https://unityroom.com/games/worship-chocomint",
+            imageUrl: chocomint,
+            title: "チョコミントを崇めよ！",
+            date: "2024-08-15",
+            description: "「チョコミントを全世界に布教しよう！」なカルト風クッキークリッカーです。1週間でここまでイラストを描いてくれた友達(@acro_works)に感謝。"
         },
-        { 
+        {
+            url: "https://unityroom.com/games/do-rpg-right",
+            imageUrl: doRpgRight,
+            title: "ちゃんとRPGしろ！",
+            date: "2026-08-04",
+            description: "なかなかRPGを始めようとしないネガティブ勇者のために、「システムメッセージ」くんが立ち上がる.....！なんとかRPGを進行させるべく、勇者の悩みを聞いて後押しするような奮闘記です。"
+        },
+        {
             url: "https://unityroom.com/games/matons_memory_journey", 
             imageUrl: memory, title: "マトン君 記憶探しの旅", 
             date: "2023-06-26", 
             description: "サイコロを振ってマトン君を進める、タイムアタック式すごろく。進めば進むほど、記憶の解像度が上がっていきます。" 
         },
-        { 
-            url: "https://unityroom.com/games/worship-chocomint", 
-            imageUrl: chocomint,
-            title: "チョコミントを崇めよ！", 
-            date: "2024-08-15", 
-            description: "「チョコミントを全世界に布教しよう！」なカルト風クッキークリッカーです。1週間でここまでイラストを描いてくれた友達(@acro_works)に感謝。" 
+        {
+            url: "https://unityroom.com/games/blackbox",
+            imageUrl: chatbot_bar,
+            title: "チャットボットバーへようこそ！",
+            date: "2026-03-24",
+            description: "「AIって絶対、影で人間の愚痴言っているよな」という確信の元に作りました。好き勝手に命令されて大変なAIたちの舞台裏を、ありありと描いたかもしれないゲームです"
         },
         { 
             url: "https://unityroom.com/games/full_tank_by_kakusuke", 
@@ -257,7 +273,7 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
                 <Link href={"https://unityroom.com/unity1weeks"} sx={{ color: '#1976d2', textDecoration: 'none' }}>
                     {"「Unity1週間ゲームジャム」"}
                 </Link>
-                {"への参加作品です。2022年9月『ためる』から参加をはじめ、計7回参加しました。"}
+                {"への参加作品です。2022年9月『ためる』から参加をはじめ、計8回参加しました。"}
         </Typography>
 
       <div className='imageWrapper'>
