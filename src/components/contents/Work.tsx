@@ -405,23 +405,6 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
 
   const homeworks = [
     {
-      url: "https://kakutory.com/game_pages/MyWordleProject",
-      imageUrls: [ wordle1, wordle2, wordle3 ],
-      title: 'MyWordleProject',
-      tags: ['ゲーム', 'React', 'TypeScript', 'AWS'],
-      date: '2024-01-15',
-      overview: '単語当てゲーム『Wordle』の模倣作成',
-      technology: 'React, TypeScript',
-      infrastructure: 'AWS S3 + CloudFront + Route53, Lambda + DynamoDB',
-      otherTechnologies: 'Vite, GitHub Actions',
-      github: "https://github.com/Suke-H/wordle-project",
-      articles: [
-        { title: "Wordle作りました！", link: "https://kakutory.com/diary/2024031101" },
-        { title: "AWSでLambda, DynamoDBを使ってWordle構築してみた", link: "https://zenn.dev/kakuhito/articles/73f9f834812eee" },
-      ],
-      description: 'AWSを使ったバックエンド開発を学ぶために、Wordleを模倣作成しました。フロントエンドやホスティングはKakutoryと同じで、バックエンドにAWS LambdaとDynamoDBを使用しています。作者でさえも毎日遊べるシステムとして、これ以上シンプルで優れたゲームって中々無いのではないでしょうか...',
-    },
-    {
       url: "https://kiro-stage-editor-708973678663.asia-northeast1.run.app/",
       imageUrls: [ kiro1, kiro2, kiro3 ],
       title: '『帰路』ステージエディタ',
@@ -437,6 +420,25 @@ export const Work = ({ isHome }: IsHomeProp ): JSX.Element => {
       description: `目下作成中のパズルゲーム『帰路』にて、Unityに依存せず、
       受け渡しはJsonで行えるような補助ツールを作成したく、取り組んでいます。
       スマホでも触れるので、寝ころびながらステージを考えられて便利...うまく使っていきたいです。`,
+    },
+    {
+      url: "https://github.com/Suke-H/yuru-sprint/",
+      imageUrls: [ yuruSprint1, yuruSprint2, yuruSprint3, yuruSprint4 ],
+      title: 'ゆるスプリント',
+      tags: ['SlackApp', 'Node.js', 'GoogleCloud'],
+      date: '2024-09-22',
+      overview: 'Slackでゆる～く1週間の目標を立てられるアプリ',
+      technology: 'Node.js',
+      infrastructure: 'Cloud Run + Cloud Scheduler',
+      otherTechnologies: 'Docker, GitHub Actions, Workload Identity Federation',
+      github: "https://github.com/Suke-H/yuru-sprint",
+      articles: [
+        { title: "Slack Appの公式Quickstartをローカルサーバーで試す", link: "https://zenn.dev/kakuhito/articles/667b00366f6626" },
+        { title: "【OIDC認証】GitHub ActionsでCloud Run自動デプロイ", link: "https://zenn.dev/kakuhito/articles/565c5dda9082a3" },
+      ],
+      description: `バックエンドの練習としてSlack Appを作成しました。
+      「今週の目標を立てる・できたタスクにはスタンプを押す・振り返りをする」を繰り返しができるアプリです。
+      結果はNotionのDBに書き込んで、いつでも振り返りできるようにしています。`,
     }
   ];
   
