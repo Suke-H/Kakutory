@@ -25,7 +25,14 @@ const { frontmatter } = Astro.props;
   .znc li {
     font-size: 1.25rem;
   }
+  .znc h1:first-child {
+    margin-top: 3rem;
+  }
   @media (max-width: 600px) {
     .znc { width: 90%; }
+    .znc p,
+    .znc li {
+      font-size: 1rem;
+    }
   }
 </style>

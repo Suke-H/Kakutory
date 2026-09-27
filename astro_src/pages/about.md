@@ -31,13 +31,9 @@ title: 'About'
 # 好きなゲーム
 
 ストーリー：ほっこりする話・ぐさっと刺さる話・ディストピア系・ミステリーが好き  
-パズル・謎解き系好き
+パズル・謎解き系好き  
 
-- Baba Is You
-- Omori
-- OneShot
-- A Short Hike
-- ファミレスを享受せよ
-- もしもシナリオ
-- パラノマサイト
-
+- ADV: OneShot, A Short Hike, ファミレスを享受せよ, Omori, もしもシナリオ
+- パズル: Baba Is You, Öoo, Portal, タロスの原理
+- ミステリー: パラノマサイト
+- TRPG: 狂気山脈, 新訳きさらぎ駅
