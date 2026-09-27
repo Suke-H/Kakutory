@@ -20,7 +20,7 @@ export const Profile = (): JSX.Element => {
       fontWeight: "bold",
       color: "#585858",
       fontSize: { xs: "14px", md: "18px" },
-      margin: { xs: "0 0 10px 25px", md: "0 0 10px 20px" },
+      margin: { xs: "0 0 10px 12px", md: "0 0 10px 12px" },
       textAlign: "left",
       fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','),
       display: "list-item",
@@ -49,9 +49,9 @@ export const Profile = (): JSX.Element => {
               flexDirection: 'column', 
               alignItems: 'center', 
               justifyContent: 'space-between', 
-              p: {xs: 0 , md:  2 },
+              p: { xs: 0, md: 1 },
               marginTop: {xs: "20px" , md: 0 },
-              marginLeft: {xs: "20px" , md: "20px" },
+              marginLeft: { xs: "12px", md: "12px" },
               }}
             >
             <Box
@@ -96,26 +96,26 @@ export const Profile = (): JSX.Element => {
           </Box>
           <CardContent 
             sx={{ 
-              marginRight: {xs: 0, md: "20px"},
-              padding: {xs: "16px 16px 24px 8px", md: "16px 16px 24px 16px"},
+              flex: 1,
+              marginRight: { xs: 0, md: "8px" },
+              padding: { xs: "16px 8px 24px 4px", md: "16px 8px 24px" },
               }}>
             <Typography gutterBottom variant="h5" component="div"
                 sx={{
                     fontWeight: "bold",
                     color: "#585858",
                     fontSize: {xs: "28px", md: "36px"},
-                    margin: {xs: "0 0 20px 20px", md: "10px 0 20px 20px"},
+                    margin: { xs: "0 0 20px 12px", md: "10px 0 20px 12px" },
                     textAlign: "left",
                     fontFamily: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"].join(','), 
                     }}>
               かくひと
             </Typography>
             <Typography variant="body2" color="text.secondary" sx={typographyStyle}>
-                おもいつきゲーム制作者
+                仕事: エンジニア
             </Typography>
-
             <Typography variant="body2" color="text.secondary" sx={typographyStyle}>
-                かけだしWebエンジニア
+                趣味: ゲーム・アプリ制作
             </Typography>
           </CardContent>
         </Card>
