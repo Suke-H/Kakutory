@@ -4,7 +4,7 @@ import { type DiarySummary } from './DiaryList';
 export const AllDiarySummary: DiarySummary[] = [
     {
         id: 2026091601,
-        title: '#FFF ヒント',
+        title: '色演算パズル『#FFF』の攻略ヒント',
         thumbnail: '/images/2026091601/fff-sam.png',
         date: '2026-09-16',
         tags: ['制作'],
