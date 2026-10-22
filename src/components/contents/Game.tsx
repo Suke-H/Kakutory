@@ -22,6 +22,7 @@ import TankStrike from '../../assets/game/TankStrike.png?url';
 import chatbot_bar from '../../assets/game/chatbot_bar2.png?url';
 import fff from '../../assets/game/fff.png?url';
 import doRpgRight from '../../assets/game/do-rpg-right.png?url';
+import ohMyDemon from '../../assets/game/oh-my-demon.png?url';
 
 
 interface GameCardProps {
@@ -95,6 +96,13 @@ export const Game = ({ isHome }: IsHomeProp  ): JSX.Element => {
             title: "#FFF",
             date: "2026-09-18",
             description: "実験的に作ってみた色演算パズル、その名も『#FFF』。ステージは全部で16問、ぜひ遊んでみてください！Web開発で1から作ったゲームはこれが初めてかも"
+        },
+        {
+            url: "https://kakuhito.itch.io/oh-my-demon",
+            imageUrl: ohMyDemon,
+            title: "Oh, My Demon!",
+            date: "2026-10-17",
+            description: "ケモゲー1week参加作品！人間界をどうにも滅ぼしたいので、「日数検索」で過去会話を思い出し、お子さま魔王を説得しよう！うすいしおさん(@ususio0unity)の描く魔王がかわいくてつい......"
         },
         { 
             url: "https://unityroom.com/games/konatsu_enikki", 
